@@ -1,147 +1,180 @@
-/* Temel Sıfırlama ve Font Ayarı */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* --- Önceki stiller burada --- */
+/* ... font, body, header, footer, container, butonlar, formlar vb ... */
 
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.7;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    color: #334;
-    padding-top: 80px; /* Dil butonları için header'da yer açıldı */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    position: relative; /* Dil butonlarını konumlandırmak için */
-}
-
-/* Dil Değiştirme Butonları */
+/* Dil Değiştirme Butonları Stilleri (Önceki yanıttaki gibi) */
 .language-switcher {
-    position: absolute; /* Sayfanın üstüne sabitle */
+    position: absolute;
     top: 15px;
     right: 20px;
-    z-index: 10; /* Diğer öğelerin üzerinde kalması için */
+    z-index: 10;
     background: rgba(255, 255, 255, 0.8);
     padding: 5px 10px;
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+.language-switcher button { /* ... stiller ... */ }
+.language-switcher button.active { /* ... stiller ... */ }
 
-.language-switcher button {
-    background: none;
-    border: none;
-    padding: 5px 8px;
-    margin: 0 3px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 600;
+/* Ana Sayfa Özel Stilleri */
+.index-container h2 { /* Ana sayfadaki "Choose..." başlığı */
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #34495e;
+}
+
+.date-range { /* Tarih aralığı paragrafı */
+    font-size: 1.1rem;
     color: #556;
-    border-radius: 15px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: -15px; /* Başlığa yaklaştır */
+    margin-bottom: 30px;
+}
+.date-range strong {
+    font-weight: 600;
+    color: #334;
 }
 
-.language-switcher button:hover {
-    color: #000;
+.index-choices {
+    display: grid; /* 4'lü yapı için Grid daha uygun olabilir */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Otomatik sığdır */
+    gap: 30px;
+    margin-top: 20px;
 }
 
-.language-switcher button.active { /* Aktif dil butonu */
-    background-color: #3498db;
-    color: #fff;
-}
-
-
-/* Ana Kapsayıcı */
-.container {
-    max-width: 900px;
-    margin: 0 auto 30px auto; /* Üst marj kaldırıldı veya azaltıldı */
-    padding: 40px;
-    background-color: #ffffff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+.index-choice-card {
+    background-color: #fff;
     border-radius: 12px;
+    padding: 25px;
     text-align: center;
-    overflow: hidden;
-    flex-grow: 1;
+    border: 1px solid #e7eaf0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit; /* Link rengini sıfırla */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* İçeriği dikeyde yay */
 }
 
-/* Başlık ve Altbilgi */
-.app-header {
+.index-choice-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.choice-img-small { /* Ana sayfadaki küçük logolar */
+    max-height: 80px; /* Yüksekliği ayarla */
+    width: auto;
+    max-width: 80%; /* Genişlik taşmasını önle */
+    margin-bottom: 15px;
+}
+
+.index-choice-card h3 {
+    font-size: 1.3rem;
+    color: #3498db; /* Ana renk */
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.index-enter-btn { /* Detay butonunu span ile yaptık */
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #2ecc71; /* Yeşil renk */
+    color: #fff;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.index-choice-card:hover .index-enter-btn {
+    background-color: #27ae60; /* Hover'da koyu yeşil */
+}
+
+/* Ana sayfadaki genel şartlar linki */
+.general-terms-link {
+    margin-top: 40px;
     text-align: center;
-    padding: 0px 20px 20px 20px; /* Üst padding azaltıldı */
+    font-size: 0.95rem;
+}
+.general-terms-link a {
+    color: #3498db;
+    text-decoration: underline;
+}
+.general-terms-link a:hover {
+    color: #2980b9;
+}
+
+
+/* Detay Sayfası Özel Stilleri */
+.detail-container h1 { /* Detay sayfası ana başlığı */
+     font-size: 2rem;
+     margin-top: 10px;
+}
+
+.back-link { /* Detay sayfasındaki geri linki */
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #556;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+.back-link:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+#prize-details { /* Ödül detayları bölümü */
+    text-align: center;
+    border-bottom: 1px solid #eee; /* Formdan ayırmak için */
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+.prize-detail-img { /* Detay sayfasındaki büyük ödül resmi */
+    max-width: 300px; /* Boyutu ayarla */
+    max-height: 250px;
+    width: auto;
+    height: auto;
     margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-/* ... (Header h1 stilleri aynı) ... */
-/* ... (Footer stilleri aynı) ... */
-
-/* Önceki .lang-en stilleri kaldırıldı */
-
-/* Seçim Kartları İçindeki Şartlar Listesi (Tek dil stili) */
-.conditions {
-    text-align: left;
-    margin-top: 15px;
-    padding-top: 10px;
-    border-top: 1px dashed #eee;
-    width: 90%;
+#prize-details h2 { /* Bölüm başlığı (örn: The Prize) */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #34495e;
+}
+#prize-details p { /* Ödül açıklaması */
+    font-size: 1.1rem;
+    color: #445;
+    max-width: 650px; /* Çok geniş olmasın */
     margin-left: auto;
     margin-right: auto;
 }
-.conditions h4 {
-    font-size: 1rem;
-    color: #334;
-    margin-bottom: 8px;
-    font-weight: 600;
+
+/* Form gönderim mesajı */
+.form-message {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #eafaf1; /* Açık yeşil */
+    border: 1px solid #b8e9c4;
+    border-radius: 5px;
+    color: #2f5e3d;
+    text-align: center;
 }
-.conditions ul {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 0;
-}
-.conditions li {
-    font-size: 0.9rem;
-    color: #556;
-    margin-bottom: 5px;
-    padding-left: 15px;
-    position: relative;
-}
-.conditions li::before {
-    content: '-';
-    position: absolute;
-    left: 0;
-    color: #3498db;
+.form-message.hidden {
+    display: none;
 }
 
-/* Yeni İçerik Bölümleri Stilleri (#rules, #sponsors) - Tek dil stili */
-.content-section {
-    text-align: left;
-    padding: 25px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    margin-top: 30px;
-}
-.content-section h2 {
-    text-align: center;
-    margin-bottom: 25px;
-    border-bottom: 2px solid #e7eaf0;
-    padding-bottom: 10px;
-}
-.rule-block {
-    margin-bottom: 25px;
-}
-.rule-block h4 {
-    font-size: 1.2rem;
-    color: #3498db;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-.rule-block p, .rule-block li {
-    color: #445;
-    margin-bottom: 8px;
-    line-height: 1.6;
-}
-.rule-block ul {
-    list-style: disc;
-    padding-left: 25px;
-}
-/* ... (Sponsor stilleri aynı) ... */
-/* ... (Diğer tüm stiller ve responsive ayarları aynı kalır) ... */
+
+/* Katılım Şartları ve Sponsor Bölümleri Stilleri (Önceki yanıttaki gibi) */
+.content-section { /* ... stiller ... */ }
+.content-section h2 { /* ... stiller ... */ }
+.rule-block { /* ... stiller ... */ }
+.rule-block h4 { /* ... stiller ... */ }
+.rule-block p, .rule-block li { /* ... stiller ... */ }
+.rule-block ul { /* ... stiller ... */ }
+.sponsor-logos { /* ... stiller ... */ }
+.sponsor-logos img { /* ... stiller ... */ }
+
+/* ... Diğer tüm stiller ve responsive ayarları ... */
