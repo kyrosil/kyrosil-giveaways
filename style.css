@@ -1,180 +1,412 @@
-/* --- Önceki stiller burada --- */
-/* ... font, body, header, footer, container, butonlar, formlar vb ... */
+/* Genel Stil Ayarları ve Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* Dil Değiştirme Butonları Stilleri (Önceki yanıttaki gibi) */
+:root {
+    --primary-color: #3498db; /* Ana Mavi */
+    --secondary-color: #e74c3c; /* İkinci Renk (Kırmızı) */
+    --accent-color: #2ecc71; /* Vurgu Rengi (Yeşil) */
+    --text-dark: #2c3e50; /* Koyu Metin */
+    --text-light: #556; /* Açık Metin */
+    --bg-light: #ffffff;
+    --bg-medium: #f9f9f9;
+    --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #e9eff5 100%); /* Daha yumuşak gradient */
+    --border-color: #e1e5ea;
+    --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.06);
+    --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.1);
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    background: var(--bg-gradient);
+    color: var(--text-light);
+    padding-top: 90px; /* Header için yer */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* İkonlar */
+.icon {
+    margin-right: 8px;
+    color: var(--primary-color);
+    font-size: 0.95em;
+}
+.icon-left {
+     margin-right: 8px;
+}
+
+/* Dil Değiştirme */
 .language-switcher {
     position: absolute;
     top: 15px;
     right: 20px;
     z-index: 10;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 5px 8px;
     border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-light);
 }
-.language-switcher button { /* ... stiller ... */ }
-.language-switcher button.active { /* ... stiller ... */ }
-
-/* Ana Sayfa Özel Stilleri */
-.index-container h2 { /* Ana sayfadaki "Choose..." başlığı */
-    margin-bottom: 30px;
-    font-size: 2rem;
-    color: #34495e;
+.language-switcher button {
+    background: none;
+    border: none;
+    padding: 6px 10px;
+    margin: 0 2px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-light);
+    border-radius: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+.language-switcher button:hover {
+    color: var(--text-dark);
+    transform: scale(1.05);
+}
+.language-switcher button.active {
+    background-color: var(--primary-color);
+    color: var(--bg-light);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.date-range { /* Tarih aralığı paragrafı */
-    font-size: 1.1rem;
-    color: #556;
-    margin-top: -15px; /* Başlığa yaklaştır */
-    margin-bottom: 30px;
+/* Header */
+.app-header {
+    text-align: center;
+    padding: 10px 20px 20px 20px;
+    margin-bottom: 10px; /* Konteyner ile arayı azalttık */
+}
+.main-logo {
+    max-height: 50px; /* Logo boyutunu ayarla */
+    margin-bottom: 15px;
+}
+.app-header h1 {
+    font-size: 2.6rem;
+    color: var(--text-dark);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.date-range {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-weight: 500;
 }
 .date-range strong {
     font-weight: 600;
-    color: #334;
+    color: var(--text-dark);
+}
+.date-range .icon {
+     color: var(--text-light);
+     font-size: 0.9em;
 }
 
+
+/* Ana Konteyner */
+.container {
+    max-width: 950px; /* Biraz daha geniş */
+    margin: 0 auto 40px auto;
+    padding: 45px;
+    background-color: var(--bg-light);
+    box-shadow: var(--shadow-medium);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Ana Sayfa Stilleri */
+.index-container h2 {
+    margin-bottom: 35px;
+    font-size: 2.1rem;
+    color: var(--text-dark);
+    font-weight: 600;
+}
 .index-choices {
-    display: grid; /* 4'lü yapı için Grid daha uygun olabilir */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Otomatik sığdır */
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Kart genişliği */
+    gap: 35px; /* Boşluk arttı */
     margin-top: 20px;
 }
-
 .index-choice-card {
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 25px;
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius-md);
+    padding: 0; /* Padding'i iç wrapper'a taşı */
     text-align: center;
-    border: 1px solid #e7eaf0;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none;
-    color: inherit; /* Link rengini sıfırla */
+    color: inherit;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between; /* İçeriği dikeyde yay */
+    overflow: hidden; /* İçeriğin taşmasını engelle */
 }
-
 .index-choice-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--shadow-medium);
 }
-
-.choice-img-small { /* Ana sayfadaki küçük logolar */
-    max-height: 80px; /* Yüksekliği ayarla */
-    width: auto;
-    max-width: 80%; /* Genişlik taşmasını önle */
-    margin-bottom: 15px;
+.card-image-wrapper { /* Resim için sarmalayıcı */
+    height: 160px; /* Sabit yükseklik */
+    width: 100%;
+    background-color: var(--bg-medium); /* Resim yüklenmezse arkaplan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
-
-.index-choice-card h3 {
-    font-size: 1.3rem;
-    color: #3498db; /* Ana renk */
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-.index-enter-btn { /* Detay butonunu span ile yaptık */
-    display: inline-block;
-    padding: 8px 20px;
-    background-color: #2ecc71; /* Yeşil renk */
-    color: #fff;
-    border-radius: 20px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.index-choice-card:hover .index-enter-btn {
-    background-color: #27ae60; /* Hover'da koyu yeşil */
-}
-
-/* Ana sayfadaki genel şartlar linki */
-.general-terms-link {
-    margin-top: 40px;
-    text-align: center;
-    font-size: 0.95rem;
-}
-.general-terms-link a {
-    color: #3498db;
-    text-decoration: underline;
-}
-.general-terms-link a:hover {
-    color: #2980b9;
-}
-
-
-/* Detay Sayfası Özel Stilleri */
-.detail-container h1 { /* Detay sayfası ana başlığı */
-     font-size: 2rem;
-     margin-top: 10px;
-}
-
-.back-link { /* Detay sayfasındaki geri linki */
-    display: inline-block;
-    margin-bottom: 15px;
-    color: #556;
-    text-decoration: none;
-    font-size: 0.95rem;
-}
-.back-link:hover {
-    color: #3498db;
-    text-decoration: underline;
-}
-
-#prize-details { /* Ödül detayları bölümü */
-    text-align: center;
-    border-bottom: 1px solid #eee; /* Formdan ayırmak için */
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-}
-.prize-detail-img { /* Detay sayfasındaki büyük ödül resmi */
-    max-width: 300px; /* Boyutu ayarla */
-    max-height: 250px;
+.choice-img-small {
+    display: block;
+    max-height: 100%; /* Yüksekliği sınırlı */
+    max-width: 85%; /* Genişliği sınırlı */
     width: auto;
     height: auto;
+    object-fit: contain; /* Resmi sığdır */
+}
+.index-choice-card h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 20px 15px 10px 15px; /* İç boşluklar */
+}
+.index-enter-btn {
+    display: inline-flex; /* İkon ile hizalamak için */
+    align-items: center;
+    padding: 9px 22px;
+    background-color: var(--accent-color);
+    color: var(--bg-light);
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin: 10px 15px 25px 15px; /* Alt boşluk arttı */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 3px 6px rgba(46, 204, 113, 0.3);
+}
+.index-enter-btn:hover {
+    background-color: #27ae60;
+    transform: scale(1.03);
+}
+.index-enter-btn .fa-arrow-right-long {
+     margin-left: 8px;
+     transition: transform 0.3s ease;
+}
+.index-choice-card:hover .index-enter-btn .fa-arrow-right-long {
+    transform: translateX(5px);
+}
+.general-terms-link { /* Stil aynı */ }
+
+
+/* Detay Sayfası Stilleri */
+.detail-container h1 { font-size: 2.2rem; margin-top: 0; color: var(--text-dark); }
+.back-link {
+    display: inline-flex; /* İkonla hizalama */
+    align-items: center;
     margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
-#prize-details h2 { /* Bölüm başlığı (örn: The Prize) */
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #34495e;
-}
-#prize-details p { /* Ödül açıklaması */
-    font-size: 1.1rem;
-    color: #445;
-    max-width: 650px; /* Çok geniş olmasın */
-    margin-left: auto;
-    margin-right: auto;
-}
+.back-link .icon { margin-right: 6px; color: var(--text-light); transition: color 0.3s ease;}
+.back-link:hover { color: var(--primary-color); }
+.back-link:hover .icon { color: var(--primary-color); }
 
-/* Form gönderim mesajı */
-.form-message {
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #eafaf1; /* Açık yeşil */
-    border: 1px solid #b8e9c4;
-    border-radius: 5px;
-    color: #2f5e3d;
+#prize-details { text-align: center; border-bottom: 1px solid var(--border-color); padding-bottom: 35px; margin-bottom: 35px; }
+.prize-image-container { /* Resim çerçevesi */
+    max-width: 350px;
+    margin: 0 auto 25px auto;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+    background-color: var(--bg-medium);
+}
+.prize-detail-img { display: block; width: 100%; height: auto; }
+#prize-details h2 { font-size: 1.6rem; margin-bottom: 15px; color: var(--text-dark); font-weight: 600; }
+#prize-details p, #prize-details ul { font-size: 1.1rem; color: var(--text-light); max-width: 700px; margin-left: auto; margin-right: auto; }
+#prize-details ul { list-style: none; padding: 0; margin-top: 15px;}
+#prize-details li { margin-bottom: 8px; }
+
+
+/* Form Bölümü ve Form Stilleri */
+.form-section {
+     background-color: var(--bg-medium);
+     padding: 35px;
+     border-radius: var(--border-radius-md);
+     margin-bottom: 35px;
+     border: 1px solid var(--border-color);
+}
+.form-section h2 {
     text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: var(--text-dark);
 }
-.form-message.hidden {
-    display: none;
+.form-section p { /* Form açıklaması */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+.giveaway-form { max-width: 550px; margin: 0 auto; text-align: left; }
+.form-group { margin-bottom: 25px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-dark); font-size: 1rem; }
+.input-wrapper { /* İkon ve input için sarmalayıcı */
+    position: relative;
+}
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 1rem;
+}
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 13px 15px 13px 45px; /* İkon için sol boşluk */
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--bg-light);
+}
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+    outline: none;
+}
+.btn-submit { /* Ana gönder butonu */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Tam genişlik */
+    padding: 14px 28px;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+.btn-submit .icon-left { font-size: 1em; margin-right: 10px;}
+.btn-submit.btn-primary { background-color: var(--primary-color); color: var(--bg-light); }
+.btn-submit.btn-primary:hover { background-color: #2980b9; box-shadow: 0 6px 12px rgba(52, 152, 219, 0.3); transform: translateY(-2px); }
+.btn-submit.btn-secondary { background-color: var(--secondary-color); color: var(--bg-light); }
+.btn-submit.btn-secondary:hover { background-color: #c0392b; box-shadow: 0 6px 12px rgba(231, 76, 60, 0.3); transform: translateY(-2px); }
+.btn-submit:disabled { opacity: 0.7; cursor: not-allowed; }
+
+.form-message { /* Stil aynı, belki renkler ayarlanabilir */ }
+.form-message.hidden { display: none; }
+
+
+/* İçerik Bölümleri (Kurallar, Sponsorlar) */
+.content-section {
+    text-align: left;
+    padding: 30px; /* Biraz daha fazla padding */
+    background-color: transparent; /* Arkaplanı kaldırdık, ana konteyner rengi geçerli */
+    border-radius: var(--border-radius-md);
+    margin-top: 35px;
+    border-top: 1px solid var(--border-color); /* Üst çizgi */
+}
+.content-section h2 { /* Bölüm başlıkları */
+    text-align: left; /* Sola hizalı */
+    margin-bottom: 20px;
+    border-bottom: none; /* Alt çizgiyi kaldır */
+    padding-bottom: 0;
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    display: flex; /* İkonla hizalamak için */
+    align-items: center;
+}
+.content-section h2 .icon { color: var(--text-dark); font-size: 0.9em;} /* Başlık ikonu rengi */
+
+.rule-block { margin-bottom: 30px; }
+.rule-block h4 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    font-weight: 600;
+    display: flex; /* İkonla hizalamak için */
+    align-items: center;
+}
+.rule-block h4 .icon { font-size: 0.9em; color: var(--primary-color);} /* Alt başlık ikonu rengi */
+
+.rule-block p, .rule-block li { color: var(--text-light); margin-bottom: 10px; line-height: 1.8; }
+.rule-block ul { list-style: none; padding-left: 10px; } /* Madde işareti kaldırıldı, padding azaltıldı */
+.rule-block li::before { /* Özel madde işareti */
+     content: "\f00c"; /* Font Awesome Check ikonu */
+     font-family: 'Font Awesome 6 Free';
+     font-weight: 900;
+     color: var(--accent-color); /* Yeşil */
+     margin-right: 10px;
+     font-size: 0.9em;
+}
+
+/* Sponsorlar */
+.sponsor-logos { text-align: center; padding: 15px 0; }
+.sponsor-logos img {
+    max-height: 55px;
+    margin: 10px 18px;
+    vertical-align: middle;
+    filter: grayscale(80%); /* Logoları gri tonlamalı yap */
+    transition: filter 0.3s ease, transform 0.3s ease;
+    opacity: 0.8;
+}
+.sponsor-logos img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
 }
 
 
-/* Katılım Şartları ve Sponsor Bölümleri Stilleri (Önceki yanıttaki gibi) */
-.content-section { /* ... stiller ... */ }
-.content-section h2 { /* ... stiller ... */ }
-.rule-block { /* ... stiller ... */ }
-.rule-block h4 { /* ... stiller ... */ }
-.rule-block p, .rule-block li { /* ... stiller ... */ }
-.rule-block ul { /* ... stiller ... */ }
-.sponsor-logos { /* ... stiller ... */ }
-.sponsor-logos img { /* ... stiller ... */ }
+/* Footer */
+.app-footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #778;
+    border-top: 1px solid var(--border-color);
+}
 
-/* ... Diğer tüm stiller ve responsive ayarları ... */
+/* Responsive İyileştirmeler */
+@media (max-width: 992px) {
+    .container { max-width: 90%; padding: 35px;}
+    .index-choices { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
+}
+@media (max-width: 768px) {
+    body { padding-top: 70px; } /* Header için boşluk */
+    .app-header h1 { font-size: 2rem; }
+    .container { padding: 25px; }
+    .index-choices { grid-template-columns: 1fr; gap: 25px; } /* Tek sütun */
+    .content-section { padding: 20px; }
+    .prize-image-container { max-width: 280px; }
+    .giveaway-form { max-width: 100%; }
+    .language-switcher { padding: 4px 6px; }
+    .language-switcher button { padding: 5px 8px; font-size: 0.85rem;}
+}
+@media (max-width: 480px) {
+    .app-header h1 { font-size: 1.8rem; }
+    .date-range { font-size: 0.9rem;}
+    .container { padding: 20px; }
+    .index-choice-card h3 { font-size: 1.2rem; }
+    .index-enter-btn { font-size: 0.9rem; padding: 8px 18px;}
+    .detail-container h1 { font-size: 1.8rem;}
+    #prize-details p, #prize-details ul { font-size: 1rem
