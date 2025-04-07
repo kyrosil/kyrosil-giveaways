@@ -1,397 +1,333 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Dil Çevirileri ---
-    // Not: Bu obje çok büyüyeceği için idealde ayrı bir translations.js dosyasına konulup import edilebilir.
-    // Tüm 'data-lang-key' karşılıkları buraya 4 dilde eklenecek.
     const translations = {
-        // English (Default)
         en: {
             pageTitle: "Kyrosil Grand Giveaway",
+            pageTitleGiveaway1: "Flat Giveaway - Kyrosil",
+            pageTitleGiveaway2: "USDT Giveaway - Kyrosil", // Örnek
+            pageTitleGiveaway3: "Starbucks Giveaway - Kyrosil", // Örnek
+            pageTitleGiveaway4: "Partner Prizes Giveaway - Kyrosil", // Örnek
             mainHeading: "✨ Kyrosil Grand Giveaway! ✨",
-            choiceTitle: "Which Giveaway Do You Want to Enter?",
-            prize1Title: "2+1 Flat from ReziKyros Azure Kağıthane",
-            prize1Desc: "A chance to win a fantastic flat in our soon-to-be-completed project!",
+            indexChoiceTitle: "Choose Your Giveaway!",
+            indexPrize1Title: "2+1 Flat",
+            indexPrize2Title: "250 USDT x 50",
+            indexPrize3Title: "$50 Starbucks Card x 100",
+            indexPrize4Title: "Partner Prize Packs",
+            indexEnterButton: "Details & Enter",
+            indexRulesLink: "See General Terms & Conditions",
+            overallEndDate: "April 30, 2025", // Ana sayfadaki genel bitiş tarihi
+            detailBackButton: "&larr; Back to All Giveaways",
+            detailPrizeTitle: "The Prize",
+            detailFormTitle: "Enter the Draw!",
+            form1Desc: "You can enter the giveaway by filling out the information below. Please ensure you meet the entry requirements listed in the terms.", // Giveaway 1 Form Desc
+            prize1Title: "2+1 Flat from ReziKyros Azure Kağıthane", // Giveaway 1 Detail Title
+            prize1Desc: "A chance to win a fantastic flat in our soon-to-be-completed ReziKyros Azure Kağıthane project!",
             conditionsTitle: "Specific Conditions:",
             prize1Cond1: "Be over 18 years old",
             prize1Cond2: "Not have any registered vehicle or property deed in your name",
             prize1Cond3: "Follow @kyrosil on Instagram",
-            prize1Button: "Enter Flat Giveaway <span class=\"arrow\">&rarr;</span>",
-            prize2Title: "250 USDT Each for 50 People",
-            prize2Desc: "You could be one of 50 lucky winners to receive 250 USDT!",
-            // prize2Cond1: "Be over 18 years old", // prize1Cond1 ile aynı anahtar kullanılabilir
-            // prize2Cond2: "Follow @kyrosil on Instagram", // prize1Cond3 ile aynı anahtar kullanılabilir
-            prize2Button: "Enter USDT Giveaway <span class=\"arrow\">&rarr;</span>",
-            form1Title: "ReziKyros Azure Kağıthane Flat Giveaway Entry Form",
-            form1Desc: "You can enter the giveaway by filling out the information below. Please ensure you meet the entry requirements.",
+            prize2Title: "250 USDT Each for 50 People", // Giveaway 2 Detail Title
+            prize2Desc: "You could be one of 50 lucky winners to receive 250 USDT!", // Giveaway 2 Detail Desc
+            prize3Title: "$50 Starbucks Mobile Gift Card x 100", // Giveaway 3 Detail Title
+            prize3Desc: "100 lucky winners will receive a $50 Starbucks Mobile Gift Card (Approx. 46 EUR / 1600 TRY value, actual value may vary based on current exchange rates).", // Giveaway 3 Detail Desc with Currency Placeholder
+            prize4Title: "Partner Prize Packs", // Giveaway 4 Detail Title
+            prize4Desc: "Enter to win one of the amazing prize packs from our partners: 50 Nestle Happiness Packs, 100 Coca Cola Happiness Packs, or one of 500 $30 Burger King Vouchers!", // Giveaway 4 Detail Desc (Combined)
+            prize4DescBK: "$30 Burger King Voucher (Approx. 28 EUR / 960 TRY value, actual value may vary based on current exchange rates). Valid on mobile app.", // Specific BK desc (if needed separately)
             formNameLabel: "Full Name:",
             formNamePlaceholder: "e.g., John Doe",
             formEmailLabel: "Email Address:",
             formEmailPlaceholder: "e.g., john@example.com",
             formSubmitButton: "Submit Entry",
             formBackButton: "&larr; Go Back",
-            form2Title: "250 USDT Giveaway Entry Form (50 Winners)",
-            form2Desc: "Enter the draw for a chance to be one of 50 winners receiving 250 USDT by filling out the form below.",
-            thanksTitle: "🎉 Thank You! 🎉",
-            thanksPara1: "You have successfully entered our giveaway! Winners will be announced via email on the specified date.",
-            thanksPara2: "Good luck!",
-            thanksButton: "Enter Again",
+            formValidationError: "Please fill in all required fields.",
+            formSubmitting: "Submitting...",
+            formSubmitted: "Submitted!",
+            formError: "An error occurred, please try again.",
+            formThanksMessage: "Thank you for entering! Good luck.",
             rulesTitle: "General Terms & Information",
             rulesScheduleTitle: "Giveaway Schedule",
             rulesStartDateLabel: "Start Date:",
-            rulesStartDateValue: "[PLEASE ENTER START DATE AND TIME HERE]",
-            rulesEndDateLabel: "End Date:",
-            rulesEndDateValue: "[PLEASE ENTER END DATE AND TIME HERE]",
+            rulesStartDateValue: "[PLEASE ENTER START DATE AND TIME HERE]", // Placeholder
+            rulesEndDateLabel: "Entry Deadline:",
+            giveaway1EndDateValue: "April 30, 2025", // Specific for G1 page
+            giveaway2EndDateValue: "April 15, 2025", // Specific for G2 page
+            giveaway3EndDateValue: "April 15, 2025", // Specific for G3 page
+            giveaway4EndDateValue: "April 15, 2025", // Specific for G4 page
+            rulesAnnounceTitle: "Announcement of Results:",
+            giveaway1AnnounceDesc: "Results will be announced via live broadcast draw on EU Portal on May 1, 2025.", // Specific for G1 page
+            giveaway2AnnounceDesc: "Results will be announced via live broadcast draw on EU Portal on April 16, 2025.",// Specific for G2 page
+            giveaway3AnnounceDesc: "Results will be announced via live broadcast draw on EU Portal on April 16, 2025.",// Specific for G3 page
+            giveaway4AnnounceDesc: "Results will be announced via live broadcast draw on EU Portal on April 16, 2025.",// Specific for G4 page
             rulesGeneralCondTitle: "General Conditions",
             rulesCond1: "All participants must be over 18 years of age.",
             rulesCond2: "All participants must follow the @kyrosil account on Instagram.",
             rulesCond3: "Kyrosil employees and their first-degree relatives cannot participate in the draw.",
-            rulesCond4: "[PLEASE ADD ANY OTHER GENERAL RULES YOU WANT TO INCLUDE HERE]",
+            rulesCondGeneric: "[Add other general rules if any]", // Placeholder for generic rules text
             rulesSpecialCond1Title: "Specific Conditions (Flat Giveaway)",
             rulesSpecialCond1Item1: "The winning participant must not have any registered vehicle or property deed in their name as of the date the results are announced. This condition will be verified.",
-            rulesSpecialCond2Title: "Specific Conditions (USDT Giveaway)",
-            rulesSpecialCond2Item1: "In this giveaway, a total of 50 people will win 250 USDT each.",
+            rulesSpecialCond2Title: "Specific Conditions (USDT Giveaway)", // Added title key
+            rulesSpecialCond2Item1: "A total of 50 people will win 250 USDT each.", // Added item key
+            rulesSpecialCond3Title: "Specific Conditions (Starbucks Giveaway)", // Added title key
+            rulesSpecialCond3Item1: "A total of 100 people will win a $50 Starbucks Mobile Gift Card each.", // Added item key
+            rulesSpecialCond4Title: "Specific Conditions (Partner Packs Giveaway)", // Added title key
+            rulesSpecialCond4Item1: "Prizes: 50 Nestle Packs, 100 Coca Cola Packs, 500 Burger King $30 Vouchers. Winners randomly assigned.", // Combined description
             rulesWinnerSelTitle: "Winner Selection",
-            rulesWinnerSelDesc: "[PLEASE WRITE HOW THE WINNERS WILL BE SELECTED HERE (e.g., By random draw conducted in the presence of a notary)]",
-            rulesAnnounceTitle: "Announcement of Results",
-            rulesAnnounceDesc: "[PLEASE WRITE WHEN AND WHERE THE WINNERS WILL BE ANNOUNCED HERE (e.g., Within X days after the giveaway end date on the Kyrosil Instagram account and website)]",
+            rulesWinnerSelDesc: "Winners will be determined by a random draw conducted via live broadcast on the EU Portal on the specified announcement date.", // Updated description
+            legalTitle: "Legal Permissions", // New Key
+            legalDesc: "This giveaway is conducted under the permissions obtained from the relevant authorities in Turkey and the European Union. Turkey Permit: Milli Piyango İdaresi - Permit No: [TR-MP-2025/XYZ-123] dated [01/04/2025]. EU Notification: Registered under consumer promotion regulations via [Relevant EU Body/Platform Name] - Ref: [EU-CP-2025/ABC-789]. All participants accept the terms by entering. [Please replace placeholders with actual permit details].", // New Key with Placeholders
             rulesOtherTitle: "Other Matters",
-            rulesOtherDesc: "[PLEASE ADD ANY ADDITIONAL CLAUSES OR LEGAL DISCLAIMERS YOU DEEM NECESSARY HERE]",
+            rulesOtherDesc: "[PLEASE ADD ANY ADDITIONAL CLAUSES OR LEGAL DISCLAIMERS YOU DEEM NECESSARY HERE]", // Placeholder
             sponsorsTitle: "Our Sponsors",
-            sponsorsPlaceholder: '[If there are no sponsors, you can delete this section or write "This giveaway has no sponsors."]',
-            footerRights: "© 2025 Kyrosil. All rights reserved.", // Yıl güncel (2025)
+            sponsorsPlaceholder: '[If there are no sponsors, you can delete this section or write "This giveaway has no sponsors."]', // Placeholder
+            footerRights: "© 2025 Kyrosil. All rights reserved.",
             footerTnc: "T&C apply."
         },
-        // Turkish
-        tr: {
-            pageTitle: "Kyrosil Büyük Çekiliş",
-            mainHeading: "✨ Kyrosil Büyük Çekiliş! ✨",
-            choiceTitle: "Hangi Çekilişe Katılmak İstersin?",
-            prize1Title: "ReziKyros Azure Kağıthane'den 2+1 Daire",
-            prize1Desc: "Tamamlanmak üzere olan projemizden harika bir daire kazanma şansı!",
-            conditionsTitle: "Özel Şartlar:",
-            prize1Cond1: "18 yaşından büyük olmak",
-            prize1Cond2: "Üzerine herhangi bir araç veya tapu kaydı olmamak",
-            prize1Cond3: "Instagram'da @kyrosil hesabını takip etmek",
-            prize1Button: "Daire Çekilişine Katıl <span class=\"arrow\">&rarr;</span>",
-            prize2Title: "50 Kişiye 250 USDT",
-            prize2Desc: "Tam 50 şanslı kişiden biri olup 250 USDT kazanabilirsiniz!",
-            // prize2Cond1: "18 yaşından büyük olmak",
-            // prize2Cond2: "Instagram'da @kyrosil hesabını takip etmek",
-            prize2Button: "USDT Çekilişine Katıl <span class=\"arrow\">&rarr;</span>",
-            form1Title: "ReziKyros Azure Kağıthane Daire Çekilişi Katılım Formu",
-            form1Desc: "Aşağıdaki bilgileri doldurarak çekilişe katılabilirsiniz. Lütfen katılım şartlarını sağladığınızdan emin olun.",
-            formNameLabel: "Adın Soyadın:",
-            formNamePlaceholder: "örn: Ayşe Yılmaz",
-            formEmailLabel: "E-posta Adresin:",
-            formEmailPlaceholder: "örn: ayse@ornek.com",
-            formSubmitButton: "Katılımı Gönder",
-            formBackButton: "&larr; Geri Dön",
-            form2Title: "250 USDT Çekilişi Katılım Formu (50 Kişi)",
-            form2Desc: "Aşağıdaki bilgileri doldurarak 50 kişiye verilecek 250 USDT ödülü için çekilişe katılın.",
-            thanksTitle: "🎉 Teşekkür Ederiz! 🎉",
-            thanksPara1: "Çekilişimize başarıyla katıldın! Kazananlar belirtilen tarihte e-posta ile duyurulacaktır.",
-            thanksPara2: "Bol şans!",
-            thanksButton: "Yeni Katılım Yap",
-            rulesTitle: "Genel Katılım Şartları ve Bilgiler",
-            rulesScheduleTitle: "Çekiliş Takvimi",
-            rulesStartDateLabel: "Başlangıç Tarihi:",
-            rulesStartDateValue: "[BURAYA BAŞLANGIÇ TARİH VE SAATİNİ YAZIN]",
-            rulesEndDateLabel: "Bitiş Tarihi:",
-            rulesEndDateValue: "[BURAYA BİTİŞ TARİH VE SAATİNİ YAZIN]",
-            rulesGeneralCondTitle: "Genel Şartlar",
-            rulesCond1: "Tüm katılımcıların 18 yaşından büyük olması gerekmektedir.",
-            rulesCond2: "Tüm katılımcıların Instagram'da @kyrosil hesabını takip etmesi gerekmektedir.",
-            rulesCond3: "Kyrosil çalışanları ve birinci derece yakınları çekilişe katılamaz.",
-            rulesCond4: "[BURAYA EKLEMEK İSTEDİĞİNİZ DİĞER GENEL KURALLARI YAZIN]",
-            rulesSpecialCond1Title: "Özel Şartlar (Daire Çekilişi)",
-            rulesSpecialCond1Item1: "Kazanan talihlinin üzerine çekiliş sonuçlarının açıklandığı tarih itibarıyla herhangi bir araç veya tapu kaydı bulunmaması gerekmektedir. Bu durumun kontrolü yapılacaktır.",
-            rulesSpecialCond2Title: "Özel Şartlar (USDT Çekilişi)",
-            rulesSpecialCond2Item1: "Bu çekilişte toplam 50 kişi, kişi başı 250 USDT kazanacaktır.",
-            rulesWinnerSelTitle: "Kazananların Belirlenmesi",
-            rulesWinnerSelDesc: "[BURAYA KAZANANLARIN NASIL SEÇİLECEĞİNİ YAZIN (örn: Noter huzurunda yapılacak rastgele çekilişle)]",
-            rulesAnnounceTitle: "Sonuçların Duyurulması",
-            rulesAnnounceDesc: "[BURAYA KAZANANLARIN NE ZAMAN VE NEREDE DUYURULACAĞINI YAZIN (örn: Çekiliş bitiş tarihinden sonra X gün içinde Kyrosil Instagram hesabından ve web sitesinden)]",
-            rulesOtherTitle: "Diğer Hususlar",
-            rulesOtherDesc: "[BURAYA GEREKLİ GÖRDÜĞÜNÜZ EK MADDELERİ VEYA YASAL UYARILARI EKLEYİN]",
-            sponsorsTitle: "Sponsorlarımız",
-            sponsorsPlaceholder: '[Sponsor yoksa bu bölümü silebilir veya "Bu çekilişin sponsoru bulunmamaktadır." yazabilirsiniz]',
-            footerRights: "© 2025 Kyrosil. Tüm hakları saklıdır.", // Yıl güncel (2025)
-            footerTnc: "T&Ş geçerlidir."
-        },
-        // French
-        fr: {
-            pageTitle: "Grand Tirage au Sort Kyrosil",
-            mainHeading: "✨ Grand Tirage au Sort Kyrosil ! ✨",
-            choiceTitle: "À quel tirage au sort souhaitez-vous participer ?",
-            prize1Title: "Appartement 2+1 du projet ReziKyros Azure Kağıthane",
-            prize1Desc: "Une chance de gagner un appartement fantastique dans notre projet bientôt terminé !",
-            conditionsTitle: "Conditions spécifiques :",
-            prize1Cond1: "Avoir plus de 18 ans",
-            prize1Cond2: "Ne posséder aucun véhicule enregistré ni titre de propriété à votre nom",
-            prize1Cond3: "Suivre @kyrosil sur Instagram",
-            prize1Button: "Participer (Appartement) <span class=\"arrow\">&rarr;</span>",
-            prize2Title: "250 USDT chacun pour 50 personnes",
-            prize2Desc: "Vous pourriez être l'un des 50 heureux gagnants à recevoir 250 USDT !",
-            prize2Button: "Participer (USDT) <span class=\"arrow\">&rarr;</span>",
-            form1Title: "Formulaire de participation au tirage au sort (Appartement)",
-            form1Desc: "Vous pouvez participer en remplissant les informations ci-dessous. Assurez-vous de remplir les conditions.",
-            formNameLabel: "Nom complet :",
-            formNamePlaceholder: "ex : Jean Dupont",
-            formEmailLabel: "Adresse e-mail :",
-            formEmailPlaceholder: "ex : jean@example.com",
-            formSubmitButton: "Envoyer la participation",
-            formBackButton: "&larr; Retour",
-            form2Title: "Formulaire de participation au tirage au sort USDT (50 gagnants)",
-            form2Desc: "Participez au tirage pour courir la chance d'être l'un des 50 gagnants de 250 USDT.",
-            thanksTitle: "🎉 Merci ! 🎉",
-            thanksPara1: "Vous avez participé avec succès à notre tirage au sort ! Les gagnants seront annoncés par e-mail à la date spécifiée.",
-            thanksPara2: "Bonne chance !",
-            thanksButton: "Participer à nouveau",
-            rulesTitle: "Conditions générales et informations",
-            rulesScheduleTitle: "Calendrier du tirage",
-            rulesStartDateLabel: "Date de début :",
-            rulesStartDateValue: "[VEUILLEZ ENTRER LA DATE ET L'HEURE DE DÉBUT ICI]",
-            rulesEndDateLabel: "Date de fin :",
-            rulesEndDateValue: "[VEUILLEZ ENTRER LA DATE ET L'HEURE DE FIN ICI]",
-            rulesGeneralCondTitle: "Conditions générales",
-            rulesCond1: "Tous les participants doivent avoir plus de 18 ans.",
-            rulesCond2: "Tous les participants doivent suivre le compte @kyrosil sur Instagram.",
-            rulesCond3: "Les employés de Kyrosil et leurs parents au premier degré ne peuvent pas participer.",
-            rulesCond4: "[VEUILLEZ AJOUTER ICI TOUTE AUTRE RÈGLE GÉNÉRALE]",
-            rulesSpecialCond1Title: "Conditions spécifiques (Tirage Appartement)",
-            rulesSpecialCond1Item1: "Le participant gagnant ne doit posséder aucun véhicule enregistré ni titre de propriété à son nom à la date d'annonce des résultats. Cette condition sera vérifiée.",
-            rulesSpecialCond2Title: "Conditions spécifiques (Tirage USDT)",
-            rulesSpecialCond2Item1: "Dans ce tirage, 50 personnes au total gagneront 250 USDT chacune.",
-            rulesWinnerSelTitle: "Sélection des gagnants",
-            rulesWinnerSelDesc: "[VEUILLEZ ÉCRIRE COMMENT LES GAGNANTS SERONT SÉLECTIONNÉS ICI (ex: Par tirage au sort en présence d'un notaire)]",
-            rulesAnnounceTitle: "Annonce des résultats",
-            rulesAnnounceDesc: "[VEUILLEZ ÉCRIRE QUAND ET OÙ LES GAGNANTS SERONT ANNONCÉS ICI (ex: Dans les X jours suivant la fin sur Instagram Kyrosil et le site web)]",
-            rulesOtherTitle: "Autres questions",
-            rulesOtherDesc: "[VEUILLEZ AJOUTER ICI TOUTE CLAUSE SUPPLÉMENTAIRE OU MENTION LÉGALE]",
-            sponsorsTitle: "Nos sponsors",
-            sponsorsPlaceholder: "[S'il n'y a pas de sponsors, supprimez cette section ou écrivez \"Ce tirage n'a pas de sponsors.\"]",
-            footerRights: "© 2025 Kyrosil. Tous droits réservés.",
-            footerTnc: "T&C s'appliquent."
-        },
-        // Greek
-        el: {
-            pageTitle: "Μεγάλη Κλήρωση Kyrosil",
-            mainHeading: "✨ Μεγάλη Κλήρωση Kyrosil! ✨",
-            choiceTitle: "Σε ποια κλήρωση θέλετε να συμμετάσχετε;",
-            prize1Title: "Διαμέρισμα 2+1 από το έργο ReziKyros Azure Kağıthane",
-            prize1Desc: "Μια ευκαιρία να κερδίσετε ένα φανταστικό διαμέρισμα στο έργο μας που σύντομα ολοκληρώνεται!",
-            conditionsTitle: "Ειδικοί Όροι:",
-            prize1Cond1: "Να είστε άνω των 18 ετών",
-            prize1Cond2: "Να μην έχετε καταχωρημένο όχημα ή τίτλο ιδιοκτησίας στο όνομά σας",
-            prize1Cond3: "Ακολουθήστε το @kyrosil στο Instagram",
-            prize1Button: "Συμμετοχή (Διαμέρισμα) <span class=\"arrow\">&rarr;</span>",
-            prize2Title: "250 USDT ο καθένας για 50 άτομα",
-            prize2Desc: "Μπορεί να είστε ένας από τους 50 τυχερούς νικητές που θα λάβουν 250 USDT!",
-            prize2Button: "Συμμετοχή (USDT) <span class=\"arrow\">&rarr;</span>",
-            form1Title: "Φόρμα Συμμετοχής Κλήρωσης Διαμερίσματος",
-            form1Desc: "Μπορείτε να συμμετάσχετε συμπληρώνοντας τα παρακάτω στοιχεία. Βεβαιωθείτε ότι πληροίτε τις προϋποθέσεις.",
-            formNameLabel: "Ονοματεπώνυμο:",
-            formNamePlaceholder: "π.χ., Γιάννης Παπαδόπουλος",
-            formEmailLabel: "Διεύθυνση Email:",
-            formEmailPlaceholder: "π.χ., yannis@example.com",
-            formSubmitButton: "Υποβολή Συμμετοχής",
-            formBackButton: "&larr; Πίσω",
-            form2Title: "Φόρμα Συμμετοχής Κλήρωσης USDT (50 Νικητές)",
-            form2Desc: "Λάβετε μέρος στην κλήρωση για μια ευκαιρία να είστε ένας από τους 50 νικητές που θα λάβουν 250 USDT.",
-            thanksTitle: "🎉 Ευχαριστούμε! 🎉",
-            thanksPara1: "Έχετε συμμετάσχει επιτυχώς στην κλήρωσή μας! Οι νικητές θα ανακοινωθούν μέσω email την καθορισμένη ημερομηνία.",
-            thanksPara2: "Καλή τύχη!",
-            thanksButton: "Συμμετοχή Ξανά",
-            rulesTitle: "Γενικοί Όροι & Πληροφορίες",
-            rulesScheduleTitle: "Πρόγραμμα Κλήρωσης",
-            rulesStartDateLabel: "Ημερομηνία Έναρξης:",
-            rulesStartDateValue: "[ΠΑΡΑΚΑΛΩ ΕΙΣΑΓΕΤΕ ΗΜΕΡΟΜΗΝΙΑ ΚΑΙ ΩΡΑ ΕΝΑΡΞΗΣ ΕΔΩ]",
-            rulesEndDateLabel: "Ημερομηνία Λήξης:",
-            rulesEndDateValue: "[ΠΑΡΑΚАЛΩ ΕΙΣΑΓΕΤΕ ΗΜΕΡΟΜΗΝΙΑ ΚΑΙ ΩΡΑ ΛΗΞΗΣ ΕΔΩ]",
-            rulesGeneralCondTitle: "Γενικοί Όροι",
-            rulesCond1: "Όλοι οι συμμετέχοντες πρέπει να είναι άνω των 18 ετών.",
-            rulesCond2: "Όλοι οι συμμετέχοντες πρέπει να ακολουθούν τον λογαριασμό @kyrosil στο Instagram.",
-            rulesCond3: "Οι υπάλληλοι της Kyrosil και οι συγγενείς πρώτου βαθμού δεν μπορούν να συμμετάσχουν.",
-            rulesCond4: "[ΠΑΡΑΚΑΛΩ ΠΡΟΣΘΕΣΤΕ ΟΠΟΙΟΥΣΔΗΠΟΤΕ ΑΛΛΟΥΣ ΓΕΝΙΚΟΥΣ ΚΑΝΟΝΕΣ ΕΔΩ]",
-            rulesSpecialCond1Title: "Ειδικοί Όροι (Κλήρωση Διαμερίσματος)",
-            rulesSpecialCond1Item1: "Ο νικητής συμμετέχων δεν πρέπει να έχει καταχωρημένο όχημα ή τίτλο ιδιοκτησίας στο όνομά του κατά την ημερομηνία ανακοίνωσης των αποτελεσμάτων. Αυτός ο όρος θα επαληθευτεί.",
-            rulesSpecialCond2Title: "Ειδικοί Όροι (Κλήρωση USDT)",
-            rulesSpecialCond2Item1: "Σε αυτήν την κλήρωση, συνολικά 50 άτομα θα κερδίσουν 250 USDT το καθένα.",
-            rulesWinnerSelTitle: "Επιλογή Νικητών",
-            rulesWinnerSelDesc: "[ΠΑΡΑΚΑΛΩ ΓΡΑΨΤΕ ΠΩΣ ΘΑ ΕΠΙΛΕΓΟΥΝ ΟΙ ΝΙΚΗΤΕΣ ΕΔΩ (π.χ., Με τυχαία κλήρωση παρουσία συμβολαιογράφου)]",
-            rulesAnnounceTitle: "Ανακοίνωση Αποτελεσμάτων",
-            rulesAnnounceDesc: "[ΠΑΡΑΚΑΛΩ ΓΡΑΨΤΕ ΠΟΤΕ ΚΑΙ ΠΟΥ ΘΑ ΑΝΑΚΟΙΝΩΘΟΥΝ ΟΙ ΝΙΚΗΤΕΣ ΕΔΩ (π.χ., Εντός Χ ημερών μετά τη λήξη στον λογαριασμό Instagram Kyrosil και στον ιστότοπο)]",
-            rulesOtherTitle: "Άλλα Θέματα",
-            rulesOtherDesc: "[ΠΑΡΑΚΑΛΩ ΠΡΟΣΘΕΣΤΕ ΟΠΟΙΕΣΔΗΠΟΤΕ ΠΡΟΣΘΕΤΕΣ ΡΗΤΡΕΣ Η ΝΟΜΙΚΕΣ ΑΠΟΠΟΙΗΣΕΙΣ ΕΔΩ]",
-            sponsorsTitle: "Οι Χορηγοί Μας",
-            sponsorsPlaceholder: "[Εάν δεν υπάρχουν χορηγοί, διαγράψτε αυτήν την ενότητα ή γράψτε \"Αυτή η κλήρωση δεν έχει χορηγούς.\"]",
-            footerRights: "© 2025 Kyrosil. Με επιφύλαξη παντός δικαιώματος.",
-            footerTnc: "Ισχύουν Όροι & Προϋποθέσεις."
-        }
-        // ... (Diğer diller buraya eklenebilir)
-    };
-
+        tr: { // Turkish - Kısaltılmış Örnek (TÜM anahtarların çevirisi eklenecek)
+             pageTitle: "Kyrosil Büyük Çekiliş",
+             pageTitleGiveaway1: "Daire Çekilişi - Kyrosil",
+             pageTitleGiveaway2: "USDT Çekilişi - Kyrosil",
+             pageTitleGiveaway3: "Starbucks Çekilişi - Kyrosil",
+             pageTitleGiveaway4: "Partner Paketleri Çekilişi - Kyrosil",
+             mainHeading: "✨ Kyrosil Büyük Çekiliş! ✨",
+             indexChoiceTitle: "Çekilişini Seç!",
+             indexPrize1Title: "2+1 Daire",
+             indexPrize2Title: "250 USDT x 50",
+             indexPrize3Title: "50$ Starbucks Kart x 100",
+             indexPrize4Title: "Partner Hediye Paketleri",
+             indexEnterButton: "Detaylar & Katıl",
+             indexRulesLink: "Genel Katılım Şartları ve Koşulları Gör",
+             overallEndDate: "30 Nisan 2025", // Ana sayfadaki genel bitiş tarihi
+             detailBackButton: "&larr; Tüm Çekilişlere Geri Dön",
+             detailPrizeTitle: "Ödül",
+             detailFormTitle: "Çekilişe Katıl!",
+             form1Desc: "Aşağıdaki bilgileri doldurarak çekilişe katılabilirsiniz. Lütfen katılım şartlarını sağladığınızdan emin olun.",
+             prize1Title: "ReziKyros Azure Kağıthane'den 2+1 Daire",
+             prize1Desc: "Tamamlanmak üzere olan projemizden harika bir daire kazanma şansı!",
+             conditionsTitle: "Özel Şartlar:",
+             prize1Cond1: "18 yaşından büyük olmak",
+             prize1Cond2: "Üzerine herhangi bir araç veya tapu kaydı olmamak",
+             prize1Cond3: "Instagram'da @kyrosil hesabını takip etmek",
+             prize2Title: "50 Kişiye 250 USDT",
+             prize2Desc: "Tam 50 şanslı kişiden biri olup 250 USDT kazanabilirsiniz!",
+             prize3Title: "100 Kişiye 50$ Değerinde Starbucks Kart",
+             prize3Desc: "100 şanslı kişi 50$ Değerinde Starbucks Mobil Hediye Kartı kazanacak (Güncel kurla yaklaşık 1600 TL / 46 EUR karşılığı, değer değişiklik gösterebilir).",
+             prize4Title: "Partner Hediye Paketleri",
+             prize4Desc: "Partnerlerimizden harika hediye paketlerinden birini kazanmak için katılın: 50 Nestle Mutluluk Paketi, 100 Coca Cola Mutluluk Paketi veya 500 adet 30$ Değerinde Tıkla Gelsin Hediye Çeki!",
+             prize4DescBK: "500 kişiye Tıkla Gelsin mobil uygulamasında geçerli 30$ Değerinde Hediye Çeki (Güncel kurla yaklaşık 960 TL / 28 EUR karşılığı, değer değişiklik gösterebilir).",
+             formNameLabel: "Adın Soyadın:",
+             formNamePlaceholder: "örn: Ayşe Yılmaz",
+             formEmailLabel: "E-posta Adresin:",
+             formEmailPlaceholder: "örn: ayse@ornek.com",
+             formSubmitButton: "Katılımı Gönder",
+             formBackButton: "&larr; Geri Dön",
+             formValidationError: "Lütfen tüm gerekli alanları doldurun.",
+             formSubmitting: "Gönderiliyor...",
+             formSubmitted: "Gönderildi!",
+             formError: "Bir hata oluştu, lütfen tekrar deneyin.",
+             formThanksMessage: "Katıldığınız için teşekkürler! Bol şans.",
+             rulesTitle: "Genel Katılım Şartları ve Bilgiler",
+             rulesScheduleTitle: "Çekiliş Takvimi",
+             rulesStartDateLabel: "Başlangıç Tarihi:",
+             rulesStartDateValue: "[BURAYA BAŞLANGIÇ TARİH VE SAATİNİ YAZIN]",
+             rulesEndDateLabel: "Son Katılım Tarihi:",
+             giveaway1EndDateValue: "30 Nisan 2025",
+             giveaway2EndDateValue: "15 Nisan 2025",
+             giveaway3EndDateValue: "15 Nisan 2025",
+             giveaway4EndDateValue: "15 Nisan 2025",
+             rulesAnnounceTitle: "Sonuçların Açıklanması:",
+             giveaway1AnnounceDesc: "Sonuçlar 1 Mayıs 2025 tarihinde EU Portal'da yapılacak canlı yayın çekilişi ile açıklanacaktır.",
+             giveaway2AnnounceDesc: "Sonuçlar 16 Nisan 2025 tarihinde EU Portal'da yapılacak canlı yayın çekilişi ile açıklanacaktır.",
+             giveaway3AnnounceDesc: "Sonuçlar 16 Nisan 2025 tarihinde EU Portal'da yapılacak canlı yayın çekilişi ile açıklanacaktır.",
+             giveaway4AnnounceDesc: "Sonuçlar 16 Nisan 2025 tarihinde EU Portal'da yapılacak canlı yayın çekilişi ile açıklanacaktır.",
+             rulesGeneralCondTitle: "Genel Şartlar",
+             rulesCond1: "Tüm katılımcıların 18 yaşından büyük olması gerekmektedir.",
+             rulesCond2: "Tüm katılımcıların Instagram'da @kyrosil hesabını takip etmesi gerekmektedir.",
+             rulesCond3: "Kyrosil çalışanları ve birinci derece yakınları çekilişe katılamaz.",
+             rulesCondGeneric: "[Varsa diğer genel kuralları buraya ekleyin]",
+             rulesSpecialCond1Title: "Özel Şartlar (Daire Çekilişi)",
+             rulesSpecialCond1Item1: "Kazanan talihlinin üzerine çekiliş sonuçlarının açıklandığı tarih itibarıyla herhangi bir araç veya tapu kaydı bulunmaması gerekmektedir. Bu durumun kontrolü yapılacaktır.",
+             rulesSpecialCond2Title: "Özel Şartlar (USDT Çekilişi)",
+             rulesSpecialCond2Item1: "Bu çekilişte toplam 50 kişi, kişi başı 250 USDT kazanacaktır.",
+             rulesSpecialCond3Title: "Özel Şartlar (Starbucks Çekilişi)",
+             rulesSpecialCond3Item1: "Bu çekilişte toplam 100 kişi, kişi başı 50$ Değerinde Starbucks Mobil Hediye Kartı kazanacaktır.",
+             rulesSpecialCond4Title: "Özel Şartlar (Partner Paketleri Çekilişi)",
+             rulesSpecialCond4Item1: "Ödüller: 50 Nestle Paketi, 100 Coca Cola Paketi, 500 Burger King 30$ Çeki. Kazananlar rastgele atanacaktır.",
+             rulesWinnerSelTitle: "Kazananların Belirlenmesi",
+             rulesWinnerSelDesc: "Kazananlar, belirtilen açıklanma tarihinde EU Portal'da yapılacak canlı yayın çekilişi ile rastgele belirlenecektir.", // Açıklama güncellendi
+             legalTitle: "Yasal İzinler", // Yeni Anahtar
+             legalDesc: "Bu çekiliş, Türkiye Cumhuriyeti ve Avrupa Birliği'ndeki ilgili mercilerden alınan izinler dahilinde düzenlenmektedir. Türkiye İzni: Milli Piyango İdaresi - İzin No: [TR-MP-2025/XYZ-123] Tarih: [01/04/2025]. AB Bildirimi: Tüketici promosyonları yönetmelikleri kapsamında [İlgili AB Kurumu/Platform Adı] üzerinden kayıtlıdır - Ref: [EU-CP-2025/ABC-789]. Tüm katılımcılar katılarak şartları kabul etmiş sayılırlar. [Lütfen yer tutucuları gerçek izin detayları ile değiştirin].", // Yeni Anahtar - Placeholder
+             rulesOtherTitle: "Diğer Hususlar",
+             rulesOtherDesc: "[BURAYA GEREKLİ GÖRDÜĞÜNÜZ EK MADDELERİ VEYA YASAL UYARILARI EKLEYİN]", // Placeholder
+             sponsorsTitle: "Sponsorlarımız",
+             sponsorsPlaceholder: '[Sponsor yoksa bu bölümü silebilir veya "Bu çekilişin sponsoru bulunmamaktadır." yazabilirsiniz]', // Placeholder
+             footerRights: "© 2025 Kyrosil. Tüm hakları saklıdır.",
+             footerTnc: "T&Ş geçerlidir."
+         },
+         fr: { // French - Kısaltılmış Örnek (TÜM anahtarların çevirisi eklenecek)
+             pageTitle: "Grand Tirage au Sort Kyrosil",
+             pageTitleGiveaway1: "Tirage Appartement - Kyrosil",
+             //... Diğer FR çevirileri ...
+             rulesEndDateLabel: "Date limite d'inscription :",
+             giveaway1EndDateValue: "30 Avril 2025",
+             giveaway2EndDateValue: "15 Avril 2025", // Örnek
+             rulesAnnounceTitle: "Annonce des résultats :",
+             giveaway1AnnounceDesc: "Les résultats seront annoncés par tirage au sort retransmis en direct sur EU Portal le 1er Mai 2025.",
+             giveaway2AnnounceDesc: "Les résultats seront annoncés par tirage au sort retransmis en direct sur EU Portal le 16 Avril 2025.", // Örnek
+             rulesWinnerSelDesc: "Les gagnants seront déterminés par un tirage au sort aléatoire retransmis en direct sur EU Portal à la date d'annonce spécifiée.",
+             legalTitle: "Autorisations Légales",
+             legalDesc: "Ce tirage au sort est organisé conformément aux autorisations obtenues auprès des autorités compétentes en Turquie et dans l'Union européenne. Permis Turquie : Milli Piyango İdaresi - Permis n° : [TR-MP-2025/XYZ-123] daté du [01/04/2025]. Notification UE : Enregistré selon les réglementations sur les promotions à la consommation via [Nom de l'organisme/plateforme UE pertinent] - Réf : [EU-CP-2025/ABC-789]. Tous les participants acceptent les conditions en participant. [Veuillez remplacer les placeholders par les détails réels du permis].",
+             //... Diğer FR çevirileri ...
+             footerRights: "© 2025 Kyrosil. Tous droits réservés.",
+             footerTnc: "T&C s'appliquent."
+         },
+         el: { // Greek - Kısaltılmış Örnek (TÜM anahtarların çevirisi eklenecek)
+             pageTitle: "Μεγάλη Κλήρωση Kyrosil",
+              pageTitleGiveaway1: "Κλήρωση Διαμερίσματος - Kyrosil",
+             //... Diğer EL çevirileri ...
+             rulesEndDateLabel: "Προθεσμία Συμμετοχής:",
+             giveaway1EndDateValue: "30 Απριλίου 2025",
+             giveaway2EndDateValue: "15 Απριλίου 2025", // Örnek
+             rulesAnnounceTitle: "Ανακοίνωση Αποτελεσμάτων:",
+             giveaway1AnnounceDesc: "Τα αποτελέσματα θα ανακοινωθούν μέσω ζωντανής μετάδοσης κλήρωσης στο EU Portal την 1η Μαΐου 2025.",
+             giveaway2AnnounceDesc: "Τα αποτελέσματα θα ανακοινωθούν μέσω ζωντανής μετάδοσης κλήρωσης στο EU Portal στις 16 Απριλίου 2025.", // Örnek
+             rulesWinnerSelDesc: "Οι νικητές θα καθοριστούν με τυχαία κλήρωση που θα διεξαχθεί μέσω ζωντανής μετάδοσης στο EU Portal την καθορισμένη ημερομηνία ανακοίνωσης.",
+             legalTitle: "Νομικές Άδειες",
+             legalDesc: "Αυτή η κλήρωση διεξάγεται σύμφωνα με τις άδειες που έχουν ληφθεί από τις αρμόδιες αρχές στην Τουρκία και την Ευρωπαϊκή Ένωση. Άδεια Τουρκίας: Milli Piyango İdaresi - Αρ. Άδειας: [TR-MP-2025/XYZ-123] ημερ. [01/04/2025]. Κοινοποίηση ΕΕ: Καταχωρήθηκε σύμφωνα με τους κανονισμούς προώθησης καταναλωτών μέσω [Όνομα αρμόδιου φορέα/πλατφόρμας ΕΕ] - Αρ. πρωτ.: [EU-CP-2025/ABC-789]. Όλοι οι συμμετέχοντες αποδέχονται τους όρους με τη συμμετοχή τους. [Παρακαλούμε αντικαταστήστε τα placeholders με τα πραγματικά στοιχεία της άδειας].",
+             //... Diğer EL çevirileri ...
+             footerRights: "© 2025 Kyrosil. Με επιφύλαξη παντός δικαιώματος.",
+             footerTnc: "Ισχύουν Όροι & Προϋποθέσεις."
+         }
+     };
 
     // --- DOM Elementleri ---
-    const sections = document.querySelectorAll('.section');
-    const choiceSection = document.getElementById('choice-section');
-    const thankYouSection = document.getElementById('thank-you-section');
-    const choiceButtons = document.querySelectorAll('.choice-btn'); // Tüm dil butonları dahil
-    const giveawayForms = document.querySelectorAll('.giveaway-form');
-    const backButtons = document.querySelectorAll('.btn-back');
-    const backToStartBtn = document.getElementById('back-to-start-btn');
+    // ... (önceki gibi)
     const languageButtons = document.querySelectorAll('.language-switcher button');
     const translatableElements = document.querySelectorAll('[data-lang-key]');
-
+    const giveawayForms = document.querySelectorAll('.giveaway-form');
 
     // --- Dil Fonksiyonları ---
+    // ... (setLanguage, initializeLanguage fonksiyonları önceki gibi) ...
     let currentLang = 'en'; // Varsayılan dil
 
-    function setLanguage(lang) {
-        if (!translations[lang]) {
-            console.warn(`Language ${lang} not found in translations.`);
-            return;
-        }
+     function setLanguage(lang) {
+        if (!translations[lang]) return;
         currentLang = lang;
-        localStorage.setItem('preferredLanguage', lang); // Seçimi kaydet
-        document.documentElement.lang = lang; // HTML lang attribute'unu güncelle
+        localStorage.setItem('preferredLanguage', lang);
+        document.documentElement.lang = lang;
 
         translatableElements.forEach(element => {
             const key = element.dataset.langKey;
-            const translation = translations[lang][key];
+            let translation = translations[lang][key];
+
+            // Özel durum: Çekiliş sayfasında doğru tarih/açıklama anahtarını kullan
+            // Bu mantık hangi HTML sayfasında olduğumuza göre genişletilebilir
+            // veya her sayfa için ayrı JS dosyası kullanılabilir.
+            // Şimdilik basit tutmak için, anahtarları HTML'de doğru verdiğimizi varsayıyoruz.
+            // (örn. giveaway1.html'de giveaway1EndDateValue anahtarı var)
 
             if (translation !== undefined) {
-                // HTML içeriği olan etiketler (p, h1, span, li, button vb.)
-                if (element.childElementCount === 0 || element.tagName === 'BUTTON' || element.dataset.langKey === 'footerRights' || element.dataset.langKey === 'footerTnc') {
-                   // Butonlar ve bazı özel spanlar için innerHTML kullanmak gerekebilir (örn. ok ikonu için)
-                   if(element.tagName === 'BUTTON' && translation.includes('<span class="arrow">')){
-                       element.innerHTML = translation;
-                   } else if (element.placeholder !== undefined) {
-                       // Input placeholder'ları
-                       element.placeholder = translation;
-                   }
-                   else {
-                       element.textContent = translation;
-                   }
-                }
-                 else if (element.placeholder !== undefined) {
-                     // Input placeholder'ları (Bu koşul yukarıdakiyle birleştirilebilir)
+                if (element.placeholder !== undefined) {
                     element.placeholder = translation;
-                 }
+                } else if (element.tagName === 'A' && element.classList.contains('index-choice-card')) {
+                     // Ana sayfadaki kartların içindeki H3 ve Span'ı güncelle
+                     const h3 = element.querySelector('h3');
+                     const span = element.querySelector('.index-enter-btn');
+                     if(h3 && translations[lang][h3.dataset.langKey]) h3.innerHTML = translations[lang][h3.dataset.langKey];
+                     if(span && translations[lang][span.dataset.langKey]) span.innerHTML = translations[lang][span.dataset.langKey];
+                }
                 else {
-                     // Eğer elementin içinde başka elementler varsa (örn. strong etiketi)
-                     // Bu basit yaklaşım iç yapıyı bozabilir. Daha gelişmiş DOM manipülasyonu gerekebilir.
-                     // Şimdilik basit metinleri değiştirdiğini varsayalım.
-                     // VEYA anahtar sadece metin içeren span'e verilebilir.
-                     // Örnek: <p><span data-lang-key="myKey">Text</span> More text</p>
-                     // Şimdilik basitçe textContent ayarlıyoruz.
-                     element.textContent = translation; // Bu satır iç HTML'i silebilir, dikkat!
-                                                        // Daha güvenli yol: Anahtarları sadece metin içeren en içteki elemana vermek.
-                                                        // Örnek: <p><strong data-lang-key="label">Label:</strong> <span data-lang-key="value">Value</span></p>
-                 }
-
-
+                    element.innerHTML = translation; // İç HTML'i değiştirmek çoğu durumda çalışır
+                }
             } else {
-                console.warn(`Translation key "${key}" not found for language "${lang}".`);
+                 console.warn(`Key "${key}" not found for lang "${lang}".`);
+                 // Fallback olarak İngilizceyi göster (isteğe bağlı)
+                 // translation = translations['en'][key];
+                 // if (translation !== undefined) { /* ... update element ... */ }
             }
         });
 
-        // Aktif dil butonunu güncelle
         languageButtons.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.lang === lang);
         });
-    }
-
-    // Dil Butonlarına Olay Dinleyici Ekle
-    languageButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            setLanguage(button.dataset.lang);
-        });
-    });
-
-    // Sayfa Yüklendiğinde Dili Ayarla
-    function initializeLanguage() {
-        const savedLang = localStorage.getItem('preferredLanguage');
-        const browserLang = navigator.language ? navigator.language.split('-')[0] : 'en'; // Tarayıcı dilini al (örn: "en", "tr")
-
-        // Desteklenen diller listesi
-        const supportedLangs = ['en', 'tr', 'fr', 'el'];
-        let initialLang = 'en'; // Varsayılan
-
-        if (savedLang && supportedLangs.includes(savedLang)) {
-            initialLang = savedLang;
-        } else if (supportedLangs.includes(browserLang)) {
-            initialLang = browserLang;
-        }
-        // Başlangıç dilini ayarla
-        setLanguage(initialLang);
-    }
-
-
-    // --- Bölüm Geçiş Fonksiyonları (Aynı) ---
-    function switchSection(targetSectionId) {
-         sections.forEach(section => {
-             section.classList.toggle('active-section', section.id === targetSectionId);
-         });
-         // Sayfanın başına gitmek için zamanlayıcı ekleyebiliriz animasyon bitince
-         setTimeout(() => {
-             const targetElement = document.getElementById(targetSectionId);
-             if(targetElement) {
-                // targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                window.scrollTo({ top: targetElement.offsetTop - 80, behavior: 'smooth' }); // Header yüksekliğini düşebiliriz
-             }
-         }, 50); // CSS transition süresiyle uyumlu olabilir
      }
 
-    choiceButtons.forEach(button => {
-        button.addEventListener('click', (event) => {
-            const choiceCard = event.target.closest('.choice-card');
-            if (choiceCard) {
-                const selectedGiveawayId = choiceCard.dataset.giveaway + '-section';
-                switchSection(selectedGiveawayId);
-            }
-        });
-    });
+     languageButtons.forEach(button => {
+         button.addEventListener('click', (e) => {
+             setLanguage(button.dataset.lang);
+         });
+     });
 
-    backButtons.forEach(button => {
-        button.addEventListener('click', (event) => {
-            const targetSectionId = event.target.dataset.target;
-            switchSection(targetSectionId);
-        });
-    });
+     function initializeLanguage() {
+         const savedLang = localStorage.getItem('preferredLanguage');
+         const browserLang = navigator.language ? navigator.language.split('-')[0] : 'en';
+         const supportedLangs = ['en', 'tr', 'fr', 'el'];
+         let initialLang = 'en';
+         if (savedLang && supportedLangs.includes(savedLang)) {
+             initialLang = savedLang;
+         } else if (supportedLangs.includes(browserLang)) {
+             initialLang = browserLang;
+         }
+         setLanguage(initialLang);
+     }
 
-     backToStartBtn.addEventListener('click', () => {
-        switchSection('choice-section');
-    });
 
-    // --- Form Gönderme (Veri Depolama SİZE AİT) ---
-    giveawayForms.forEach(form => {
-        form.addEventListener('submit', (event) => {
-            event.preventDefault();
-            // ... (Form doğrulama ve veri alma kodları aynı) ...
+    // --- Form Gönderme (Detay Sayfalarında Çalışacak - Önceki gibi) ---
+    // ... (form submit event listener kodları) ...
+     giveawayForms.forEach(form => {
+         const messageElement = form.querySelector('.form-message');
+         const submitButton = form.querySelector('button[type="submit"]');
+         let originalButtonText = ''; // Buton metnini saklamak için
+
+         form.addEventListener('submit', (event) => {
+             event.preventDefault();
+             const nameInput = form.querySelector('input[name="name"]');
+             const emailInput = form.querySelector('input[name="email"]');
+             originalButtonText = submitButton.innerHTML; // Orijinal metni kaydet
+
+             if (!nameInput.value.trim() || !emailInput.value.trim()) {
+                  alert(translations[currentLang]['formValidationError'] || "Lütfen tüm alanları doldurun.");
+                  return;
+             }
+
+             submitButton.disabled = true;
+             submitButton.style.opacity = 0.7;
+             submitButton.innerHTML = translations[currentLang]['formSubmitting'] || "Gönderiliyor...";
+             if(messageElement) messageElement.classList.add('hidden'); // Önceki mesajı gizle
+
+
              const formData = new FormData(form);
-             const name = formData.get('name');
-             const email = formData.get('email');
-             const whichForm = form.id;
-
-             console.log(`--- ${whichForm} Form Gönderildi ---`);
-             console.log("Ad Soyad:", name);
-             console.log("E-posta:", email);
-             console.log("-----------------------------");
+             // ... (veri alma) ...
+             console.log("Form submitted for:", form.id);
 
 
-            // -----!----- VERİ DEPOLAMA ALANI (DEĞİŞMEDİ VE ÇOK ÖNEMLİ) -----!-----
-            // Google Forms, Apps Script, Formspree vb. bir yöntem kullanmalısınız.
-            // -------------------------------------------------------------------
+             // -----!----- VERİ DEPOLAMA -----!-----
+             // Buraya fetch veya benzeri kodunuz gelecek.
+             // Başarı durumunda:
+              setTimeout(() => { // Simülasyon
+                  if (messageElement) {
+                      messageElement.innerHTML = `<p data-lang-key="formThanksMessage">${translations[currentLang]['formThanksMessage']}</p>`;
+                      messageElement.classList.remove('hidden');
+                  }
+                  form.reset();
+                  // Butonu gönderildi olarak bırakabiliriz veya eski haline getirebiliriz
+                   submitButton.innerHTML = translations[currentLang]['formSubmitted'] || "Gönderildi!";
+                   // submitButton.disabled = false; // Tekrar gönderme izni için
+                   // submitButton.style.opacity = 1;
+              }, 1000);
+              // Hata durumunda:
+              /*
+              setTimeout(() => {
+                  alert(translations[currentLang]['formError'] || "Bir hata oluştu.");
+                  submitButton.disabled = false;
+                  submitButton.style.opacity = 1;
+                  submitButton.innerHTML = originalButtonText; // Orijinal metne dön
+              }, 1000);
+              */
 
-            switchSection('thank-you-section');
-            form.reset();
-        });
-    });
-
+         });
+     });
 
     // --- Başlangıç ---
-    initializeLanguage(); // Sayfa yüklendiğinde dili ayarla
-    switchSection('choice-section'); // Başlangıç bölümünü göster
+    initializeLanguage();
 
 });
