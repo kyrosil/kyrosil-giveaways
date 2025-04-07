@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Özel Çekiliş Uygulaması</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
 
+    <header class="app-header">
+        <h1>✨ Muhteşem Çekilişimiz Başladı! ✨</h1>
+    </header>
+
+    <main class="container">
+
+        <section id="choice-section" class="section active-section">
+            <h2>Hangi Harika Ödülü Kazanmak İstersin?</h2>
+            <div class="choices">
+                <div class="choice-card" data-giveaway="giveaway1">
+                    <img src="logo1-placeholder.png" alt="Çekiliş 1 Hediyesi" class="choice-img">
+                    <h3>Teknoloji Paketi</h3>
+                    <p>En yeni gadget'lar seni bekliyor!</p>
+                    <button class="choice-btn btn-primary">Bu Çekilişe Katıl <span class="arrow">&rarr;</span></button>
+                </div>
+                <div class="choice-card" data-giveaway="giveaway2">
+                    <img src="logo2-placeholder.png" alt="Çekiliş 2 Hediyesi" class="choice-img">
+                    <h3>Tatil Fırsatı</h3>
+                    <p>Unutulmaz bir kaçamak yap!</p>
+                    <button class="choice-btn btn-secondary">Bu Çekilişe Katıl <span class="arrow">&rarr;</span></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="giveaway1-section" class="section">
+            <h2>Teknoloji Paketi Çekilişi</h2>
+            <p>Bilgilerini doldur, şansını yakala!</p>
+            <form id="form-giveaway1" class="giveaway-form">
+                <div class="form-group">
+                    <label for="name1">Adın Soyadın:</label>
+                    <input type="text" id="name1" name="name" placeholder="örn: Ayşe Yılmaz" required>
+                </div>
+                <div class="form-group">
+                    <label for="email1">E-posta Adresin:</label>
+                    <input type="email" id="email1" name="email" placeholder="örn: ayse@ornek.com" required>
+                </div>
+                <button type="submit" class="btn-submit btn-primary">Katılımı Gönder</button>
+                <button type="button" class="btn-back" data-target="choice-section">&larr; Geri Dön</button>
+            </form>
+        </section>
+
+        <section id="giveaway2-section" class="section">
+            <h2>Tatil Fırsatı Çekilişi</h2>
+            <p>Hayallerindeki tatile bir adım daha yaklaş!</p>
+            <form id="form-giveaway2" class="giveaway-form">
+                 <div class="form-group">
+                    <label for="name2">Adın Soyadın:</label>
+                    <input type="text" id="name2" name="name" placeholder="örn: Ali Veli" required>
+                </div>
+                <div class="form-group">
+                    <label for="email2">E-posta Adresin:</label>
+                    <input type="email" id="email2" name="email" placeholder="örn: ali@ornek.com" required>
+                </div>
+                <button type="submit" class="btn-submit btn-secondary">Katılımı Gönder</button>
+                <button type="button" class="btn-back" data-target="choice-section">&larr; Geri Dön</button>
+            </form>
+        </section>
+
+        <section id="thank-you-section" class="section">
+            <h2>🎉 Teşekkür Ederiz! 🎉</h2>
+            <p>Çekilişimize başarıyla katıldın! Kazananlar belirtilen tarihte e-posta ile duyurulacaktır.</p>
+            <p>Bol şans!</p>
+            <button id="back-to-start-btn" class="btn-primary">Yeni Katılım Yap</button>
+        </section>
+
+    </main>
+
+    <footer class="app-footer">
+        <p>&copy; 2025 Senin Websiten. Tüm hakları saklıdır.</p>
+        </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
