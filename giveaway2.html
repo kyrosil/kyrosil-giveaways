@@ -4,56 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-lang-key="pageTitleGiveaway2">USDT Giveaway - Kyrosil</title>
-    <link rel="stylesheet" href="style.css"> {/* Ana stil dosyanız hala bağlı */}
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
       .winners-grid {
-        /* Grid Konteyneri Ayarları */
         display: grid;
-        /* Otomatik olarak sığacak sütunlar oluşturur.
-           Her sütun en az 180px genişliğinde olur,
-           boşluk kalırsa eşit olarak paylaşır (1fr). */
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 1rem; /* Öğeler arasındaki boşluk (yatay ve dikey) */
-        list-style: none; /* Liste işaretlerini (örn. 1., 2.) kaldırır */
-        padding: 0; /* Tarayıcı varsayılan iç boşluğunu sıfırlar */
-        margin-top: 1em; /* Üstündeki başlığa göre boşluk */
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+        margin-top: 1em;
       }
-
       .winners-grid li {
-        /* Grid Öğesi (Her bir kazanan) Ayarları */
-        background-color: #f8f9fa; /* Hafif bir arka plan rengi */
-        border: 1px solid #dee2e6; /* İnce bir kenarlık */
-        padding: 0.75rem 1rem; /* İç boşluk (üst/alt - sağ/sol) */
-        border-radius: 0.3rem; /* Yumuşak köşeler */
-        text-align: center; /* Metni ortala */
-        font-size: 0.9em; /* Font boyutunu biraz küçült */
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Çok hafif bir gölge */
-        transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hover efekti için geçiş */
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        padding: 0.75rem 1rem;
+        border-radius: 0.3rem;
+        text-align: center;
+        font-size: 0.9em;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
-
-      /* İsteğe Bağlı: Hover efekti */
       .winners-grid li:hover {
-        transform: translateY(-2px); /* Hafif yukarı kalkma */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Daha belirgin gölge */
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
-
-      /* İsteğe Bağlı: Daha küçük ekranlar için ince ayar (genelde auto-fit yeterli olur) */
       @media (max-width: 480px) {
         .winners-grid {
-          /* Çok küçük ekranlarda sütunlar arası boşluğu azaltabiliriz */
           gap: 0.75rem;
         }
         .winners-grid li {
-           padding: 0.6rem 0.8rem; /* İç boşluğu biraz azalt */
-           font-size: 0.85em; /* Fontu biraz daha küçült */
+           padding: 0.6rem 0.8rem;
+           font-size: 0.85em;
         }
       }
     </style>
-    </head>
+
+</head>
 <body>
     <header class="app-header">
         <div class="language-switcher"> <button data-lang="en">EN</button> <button data-lang="tr">TR</button> <button data-lang="fr">FR</button> <button data-lang="el">EL</button> </div>
@@ -75,13 +65,8 @@
             <h2 data-lang-key="resultsTitle">Giveaway Results</h2>
             <p data-lang-key="resultsSummary">Congratulations to the 50 lucky winners below, each receiving 250 USDT!</p>
             <h3 data-lang-key="winnersListTitle">Winners List:</h3>
-            <ol class="winners-list winners-grid"> {/* Hem eski class hem yeni grid class */}
-                {/*
-                    *******************************************************
-                    * DİKKAT: Aşağıdaki liste sadece ÖRNEKTİR!             *
-                    * Bu <li> etiketlerini GERÇEK KAZANANLAR ile değiştirin! *
-                    *******************************************************
-                */}
+            <ol class="winners-list winners-grid">
+                {/* === GERÇEK KAZANAN LİSTESİNİ BURAYA GİRİN === */}
                 <li>Ahmet Yılmaz</li>
                 <li>Maria Garcia</li>
                 <li>Mehmet Kaya</li>
@@ -132,17 +117,17 @@
                 <li>Nikolaos Papadopoulos</li>
                 <li>Yasemin Koç</li>
                 <li>James White</li>
-                {/* Gerekirse daha fazla <li> ekleyerek gerçek kazananları tamamlayın */}
+                {/* === KAZANAN LİSTESİ SONU === */}
             </ol>
             <p style="margin-top: 1em;" data-lang-key="resultsContact">Winners will be contacted via the email address provided during entry. Congratulations to all!</p>
         </section>
+
         <section id="rules" class="section content-section">
             <h2 data-lang-key="rulesTitle">General Terms & Information</h2>
             <div class="rule-block">
                 <h4 data-lang-key="rulesScheduleTitle">Giveaway Schedule</h4>
                 <p><strong data-lang-key="rulesStartDateLabel">Start Date:</strong> <span data-lang-key="rulesStartDateValue">April 8, 2025</span></p>
                 <p><strong data-lang-key="rulesEndDateLabel">Entry Deadline:</strong> <span data-lang-key="giveaway2EndDateValue">April 15, 2025</span></p>
-                {/* Sonuç duyuru metnini güncelledim */}
                 <p><strong data-lang-key="rulesAnnounceTitle">Announcement of Results:</strong> <span data-lang-key="giveaway2AnnounceDesc">Results were announced via live broadcast draw on EU Portal on April 16, 2025. Winners are listed above.</span></p>
             </div>
             <div class="rule-block">
@@ -151,15 +136,13 @@
             </div>
              <div class="rule-block">
                 <h4 data-lang-key="rulesSpecialCond2Title">Specific Conditions (USDT Giveaway)</h4>
-                 {/* Koşul metnini geçmiş zamana uygun güncelledim */}
                 <ul> <li data-lang-key="rulesSpecialCond2Item1">A total of 50 people won 250 USDT each.</li> </ul>
             </div>
-             {/* Kazanan seçimi ve yasal izin metinlerini geçmiş zamana uygun güncelledim */}
             <div class="rule-block"> <h4 data-lang-key="rulesWinnerSelTitle">Winner Selection</h4> <p data-lang-key="rulesWinnerSelDesc">Winners were determined by a random draw...</p> </div>
             <div class="rule-block"> <h4 data-lang-key="legalTitle">Legal Permissions</h4> <p data-lang-key="legalDesc">This giveaway was conducted under the permissions obtained...</p> </div>
         </section>
     </main>
     <footer class="app-footer"> <p><span data-lang-key="footerRights">© 2025 Kyrosil. All rights reserved.</span> <span data-lang-key="footerTnc">T&C apply.</span></p> </footer>
-    <script src="script.js"></script> {/* Script dosyanız hala bağlı */}
+    <script src="script.js"></script>
 </body>
 </html>
