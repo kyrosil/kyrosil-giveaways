@@ -4,10 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-lang-key="pageTitleGiveaway3">Starbucks Giveaway - Kyrosil</title>
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      /* Kazananlar Grid Stilleri */
+      .winners-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+        margin-top: 1em;
+      }
+      .winners-grid li {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        padding: 0.75rem 1rem;
+        border-radius: 0.3rem;
+        text-align: center;
+        font-size: 0.9em;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .winners-grid li:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      @media (max-width: 480px) {
+        .winners-grid {
+          gap: 0.75rem;
+        }
+        .winners-grid li {
+           padding: 0.6rem 0.8rem;
+           font-size: 0.85em;
+        }
+      }
+    </style>
+
 </head>
 <body>
     <header class="app-header">
@@ -21,37 +57,143 @@
             <h2 data-lang-key="detailPrizeTitle">The Prize</h2>
             <p data-lang-key="prize3Desc">100 lucky winners will receive a $50 Starbucks Mobile Gift Card...</p>
         </section>
-        <section id="giveaway3-section" class="section">
-             <h2 data-lang-key="detailFormTitle">Enter the Draw!</h2>
-             <p data-lang-key="formDescGeneric">You can enter this giveaway by filling out the information below...</p>
-             <form id="form-giveaway3" class="giveaway-form">
-                 <div class="form-group"> <label for="name3" data-lang-key="formNameLabel">Full Name:</label> <input type="text" id="name3" name="name" data-lang-key="formNamePlaceholder" placeholder="e.g., John Doe" required> </div>
-                 <div class="form-group"> <label for="email3" data-lang-key="formEmailLabel">Email Address:</label> <input type="email" id="email3" name="email" data-lang-key="formEmailPlaceholder" placeholder="e.g., john@example.com" required> </div>
-                 <div class="form-group"> <label for="insta3" data-lang-key="formInstaLabel">Instagram Username:</label> <input type="text" id="insta3" name="instagram" data-lang-key="formInstaPlaceholder" placeholder="e.g., @username" required> </div>
-                 <div class="form-group consent"> <input type="checkbox" id="ipConsent3" name="ipConsent" required> <label for="ipConsent3" data-lang-key="formIpConsentLabel">I confirm that my IP address may be logged...</label> </div>
-                 <div id="form-message" class="form-message hidden"> <p data-lang-key="formThanksMessage">Thank you for entering! Good luck.</p> </div>
-                 <button type="submit" class="btn-submit btn-primary" data-lang-key="formSubmitButton">Submit Entry</button>
-             </form>
+
+        <section id="results-section" class="section">
+            <h2 data-lang-key="resultsTitle">Giveaway Results</h2>
+            <p data-lang-key="resultsSummary3">Congratulations to the 100 lucky winners below, each receiving a $50 Starbucks Mobile Gift Card!</p>
+            <h3 data-lang-key="winnersListTitle">Winners List:</h3>
+            <ol class="winners-list winners-grid">
+                {/* === YENİ, FARKLI 100 KİŞİLİK ÖRNEK KAZANAN LİSTESİ (GERÇEKLERİYLE DEĞİŞTİRİN!) === */}
+                <li>Serkan Boztaş</li>
+                <li>Olivia Martin</li>
+                <li>Barış Akgün</li>
+                <li>Chloe Lefebvre</li>
+                <li>Ebru Sancak</li>
+                <li>Matteo Ricci</li>
+                <li>Gökçe Ural</li>
+                <li>Noah Wagner</li>
+                <li>İlhan Keskin</li>
+                <li>Sophia Becker</li>
+                <li>Kübra Taşdelen</li>
+                <li>Leo Moreau</li>
+                <li>Musa Çakır</li>
+                <li>Isabelle Simon</li>
+                <li>Nurdan Alpaslan</li>
+                <li>Felix Schneider</li>
+                <li>Oğuzhan Durmuş</li>
+                <li>Amelia Hoffmann</li>
+                <li>Pınar Işık</li>
+                <li>Hugo Fischer</li>
+                <li>Recep Şentürk</li>
+                <li>Mia Weber</li>
+                <li>Sinan Coşkun</li>
+                <li>Arthur Keller</li>
+                <li>Tuğba Sezgin</li>
+                <li>Clara Meyer</li>
+                <li>Ufuk Adıgüzel</li>
+                <li>Louis Huber</li>
+                <li>Volkan Erol</li>
+                <li>Ella Walter</li>
+                <li>Yaren Karakaş</li>
+                <li>Finn König</li>
+                <li>Zafer Özturan</li>
+                <li>Lina Mayer</li>
+                <li>Aslıhan Gündüz</li>
+                <li>Paul Wolf</li>
+                <li>Bilal Sarıoğlu</li>
+                <li>Emilia Schreiber</li>
+                <li>Cüneyt Peker</li>
+                <li>Jonas Baumann</li>
+                <li>Dilan Toprak</li>
+                <li>Hannah Schubert</li>
+                <li>Ercan Solmaz</li>
+                <li>Ben Schwarz</li>
+                <li>Figen Yücel</li>
+                <li>Maximilian Hahn</li>
+                <li>Galip Aktaş</li>
+                <li>Sophie Pohl</li>
+                <li>Haluk Vatansever</li>
+                <li>Leon Lang</li>
+                <li>Jale Biçer</li>
+                <li>Marie Voss</li>
+                <li>Kadir Ünlü</li>
+                <li>Anton Engel</li>
+                <li>Leman Polat</li>
+                <li>Johanna Krause</li>
+                <li>Metin Türk</li>
+                <li>Nico Berger</li>
+                <li>Nilgün Savaş</li>
+                <li>Charlotte Braun</li>
+                <li>Orhan Acar</li>
+                <li>Ida Peters</li>
+                <li>Perihan Çoban</li>
+                <li>Erik Otto</li>
+                <li>Ramazan Kurt</li>
+                <li>Frieda Schuster</li>
+                <li>Songül Dağ</li>
+                <li>Till Ludwig</li>
+                <li>Tayfun Yaman</li>
+                <li>Mathilda Seidel</li>
+                <li>Ümit Güngör</li>
+                <li>Oskar Beck</li>
+                <li>Vedat Saygıner</li>
+                <li>Paula Ernst</li>
+                <li>Yelda Gök</li>
+                <li>Carl Herzog</li>
+                <li>Zülfü Şimşek</li>
+                <li>Martha Schröder</li>
+                <li>Adem Altın</li>
+                <li>Valentin Lorenz</li>
+                <li>Beril Kılıç</li>
+                <li>Carla Winkler</li>
+                <li>Cihan Albayrak</li>
+                <li>Bruno Roth</li>
+                <li>Derya Kara</li>
+                <li>Emil Graf</li>
+                <li>Erdem Atalay</li>
+                <li>Frida Ziegler</li>
+                <li>Fırat Soylu</li>
+                <li>Greta Bachmann</li>
+                <li>Gülşah Çetin</li>
+                <li>Hannes Horn</li>
+                <li>Hamza Yılmazer</li>
+                <li>Jonathan Conrad</li>
+                <li>Jülide Demir</li>
+                <li>Karl Franke</li>
+                <li>Koray Avcı</li>
+                <li>Lotte Jäger</li>
+                <li>Lokman Şen</li>
+                <li>Malte Herrmann</li>
+                <li>Meltem Sönmez</li>
+                <li>Mats Kurz</li>
+                <li>Nalan Ersoy</li>
+                <li>Moritz Werner</li>
+                <li>Osman Bal</li>
+                <li>Pia Lehmann</li>
+                {/* === ÖRNEK LİSTE SONU === */}
+            </ol>
+            <p style="margin-top: 1em;" data-lang-key="resultsContact">Winners will be contacted via the email address provided during entry. Congratulations to all!</p>
         </section>
+
         <section id="rules" class="section content-section">
-              <h2 data-lang-key="rulesTitle">General Terms & Information</h2>
-              <div class="rule-block">
-                  <h4 data-lang-key="rulesScheduleTitle">Giveaway Schedule</h4>
-                  <p><strong data-lang-key="rulesStartDateLabel">Start Date:</strong> <span data-lang-key="rulesStartDateValue">April 8, 2025</span></p>
-                  <p><strong data-lang-key="rulesEndDateLabel">Entry Deadline:</strong> <span data-lang-key="giveaway3EndDateValue">April 15, 2025</span></p>
-                  <p><strong data-lang-key="rulesAnnounceTitle">Announcement of Results:</strong> <span data-lang-key="giveaway3AnnounceDesc">Results will be announced via live broadcast draw on EU Portal on April 16, 2025.</span></p>
-              </div>
-              <div class="rule-block">
-                  <h4 data-lang-key="rulesGeneralCondTitle">General Conditions</h4>
-                   <ul> <li data-lang-key="rulesCond1">All participants must be over 18 years of age.</li> <li data-lang-key="rulesCond2">All participants must follow the @kyrosil account on Instagram.</li> <li data-lang-key="rulesCond3">Kyrosil employees and their first-degree relatives cannot participate...</li> </ul>
-              </div>
-               <div class="rule-block">
-                  <h4 data-lang-key="rulesSpecialCond3Title">Specific Conditions (Starbucks Giveaway)</h4>
-                  <ul> <li data-lang-key="rulesSpecialCond3Item1">A total of 100 people will win a $50 Starbucks Mobile Gift Card each.</li> </ul>
-              </div>
-              <div class="rule-block"> <h4 data-lang-key="rulesWinnerSelTitle">Winner Selection</h4> <p data-lang-key="rulesWinnerSelDesc">Winners will be determined by a random draw...</p> </div>
-              <div class="rule-block"> <h4 data-lang-key="legalTitle">Legal Permissions</h4> <p data-lang-key="legalDesc">This giveaway is conducted under the permissions obtained...</p> </div>
-          </section>
+            <h2 data-lang-key="rulesTitle">General Terms & Information</h2>
+            <div class="rule-block">
+                <h4 data-lang-key="rulesScheduleTitle">Giveaway Schedule</h4>
+                <p><strong data-lang-key="rulesStartDateLabel">Start Date:</strong> <span data-lang-key="rulesStartDateValue">April 8, 2025</span></p>
+                <p><strong data-lang-key="rulesEndDateLabel">Entry Deadline:</strong> <span data-lang-key="giveaway3EndDateValue">April 15, 2025</span></p>
+                <p><strong data-lang-key="rulesAnnounceTitle">Announcement of Results:</strong> <span data-lang-key="giveaway3AnnounceDesc">Results were announced via live broadcast draw on EU Portal on April 16, 2025. Winners are listed above.</span></p>
+            </div>
+            <div class="rule-block">
+                <h4 data-lang-key="rulesGeneralCondTitle">General Conditions</h4>
+                 <ul> <li data-lang-key="rulesCond1">All participants must be over 18 years of age.</li> <li data-lang-key="rulesCond2">All participants must follow the @kyrosil account on Instagram.</li> <li data-lang-key="rulesCond3">Kyrosil employees and their first-degree relatives cannot participate...</li> </ul>
+            </div>
+             <div class="rule-block">
+                <h4 data-lang-key="rulesSpecialCond3Title">Specific Conditions (Starbucks Giveaway)</h4>
+                <ul> <li data-lang-key="rulesSpecialCond3Item1">A total of 100 people won a $50 Starbucks Mobile Gift Card each.</li> </ul>
+            </div>
+            <div class="rule-block"> <h4 data-lang-key="rulesWinnerSelTitle">Winner Selection</h4> <p data-lang-key="rulesWinnerSelDesc">Winners were determined by a random draw...</p> </div>
+            <div class="rule-block"> <h4 data-lang-key="legalTitle">Legal Permissions</h4> <p data-lang-key="legalDesc">This giveaway was conducted under the permissions obtained...</p> </div>
+        </section>
     </main>
     <footer class="app-footer"> <p><span data-lang-key="footerRights">© 2025 Kyrosil. All rights reserved.</span> <span data-lang-key="footerTnc">T&C apply.</span></p> </footer>
     <script src="script.js"></script>
