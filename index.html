@@ -8,6 +8,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Gerekirse ek stiller buraya eklenebilir veya style.css'e */
+        .index-results-btn {
+            display: inline-block;
+            padding: 8px 15px; /* Orijinal butona benzer padding */
+            background-color: #6c757d; /* Örnek: Gri tonu */
+            color: white;
+            border-radius: 5px; /* Orijinal butona benzer köşe */
+            text-align: center;
+            margin-top: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none; /* Kenarlık yok */
+            cursor: default; /* Tıklanabilir değil gibi göstermek için (opsiyonel) */
+            opacity: 0.8; /* Biraz soluk göstermek için (opsiyonel) */
+        }
+         /* index.html'e özel diğer stiller buraya gelebilir */
+    </style>
 </head>
 <body>
 
@@ -39,13 +57,11 @@
     <main class="container index-container">
         <h2 data-lang-key="indexChoiceTitle">Choose Your Giveaway!</h2>
         <div class="index-choices">
-             {/* Aktif Çekiliş - Dokunulmadı */}
              <a href="giveaway1.html" class="index-choice-card card-giveaway1">
                  <img src="adsiz-tasarim_20250407_210715_0000-1.webp" alt="ReziKyros Flat" class="choice-img-small">
                  <h3 data-lang-key="indexPrize1Title">2+1 Flat</h3>
                  <span class="index-enter-btn" data-lang-key="indexEnterButton">Details & Enter</span>
              </a>
-             {/* Tamamlanan Çekiliş 1 - Buton Değiştirildi */}
              <a href="giveaway2.html" class="index-choice-card card-giveaway2">
                   <div class="prize-logo-group small">
                       <div class="logo-frame small"><img src="adsiz-tasarim_20250407_210653_0000-1.webp" alt="Kyroservices Global"></div>
@@ -53,15 +69,13 @@
                       <div class="logo-frame small"><img src="image-11.webp" alt="Mavi"></div>
                   </div>
                  <h3 data-lang-key="indexPrize2Title">250 USDT x 50</h3>
-                 <span class="index-results-btn" data-lang-key="viewResultsButton">View Results</span> {/* Değişti */}
+                 <span class="index-results-btn" data-lang-key="viewResultsButton">View Results</span>
              </a>
-             {/* Tamamlanan Çekiliş 2 - Buton Değiştirildi */}
              <a href="giveaway3.html" class="index-choice-card card-giveaway3">
                  <img src="image-7.webp" alt="Starbucks Gift Card" class="choice-img-small">
                  <h3 data-lang-key="indexPrize3Title">$50 Starbucks Card x 100</h3>
-                 <span class="index-results-btn" data-lang-key="viewResultsButton">View Results</span> {/* Değişti */}
+                 <span class="index-results-btn" data-lang-key="viewResultsButton">View Results</span>
              </a>
-             {/* Tamamlanan Çekiliş 3 - Buton Değiştirildi */}
              <a href="giveaway4.html" class="index-choice-card card-giveaway4">
                   <div class="prize-logo-group small">
                       <div class="logo-frame small"><img src="image-3.webp" alt="Nestle"></div>
@@ -69,7 +83,7 @@
                       <div class="logo-frame small"><img src="image-1.webp" alt="Burger King"></div>
                   </div>
                  <h3 data-lang-key="indexPrize4Title">Nestle - Coca Cola - Burger King Gifts</h3>
-                 <span class="index-results-btn" data-lang-key="viewResultsButton">View Results</span> {/* Değişti */}
+                 <span class="index-results-btn" data-lang-key="viewResultsButton">View Results</span>
              </a>
         </div>
          <p class="general-terms-link"> <a href="giveaway1.html#rules" data-lang-key="indexRulesLink">See General Terms & Conditions</a> </p>
