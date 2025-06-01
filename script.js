@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // English (Default & Updated)
         en: {
             pageTitle: "Kyrosil Grand Giveaway",
-            pageTitleGiveaway1: "2+1 Flat from ReziKyros Azure Kağıthane Project - Kyrosil",
-            pageTitleGiveaway2: "USDT Giveaway Results - Kyrosil", // Updated (Results)
-            pageTitleGiveaway3: "Starbucks Giveaway Results - Kyrosil", // Updated (Results)
-            pageTitleGiveaway4: "Nestle - Coca Cola - Burger King Gifts Results - Kyrosil", // Updated (Results)
+            pageTitleGiveaway1: "2+1 Flat from ReziKyros Azure Kağıthane Project - Kyrosil", // This page is now a results page
+            pageTitleGiveaway2: "USDT Giveaway Results - Kyrosil", 
+            pageTitleGiveaway3: "Starbucks Giveaway Results - Kyrosil", 
+            pageTitleGiveaway4: "Nestle - Coca Cola - Burger King Gifts Results - Kyrosil", 
             mainHeading: "✨ Kyrosil Grand Giveaway! ✨",
             indexChoiceTitle: "Choose Your Giveaway!",
             indexPrize1Title: "2+1 Flat from ReziKyros Azure Kağıthane Project",
@@ -15,13 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
             indexPrize3Title: "$50 Starbucks Card x 100",
             indexPrize4Title: "Nestle - Coca Cola - Burger King Gifts",
             indexEnterButton: "Details & Enter",
-            viewResultsButton: "View Results", // Yeni Eklendi
+            viewResultsButton: "View Results", 
             indexRulesLink: "See General Terms & Conditions",
             endDateVaries: "(End dates vary - see details)",
             detailBackButton: "&larr; Back to All Giveaways",
             detailPrizeTitle: "The Prize",
-            detailFormTitle: "Enter the Draw!", // Form başlığı (Form olmayan sayfalarda görünmeyecek)
-            formDescGeneric: "You can enter this giveaway by filling out the information below. Please ensure you meet the entry requirements listed in the terms.", // Form açıklaması (Form olmayan sayfalarda görünmeyecek)
+            detailFormTitle: "Enter the Draw!", 
+            formDescGeneric: "You can enter this giveaway by filling out the information below. Please ensure you meet the entry requirements listed in the terms.", 
             prize1Title: "2+1 Flat from the ReziKyros Azure Kağıthane Project",
             prize1Desc: "A chance to win a fantastic flat in our soon-to-be-completed ReziKyros Azure Kağıthane project!",
             conditionsTitle: "Specific Conditions:",
@@ -29,11 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
             prize1Cond2: "Not have any registered vehicle or property deed in your name",
             prize1Cond3: "Follow @kyrosil on Instagram",
             prize2Title: "250 USDT Each for 50 People",
-            prize2Desc: "You could be one of 50 lucky winners to receive 250 USDT!", // Bu açıklama sonuç sayfasında da kalabilir
+            prize2Desc: "You could be one of 50 lucky winners to receive 250 USDT!", 
             prize3Title: "$50 Starbucks Mobile Gift Card x 100",
-            prize3Desc: "100 lucky winners will receive a $50 Starbucks Mobile Gift Card (Approx. 46 EUR / 1600 TRY value, actual value may vary based on current exchange rates).", // Bu açıklama sonuç sayfasında da kalabilir
+            prize3Desc: "100 lucky winners will receive a $50 Starbucks Mobile Gift Card (Approx. 46 EUR / 1600 TRY value, actual value may vary based on current exchange rates).", 
             prize4Title: "Nestle - Coca Cola - Burger King Gifts",
-            prize4Desc: "Enter to win one of the amazing prize packs from our partners! Prizes include:", // Bu açıklama sonuç sayfasında da kalabilir
+            prize4Desc: "Enter to win one of the amazing prize packs from our partners! Prizes include:", 
             prize4ListItem1: "50 Nestle Happiness Packs",
             prize4ListItem2: "100 Coca Cola Happiness Packs",
             prize4ListItem3: "500 Burger King $30 Vouchers (<span data-lang-key=\"prize4DescBK\">Approx. 28 EUR / 960 TRY value, actual value may vary. Valid on mobile app (TR: Tıkla Gelsin).</span>)",
@@ -57,15 +57,15 @@ document.addEventListener('DOMContentLoaded', () => {
             rulesStartDateLabel: "Start Date:",
             rulesStartDateValue: "April 8, 2025",
             rulesEndDateLabel: "Entry Deadline:",
-            giveaway1EndDateValue: "April 30, 2025", // Aktif çekiliş
-            giveaway2EndDateValue: "April 15, 2025", // Bitti
-            giveaway3EndDateValue: "April 15, 2025", // Bitti
-            giveaway4EndDateValue: "April 15, 2025", // Bitti
+            giveaway1EndDateValue: "April 30, 2025", 
+            giveaway2EndDateValue: "April 15, 2025", 
+            giveaway3EndDateValue: "April 15, 2025", 
+            giveaway4EndDateValue: "April 15, 2025", 
             rulesAnnounceTitle: "Announcement of Results:",
-            giveaway1AnnounceDesc: "Results will be announced via live broadcast draw on EU Portal on May 1, 2025.", // Aktif çekiliş
-            giveaway2AnnounceDesc: "Results were announced via live broadcast draw on EU Portal on April 16, 2025. Winners are listed above.", // Güncellendi (Geçmiş Zaman)
-            giveaway3AnnounceDesc: "Results were announced via live broadcast draw on EU Portal on April 16, 2025. Winners are listed above.", // Güncellendi (Geçmiş Zaman)
-            giveaway4AnnounceDesc: "Results were announced via live broadcast draw on EU Portal on April 16, 2025. Winners are listed above by prize category.", // Güncellendi (Geçmiş Zaman)
+            giveaway1AnnounceDesc: "Results were announced via live broadcast draw on EU Portal on May 1, 2025. Winners are announced on this page.", // Updated for Giveaway 1 results page
+            giveaway2AnnounceDesc: "Results were announced via live broadcast draw on EU Portal on April 16, 2025. Winners are listed above.", 
+            giveaway3AnnounceDesc: "Results were announced via live broadcast draw on EU Portal on April 16, 2025. Winners are listed above.", 
+            giveaway4AnnounceDesc: "Results were announced via live broadcast draw on EU Portal on April 16, 2025. Winners are listed above by prize category.", 
             rulesGeneralCondTitle: "General Conditions",
             rulesCond1: "All participants must be over 18 years of age.",
             rulesCond2: "All participants must follow the @kyrosil account on Instagram.",
@@ -73,37 +73,45 @@ document.addEventListener('DOMContentLoaded', () => {
             rulesSpecialCond1Title: "Specific Conditions (Flat Giveaway)",
             rulesSpecialCond1Item1: "The winning participant must not have any registered vehicle or property deed in their name as of the date the results are announced. This condition will be verified.",
             rulesSpecialCond2Title: "Specific Conditions (USDT Giveaway)",
-            rulesSpecialCond2Item1: "A total of 50 people won 250 USDT each.", // Güncellendi (Geçmiş Zaman)
+            rulesSpecialCond2Item1: "A total of 50 people won 250 USDT each.", 
             rulesSpecialCond3Title: "Specific Conditions (Starbucks Giveaway)",
-            rulesSpecialCond3Item1: "A total of 100 people won a $50 Starbucks Mobile Gift Card each.", // Güncellendi (Geçmiş Zaman)
+            rulesSpecialCond3Item1: "A total of 100 people won a $50 Starbucks Mobile Gift Card each.", 
             rulesSpecialCond4Title: "Specific Conditions (Nestle - Coca Cola - Burger King Gifts)",
-            rulesSpecialCond4Item1: "Prizes awarded: 50 Nestle Packs, 100 Coca Cola Packs, 500 Burger King $30 Vouchers. Winners were randomly assigned to one prize category from the pool of entrants for this specific giveaway.", // Güncellendi (Geçmiş Zaman)
+            rulesSpecialCond4Item1: "Prizes awarded: 50 Nestle Packs, 100 Coca Cola Packs, 500 Burger King $30 Vouchers. Winners were randomly assigned to one prize category from the pool of entrants for this specific giveaway.", 
             rulesWinnerSelTitle: "Winner Selection",
-            rulesWinnerSelDesc: "Winners were determined by a random draw conducted via live broadcast on the EU Portal on the specified announcement date.", // Güncellendi (Geçmiş Zaman)
+            rulesWinnerSelDesc: "Winners were determined by a random draw conducted via live broadcast on the EU Portal on the specified announcement date.", 
             legalTitle: "Legal Permissions",
-            legalDesc: "This giveaway was conducted under the permissions obtained from the relevant authorities in Turkey (Turkish National Lottery Admin. - Permit No: 2025/1453-01, Date: 07/04/2025) and the European Union (EU Registry of Promotions - Ref: ECP/REG/2025/0704-K). All participants accept the terms by entering.", // Bu genel kalabilir veya geçmiş zaman olabilir
+            legalDesc: "This giveaway was conducted under the permissions obtained from the relevant authorities in Turkey (Turkish National Lottery Admin. - Permit No: 2025/1453-01, Date: 07/04/2025) and the European Union (EU Registry of Promotions - Ref: ECP/REG/2025/0704-K). All participants accept the terms by entering.", 
             rulesOtherTitle: "Other Matters",
             sponsorsTitle: "Our Sponsors",
             footerRights: "© 2025 Kyrosil. All rights reserved.",
             footerTnc: "T&C apply.",
-            // --- YENİ EKLENEN SONUÇ SAYFASI METİNLERİ ---
+            // --- GIVEAWAY 1 RESULTS PAGE TEXTS (NEW) ---
+            giveawayEndedTitle: "The Grand Prize Has Found Its Owner!",
+            giveawayThanksAll: "Our draw has concluded. Thank you to everyone who participated!",
+            giveawayWinnerMainLabel: "Winner:",
+            giveawayWinnerMainName: "METİN ŞAHLI / İZMİR", // Specific winner name
+            giveawayWinnerBackupLabel: "Runner-up:",
+            giveawayWinnerBackupName: "GAMZE İNAL / İSTANBUL", // Specific runner-up name
+            giveawayCongratsMessage: "Congratulations to our winning contestants!",
+            giveawayStayTuned: "Stay tuned for our new campaigns!",
+            // --- OTHER RESULTS PAGE TEXTS ---
             resultsTitle: "Giveaway Results",
-            resultsSummary2: "Congratulations to the 50 lucky winners below, each receiving 250 USDT!", // USDT Specific Summary
-            resultsSummary3: "Congratulations to the 100 lucky winners below, each receiving a $50 Starbucks Mobile Gift Card!", // Starbucks Specific Summary
-            // resultsSummary4: "...", // Giveaway 4 has subsections, no single summary needed here
+            resultsSummary2: "Congratulations to the 50 lucky winners below, each receiving 250 USDT!", 
+            resultsSummary3: "Congratulations to the 100 lucky winners below, each receiving a $50 Starbucks Mobile Gift Card!", 
             winnersListTitle: "Winners List:",
             resultsContact: "Winners will be contacted via the email address provided during entry. Congratulations to all!",
-            resultsNestleTitle: "Nestle Happiness Pack Winners (50 People)", // Giveaway 4 - Nestle
-            resultsCokeTitle: "Coca Cola Happiness Pack Winners (100 People)", // Giveaway 4 - Coke
-            resultsBkTitle: "Burger King $30 Voucher Winners (500 People)" // Giveaway 4 - BK
+            resultsNestleTitle: "Nestle Happiness Pack Winners (50 People)", 
+            resultsCokeTitle: "Coca Cola Happiness Pack Winners (100 People)", 
+            resultsBkTitle: "Burger King $30 Voucher Winners (500 People)" 
         },
         // Türkçe (Tamamlandı ve Güncellendi)
         tr: {
              pageTitle: "Kyrosil Büyük Çekiliş",
-             pageTitleGiveaway1: "ReziKyros Azure Kağıthane Projesinden 2+1 Daire Çekilişi - Kyrosil",
-             pageTitleGiveaway2: "USDT Çekiliş Sonuçları - Kyrosil", // Güncellendi (Sonuç)
-             pageTitleGiveaway3: "Starbucks Çekiliş Sonuçları - Kyrosil", // Güncellendi (Sonuç)
-             pageTitleGiveaway4: "Nestle - Coca Cola - Burger King Hediye Sonuçları - Kyrosil", // Güncellendi (Sonuç)
+             pageTitleGiveaway1: "ReziKyros Azure Kağıthane Projesinden 2+1 Daire Sonuçları - Kyrosil", // Güncellendi (Sonuç sayfası)
+             pageTitleGiveaway2: "USDT Çekiliş Sonuçları - Kyrosil", 
+             pageTitleGiveaway3: "Starbucks Çekiliş Sonuçları - Kyrosil", 
+             pageTitleGiveaway4: "Nestle - Coca Cola - Burger King Hediye Sonuçları - Kyrosil", 
              mainHeading: "✨ Kyrosil Büyük Çekiliş! ✨",
              indexChoiceTitle: "Çekilişini Seç!",
              indexPrize1Title: "ReziKyros Azure Kağıthane Projesinden 2+1 Daire",
@@ -111,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
              indexPrize3Title: "50$ Starbucks Kart x 100",
              indexPrize4Title: "Nestle - Coca Cola - Burger King Hediyeleri",
              indexEnterButton: "Detaylar & Katıl",
-             viewResultsButton: "Sonuçları Gör", // Yeni Eklendi
+             viewResultsButton: "Sonuçları Gör", 
              indexRulesLink: "Genel Katılım Şartları ve Koşulları Gör",
              endDateVaries: "(Bitiş tarihleri farklıdır - detaylara bakın)",
              detailBackButton: "&larr; Tüm Çekilişlere Geri Dön",
@@ -158,10 +166,10 @@ document.addEventListener('DOMContentLoaded', () => {
              giveaway3EndDateValue: "15 Nisan 2025",
              giveaway4EndDateValue: "15 Nisan 2025",
              rulesAnnounceTitle: "Sonuçların Açıklanması:",
-             giveaway1AnnounceDesc: "Sonuçlar 1 Mayıs 2025 tarihinde EU Portal'da yapılacak canlı yayın çekilişi ile açıklanacaktır.",
-             giveaway2AnnounceDesc: "Sonuçlar 16 Nisan 2025 tarihinde EU Portal'da yapılan canlı yayın çekilişi ile açıklandı. Kazananlar yukarıda listelenmiştir.", // Güncellendi (Geçmiş Zaman)
-             giveaway3AnnounceDesc: "Sonuçlar 16 Nisan 2025 tarihinde EU Portal'da yapılan canlı yayın çekilişi ile açıklandı. Kazananlar yukarıda listelenmiştir.", // Güncellendi (Geçmiş Zaman)
-             giveaway4AnnounceDesc: "Sonuçlar 16 Nisan 2025 tarihinde EU Portal'da yapılan canlı yayın çekilişi ile açıklandı. Kazananlar ödül kategorisine göre yukarıda listelenmiştir.", // Güncellendi (Geçmiş Zaman)
+             giveaway1AnnounceDesc: "Sonuçlar 1 Mayıs 2025 tarihinde EU Portal'da yapılan canlı yayın çekilişi ile açıklandı. Kazananlar bu sayfada duyurulmuştur.", // Güncellendi (Çekiliş 1 sonuç sayfası)
+             giveaway2AnnounceDesc: "Sonuçlar 16 Nisan 2025 tarihinde EU Portal'da yapılan canlı yayın çekilişi ile açıklandı. Kazananlar yukarıda listelenmiştir.", 
+             giveaway3AnnounceDesc: "Sonuçlar 16 Nisan 2025 tarihinde EU Portal'da yapılan canlı yayın çekilişi ile açıklandı. Kazananlar yukarıda listelenmiştir.", 
+             giveaway4AnnounceDesc: "Sonuçlar 16 Nisan 2025 tarihinde EU Portal'da yapılan canlı yayın çekilişi ile açıklandı. Kazananlar ödül kategorisine göre yukarıda listelenmiştir.", 
              rulesGeneralCondTitle: "Genel Şartlar",
              rulesCond1: "Tüm katılımcıların 18 yaşından büyük olması gerekmektedir.",
              rulesCond2: "Tüm katılımcıların Instagram'da @kyrosil hesabını takip etmesi gerekmektedir.",
@@ -169,36 +177,45 @@ document.addEventListener('DOMContentLoaded', () => {
              rulesSpecialCond1Title: "Özel Şartlar (Daire Çekilişi)",
              rulesSpecialCond1Item1: "Kazanan talihlinin üzerine çekiliş sonuçlarının açıklandığı tarih itibarıyla herhangi bir araç veya tapu kaydı bulunmaması gerekmektedir. Bu durumun kontrolü yapılacaktır.",
              rulesSpecialCond2Title: "Özel Şartlar (USDT Çekilişi)",
-             rulesSpecialCond2Item1: "Bu çekilişte toplam 50 kişi, kişi başı 250 USDT kazandı.", // Güncellendi (Geçmiş Zaman)
+             rulesSpecialCond2Item1: "Bu çekilişte toplam 50 kişi, kişi başı 250 USDT kazandı.", 
              rulesSpecialCond3Title: "Özel Şartlar (Starbucks Çekilişi)",
-             rulesSpecialCond3Item1: "Bu çekilişte toplam 100 kişi, kişi başı 50$ Değerinde Starbucks Mobil Hediye Kartı kazandı.", // Güncellendi (Geçmiş Zaman)
+             rulesSpecialCond3Item1: "Bu çekilişte toplam 100 kişi, kişi başı 50$ Değerinde Starbucks Mobil Hediye Kartı kazandı.", 
              rulesSpecialCond4Title: "Özel Şartlar (Nestle - Coca Cola - Burger King Hediyeleri)",
-             rulesSpecialCond4Item1: "Ödüller verildi: 50 Nestle Paketi, 100 Coca Cola Paketi, 500 Burger King 30$ Çeki. Kazananlar bu çekilişe katılanlar arasından rastgele bir ödül kategorisine atandı.", // Güncellendi (Geçmiş Zaman)
+             rulesSpecialCond4Item1: "Ödüller verildi: 50 Nestle Paketi, 100 Coca Cola Paketi, 500 Burger King 30$ Çeki. Kazananlar bu çekilişe katılanlar arasından rastgele bir ödül kategorisine atandı.", 
              rulesWinnerSelTitle: "Kazananların Belirlenmesi",
-             rulesWinnerSelDesc: "Kazananlar, belirtilen açıklanma tarihinde EU Portal'da yapılan canlı yayın çekilişi ile rastgele belirlendi.", // Güncellendi (Geçmiş Zaman)
+             rulesWinnerSelDesc: "Kazananlar, belirtilen açıklanma tarihinde EU Portal'da yapılan canlı yayın çekilişi ile rastgele belirlendi.", 
              legalTitle: "Yasal İzinler",
              legalDesc: "Bu çekiliş, Türkiye Cumhuriyeti (Milli Piyango İdaresi - İzin No: 2025/1453-01, Tarih: 07/04/2025) ve Avrupa Birliği'ndeki (AB Promosyon Kayıtları - Ref: ECP/REG/2025/0704-K) ilgili mercilerden alınan izinler dahilinde düzenlenmiştir. Tüm katılımcılar katılarak şartları kabul etmiş sayılırlar.",
              rulesOtherTitle: "Diğer Hususlar",
              sponsorsTitle: "Sponsorlarımız",
              footerRights: "© 2025 Kyrosil. Tüm hakları saklıdır.",
              footerTnc: "T&Ş geçerlidir.",
-             // --- YENİ EKLENEN SONUÇ SAYFASI METİNLERİ ---
+            // --- ÇEKİLİŞ 1 SONUÇ SAYFASI METİNLERİ (YENİ) ---
+            giveawayEndedTitle: "Büyük Ödül Sahibini Buldu!",
+            giveawayThanksAll: "Çekilişimiz sonuçlanmıştır. Katılan herkese teşekkür ederiz!",
+            giveawayWinnerMainLabel: "Asil Kazanan:",
+            giveawayWinnerMainName: "METİN ŞAHLI / İZMİR", // Özel kazanan ismi
+            giveawayWinnerBackupLabel: "Yedek Kazanan:",
+            giveawayWinnerBackupName: "GAMZE İNAL / İSTANBUL", // Özel yedek kazanan ismi
+            giveawayCongratsMessage: "Kazanan yarışmacılarımızı tebrik ederiz!",
+            giveawayStayTuned: "Yeni kampanyalarımız için bizi takip etmeye devam edin!",
+             // --- DİĞER SONUÇ SAYFASI METİNLERİ ---
              resultsTitle: "Çekiliş Sonuçları",
-             resultsSummary2: "Aşağıdaki 50 şanslı kişiyi tebrik ederiz, her biri 250 USDT kazandı!", // USDT Özel Özet
-             resultsSummary3: "Aşağıdaki 100 şanslı kişiyi tebrik ederiz, her biri 50$ Değerinde Starbucks Mobil Hediye Kartı kazandı!", // Starbucks Özel Özet
+             resultsSummary2: "Aşağıdaki 50 şanslı kişiyi tebrik ederiz, her biri 250 USDT kazandı!", 
+             resultsSummary3: "Aşağıdaki 100 şanslı kişiyi tebrik ederiz, her biri 50$ Değerinde Starbucks Mobil Hediye Kartı kazandı!", 
              winnersListTitle: "Kazananlar Listesi:",
              resultsContact: "Kazananlarla girişte belirtilen e-posta adresi üzerinden iletişime geçilecektir. Herkesi tebrik ederiz!",
-             resultsNestleTitle: "Nestle Mutluluk Paketi Kazananları (50 Kişi)", // Çekiliş 4 - Nestle
-             resultsCokeTitle: "Coca Cola Mutluluk Paketi Kazananları (100 Kişi)", // Çekiliş 4 - Coke
-             resultsBkTitle: "Burger King 30$ Çeki Kazananları (500 Kişi)" // Çekiliş 4 - BK
+             resultsNestleTitle: "Nestle Mutluluk Paketi Kazananları (50 Kişi)", 
+             resultsCokeTitle: "Coca Cola Mutluluk Paketi Kazananları (100 Kişi)", 
+             resultsBkTitle: "Burger King 30$ Çeki Kazananları (500 Kişi)" 
         },
         // Français (Tamamlandı ve Güncellendi)
         fr: {
              pageTitle: "Grand Tirage au Sort Kyrosil",
-             pageTitleGiveaway1: "Tirage Appartement du Projet ReziKyros Azure Kağıthane - Kyrosil",
-             pageTitleGiveaway2: "Résultats Tirage USDT - Kyrosil", // Mis à jour (Résultats)
-             pageTitleGiveaway3: "Résultats Tirage Starbucks - Kyrosil", // Mis à jour (Résultats)
-             pageTitleGiveaway4: "Résultats Tirage Cadeaux Nestle - Coca Cola - Burger King - Kyrosil", // Mis à jour (Résultats)
+             pageTitleGiveaway1: "Résultats Tirage Appartement Projet ReziKyros Azure Kağıthane - Kyrosil", // Mis à jour (Page de résultats)
+             pageTitleGiveaway2: "Résultats Tirage USDT - Kyrosil", 
+             pageTitleGiveaway3: "Résultats Tirage Starbucks - Kyrosil", 
+             pageTitleGiveaway4: "Résultats Tirage Cadeaux Nestle - Coca Cola - Burger King - Kyrosil", 
              mainHeading: "✨ Grand Tirage au Sort Kyrosil ! ✨",
              indexChoiceTitle: "Choisissez votre tirage au sort !",
              indexPrize1Title: "Appartement 2+1 du Projet ReziKyros Azure Kağıthane",
@@ -206,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
              indexPrize3Title: "Carte Starbucks 50$ x 100",
              indexPrize4Title: "Cadeaux Nestle - Coca Cola - Burger King",
              indexEnterButton: "Détails & Participer",
-             viewResultsButton: "Voir les Résultats", // Ajouté
+             viewResultsButton: "Voir les Résultats", 
              indexRulesLink: "Voir les Termes et Conditions Générales",
              endDateVaries: "(Les dates de fin varient - voir détails)",
              detailBackButton: "&larr; Retour à Tous les Tirages",
@@ -253,10 +270,10 @@ document.addEventListener('DOMContentLoaded', () => {
              giveaway3EndDateValue: "15 Avril 2025",
              giveaway4EndDateValue: "15 Avril 2025",
              rulesAnnounceTitle: "Annonce des Résultats:",
-             giveaway1AnnounceDesc: "Les résultats seront annoncés via un tirage au sort en direct sur le portail EU le 1 Mai 2025.",
-             giveaway2AnnounceDesc: "Les résultats ont été annoncés via un tirage au sort en direct sur le portail EU le 16 avril 2025. Les gagnants sont listés ci-dessus.", // Mis à jour (Passé)
-             giveaway3AnnounceDesc: "Les résultats ont été annoncés via un tirage au sort en direct sur le portail EU le 16 avril 2025. Les gagnants sont listés ci-dessus.", // Mis à jour (Passé)
-             giveaway4AnnounceDesc: "Les résultats ont été annoncés via un tirage au sort en direct sur le portail EU le 16 avril 2025. Les gagnants sont listés ci-dessus par catégorie de prix.", // Mis à jour (Passé)
+             giveaway1AnnounceDesc: "Les résultats ont été annoncés via un tirage au sort en direct sur le portail EU le 1 Mai 2025. Les gagnants sont annoncés sur cette page.", // Mis à jour (Page de résultats Tirage 1)
+             giveaway2AnnounceDesc: "Les résultats ont été annoncés via un tirage au sort en direct sur le portail EU le 16 avril 2025. Les gagnants sont listés ci-dessus.", 
+             giveaway3AnnounceDesc: "Les résultats ont été annoncés via un tirage au sort en direct sur le portail EU le 16 avril 2025. Les gagnants sont listés ci-dessus.", 
+             giveaway4AnnounceDesc: "Les résultats ont été annoncés via un tirage au sort en direct sur le portail EU le 16 avril 2025. Les gagnants sont listés ci-dessus par catégorie de prix.", 
              rulesGeneralCondTitle: "Conditions Générales",
              rulesCond1: "Tous les participants doivent avoir plus de 18 ans.",
              rulesCond2: "Tous les participants doivent suivre le compte @kyrosil sur Instagram.",
@@ -264,36 +281,45 @@ document.addEventListener('DOMContentLoaded', () => {
              rulesSpecialCond1Title: "Conditions spécifiques (Tirage Appartement)",
              rulesSpecialCond1Item1: "Le participant gagnant ne doit posséder aucun véhicule ou titre de propriété enregistré à son nom à la date d'annonce des résultats. Cette condition sera vérifiée.",
              rulesSpecialCond2Title: "Conditions spécifiques (Tirage USDT)",
-             rulesSpecialCond2Item1: "Un total de 50 personnes ont gagné 250 USDT chacune.", // Mis à jour (Passé)
+             rulesSpecialCond2Item1: "Un total de 50 personnes ont gagné 250 USDT chacune.", 
              rulesSpecialCond3Title: "Conditions spécifiques (Tirage Starbucks)",
-             rulesSpecialCond3Item1: "Un total de 100 personnes ont gagné une Carte Cadeau Mobile Starbucks de 50$ chacune.", // Mis à jour (Passé)
+             rulesSpecialCond3Item1: "Un total de 100 personnes ont gagné une Carte Cadeau Mobile Starbucks de 50$ chacune.", 
              rulesSpecialCond4Title: "Conditions spécifiques (Cadeaux Nestle - Coca Cola - Burger King)",
-             rulesSpecialCond4Item1: "Prix attribués : 50 Packs Nestle, 100 Packs Coca Cola, 500 Bons Burger King de 30$. Les gagnants ont été assignés aléatoirement à une catégorie de prix parmi les participants à ce tirage spécifique.", // Mis à jour (Passé)
+             rulesSpecialCond4Item1: "Prix attribués : 50 Packs Nestle, 100 Packs Coca Cola, 500 Bons Burger King de 30$. Les gagnants ont été assignés aléatoirement à une catégorie de prix parmi les participants à ce tirage spécifique.", 
              rulesWinnerSelTitle: "Sélection des Gagnants",
-             rulesWinnerSelDesc: "Les gagnants ont été déterminés par un tirage au sort effectué en direct sur le portail EU à la date d'annonce spécifiée.", // Mis à jour (Passé)
+             rulesWinnerSelDesc: "Les gagnants ont été déterminés par un tirage au sort effectué en direct sur le portail EU à la date d'annonce spécifiée.", 
              legalTitle: "Autorisations Légales",
              legalDesc: "Ce tirage au sort est organisé conformément aux autorisations obtenues auprès des autorités compétentes en Turquie (Admin. Loterie Nationale Turque - N°: 2025/1453-01, Date: 07/04/2025) et dans l'Union européenne (Registre UE des Promotions - Réf: ECP/REG/2025/0704-K). Tous les participants acceptent les conditions en participant.",
              rulesOtherTitle: "Autres Sujets",
              sponsorsTitle: "Nos Sponsors",
              footerRights: "© 2025 Kyrosil. Tous droits réservés.",
              footerTnc: "T&C s'appliquent.",
+            // --- TEXTES PAGE RÉSULTATS TIRAGE 1 (NOUVEAU) ---
+            giveawayEndedTitle: "Le Grand Prix a Trouvé Son Propriétaire !",
+            giveawayThanksAll: "Notre tirage au sort est terminé. Merci à tous ceux qui ont participé !",
+            giveawayWinnerMainLabel: "Gagnant Principal :",
+            giveawayWinnerMainName: "METİN ŞAHLI / İZMİR", // Nom spécifique du gagnant
+            giveawayWinnerBackupLabel: "Gagnant Suppléant :",
+            giveawayWinnerBackupName: "GAMZE İNAL / İSTANBUL", // Nom spécifique du gagnant suppléant
+            giveawayCongratsMessage: "Félicitations à nos participants gagnants !",
+            giveawayStayTuned: "Restez à l'écoute pour nos nouvelles campagnes !",
              // --- NOUVEAUX TEXTES PAGE RESULTATS ---
              resultsTitle: "Résultats du Tirage",
-             resultsSummary2: "Félicitations aux 50 heureux gagnants ci-dessous, chacun recevant 250 USDT !", // Résumé Spécifique USDT
-             resultsSummary3: "Félicitations aux 100 heureux gagnants ci-dessous, chacun recevant une Carte Cadeau Mobile Starbucks de 50$ !", // Résumé Spécifique Starbucks
+             resultsSummary2: "Félicitations aux 50 heureux gagnants ci-dessous, chacun recevant 250 USDT !", 
+             resultsSummary3: "Félicitations aux 100 heureux gagnants ci-dessous, chacun recevant une Carte Cadeau Mobile Starbucks de 50$ !", 
              winnersListTitle: "Liste des Gagnants :",
              resultsContact: "Les gagnants seront contactés via l'adresse e-mail fournie lors de l'inscription. Félicitations à tous !",
-             resultsNestleTitle: "Gagnants du Pack Bonheur Nestle (50 Personnes)", // Tirage 4 - Nestle
-             resultsCokeTitle: "Gagnants du Pack Bonheur Coca Cola (100 Personnes)", // Tirage 4 - Coke
-             resultsBkTitle: "Gagnants du Bon Burger King 30$ (500 Personnes)" // Tirage 4 - BK
+             resultsNestleTitle: "Gagnants du Pack Bonheur Nestle (50 Personnes)", 
+             resultsCokeTitle: "Gagnants du Pack Bonheur Coca Cola (100 Personnes)", 
+             resultsBkTitle: "Gagnants du Bon Burger King 30$ (500 Personnes)" 
         },
         // Ελληνικά (Tamamlandı ve Güncellendi)
         el: {
              pageTitle: "Μεγάλη Κλήρωση Kyrosil",
-             pageTitleGiveaway1: "Κλήρωση Διαμερίσματος από το Έργο ReziKyros Azure Kağıthane - Kyrosil",
-             pageTitleGiveaway2: "Αποτελέσματα Κλήρωσης USDT - Kyrosil", // Ενημερώθηκε (Αποτελέσματα)
-             pageTitleGiveaway3: "Αποτελέσματα Κλήρωσης Starbucks - Kyrosil", // Ενημερώθηκε (Αποτελέσματα)
-             pageTitleGiveaway4: "Αποτελέσματα Κλήρωσης Δώρων Nestle - Coca Cola - Burger King - Kyrosil", // Ενημερώθηκε (Αποτελέσματα)
+             pageTitleGiveaway1: "Αποτελέσματα Κλήρωσης Διαμερίσματος Έργου ReziKyros Azure Kağıthane - Kyrosil", // Ενημερώθηκε (Σελίδα αποτελεσμάτων)
+             pageTitleGiveaway2: "Αποτελέσματα Κλήρωσης USDT - Kyrosil", 
+             pageTitleGiveaway3: "Αποτελέσματα Κλήρωσης Starbucks - Kyrosil", 
+             pageTitleGiveaway4: "Αποτελέσματα Κλήρωσης Δώρων Nestle - Coca Cola - Burger King - Kyrosil", 
              mainHeading: "✨ Μεγάλη Κλήρωση Kyrosil! ✨",
              indexChoiceTitle: "Επιλέξτε την Κλήρωσή σας!",
              indexPrize1Title: "Διαμέρισμα 2+1 από το Έργο ReziKyros Azure Kağıthane",
@@ -301,7 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
              indexPrize3Title: "Κάρτα Starbucks 50$ x 100",
              indexPrize4Title: "Δώρα Nestle - Coca Cola - Burger King",
              indexEnterButton: "Λεπτομέρειες & Συμμετοχή",
-             viewResultsButton: "Δείτε τα Αποτελέσματα", // Προστέθηκε
+             viewResultsButton: "Δείτε τα Αποτελέσματα", 
              indexRulesLink: "Δείτε τους Γενικούς Όρους & Προϋποθέσεις",
              endDateVaries: "(Οι ημερομηνίες λήξης διαφέρουν - δείτε λεπτομέρειες)",
              detailBackButton: "&larr; Πίσω σε Όλες τις Κληρώσεις",
@@ -348,10 +374,10 @@ document.addEventListener('DOMContentLoaded', () => {
              giveaway3EndDateValue: "15 Απριλίου 2025",
              giveaway4EndDateValue: "15 Απριλίου 2025",
              rulesAnnounceTitle: "Ανακοίνωση Αποτελεσμάτων:",
-             giveaway1AnnounceDesc: "Τα αποτελέσματα θα ανακοινωθούν μέσω ζωντανής κλήρωσης στο EU Portal την 1η Μαΐου 2025.",
-             giveaway2AnnounceDesc: "Τα αποτελέσματα ανακοινώθηκαν μέσω ζωντανής κλήρωσης στο EU Portal στις 16 Απριλίου 2025. Οι νικητές αναφέρονται παραπάνω.", // Ενημερώθηκε (Παρελθόν)
-             giveaway3AnnounceDesc: "Τα αποτελέσματα ανακοινώθηκαν μέσω ζωντανής κλήρωσης στο EU Portal στις 16 Απριλίου 2025. Οι νικητές αναφέρονται παραπάνω.", // Ενημερώθηκε (Παρελθόν)
-             giveaway4AnnounceDesc: "Τα αποτελέσματα ανακοινώθηκαν μέσω ζωντανής κλήρωσης στο EU Portal στις 16 Απριλίου 2025. Οι νικητές αναφέρονται παραπάνω ανά κατηγορία βραβείου.", // Ενημερώθηκε (Παρελθόν)
+             giveaway1AnnounceDesc: "Τα αποτελέσματα ανακοινώθηκαν μέσω ζωντανής κλήρωσης στο EU Portal την 1η Μαΐου 2025. Οι νικητές ανακοινώνονται σε αυτή τη σελίδα.", // Ενημερώθηκε (Σελίδα αποτελεσμάτων Κλήρωσης 1)
+             giveaway2AnnounceDesc: "Τα αποτελέσματα ανακοινώθηκαν μέσω ζωντανής κλήρωσης στο EU Portal στις 16 Απριλίου 2025. Οι νικητές αναφέρονται παραπάνω.", 
+             giveaway3AnnounceDesc: "Τα αποτελέσματα ανακοινώθηκαν μέσω ζωντανής κλήρωσης στο EU Portal στις 16 Απριλίου 2025. Οι νικητές αναφέρονται παραπάνω.", 
+             giveaway4AnnounceDesc: "Τα αποτελέσματα ανακοινώθηκαν μέσω ζωντανής κλήρωσης στο EU Portal στις 16 Απριλίου 2025. Οι νικητές αναφέρονται παραπάνω ανά κατηγορία βραβείου.", 
              rulesGeneralCondTitle: "Γενικοί Όροι",
              rulesCond1: "Όλοι οι συμμετέχοντες πρέπει να είναι άνω των 18 ετών.",
              rulesCond2: "Όλοι οι συμμετέχοντες πρέπει να ακολουθούν τον λογαριασμό @kyrosil στο Instagram.",
@@ -359,28 +385,37 @@ document.addEventListener('DOMContentLoaded', () => {
              rulesSpecialCond1Title: "Ειδικοί Όροι (Κλήρωση Διαμερίσματος)",
              rulesSpecialCond1Item1: "Ο νικητής συμμετέχων δεν πρέπει να έχει κανένα όχημα ή τίτλο ιδιοκτησίας καταχωρημένο στο όνομά του κατά την ημερομηνία ανακοίνωσης των αποτελεσμάτων. Αυτός ο όρος θα επαληθευτεί.",
              rulesSpecialCond2Title: "Ειδικοί Όροι (Κλήρωση USDT)",
-             rulesSpecialCond2Item1: "Συνολικά 50 άτομα κέρδισαν 250 USDT το καθένα.", // Ενημερώθηκε (Παρελθόν)
+             rulesSpecialCond2Item1: "Συνολικά 50 άτομα κέρδισαν 250 USDT το καθένα.", 
              rulesSpecialCond3Title: "Ειδικοί Όροι (Κλήρωση Starbucks)",
-             rulesSpecialCond3Item1: "Συνολικά 100 άτομα κέρδισαν μια Δωροκάρτα Starbucks Mobile αξίας 50$ το καθένα.", // Ενημερώθηκε (Παρελθόν)
+             rulesSpecialCond3Item1: "Συνολικά 100 άτομα κέρδισαν μια Δωροκάρτα Starbucks Mobile αξίας 50$ το καθένα.", 
              rulesSpecialCond4Title: "Ειδικοί Όροι (Δώρα Nestle - Coca Cola - Burger King)",
-             rulesSpecialCond4Item1: "Βραβεία που απονεμήθηκαν: 50 Πακέτα Nestle, 100 Πακέτα Coca Cola, 500 Κουπόνια Burger King 30$. Οι νικητές ανατέθηκαν τυχαία σε μία κατηγορία βραβείου από το σύνολο των συμμετεχόντων σε αυτή τη συγκεκριμένη κλήρωση.", // Ενημερώθηκε (Παρελθόν)
+             rulesSpecialCond4Item1: "Βραβεία που απονεμήθηκαν: 50 Πακέτα Nestle, 100 Πακέτα Coca Cola, 500 Κουπόνια Burger King 30$. Οι νικητές ανατέθηκαν τυχαία σε μία κατηγορία βραβείου από το σύνολο των συμμετεχόντων σε αυτή τη συγκεκριμένη κλήρωση.", 
              rulesWinnerSelTitle: "Επιλογή Νικητών",
-             rulesWinnerSelDesc: "Οι νικητές καθορίστηκαν μέσω τυχαίας κλήρωσης που διεξήχθη ζωντανά στο EU Portal την καθορισμένη ημερομηνία ανακοίνωσης.", // Ενημερώθηκε (Παρελθόν)
+             rulesWinnerSelDesc: "Οι νικητές καθορίστηκαν μέσω τυχαίας κλήρωσης που διεξήχθη ζωντανά στο EU Portal την καθορισμένη ημερομηνία ανακοίνωσης.", 
              legalTitle: "Νομικές Άδειες",
              legalDesc: "Αυτή η κλήρωση διεξάγεται σύμφωνα με τις άδειες που έχουν ληφθεί από τις αρμόδιες αρχές στην Τουρκία (Τουρκική Διοίκηση Εθν. Λαχείων - Αρ.: 2025/1453-01, Ημ/νία: 07/04/2025) και την Ευρωπαϊκή Ένωση (Μητρώο Προωθητικών Ενεργειών ΕΕ - Αρ.: ECP/REG/2025/0704-K). Όλοι οι συμμετέχοντες αποδέχονται τους όρους με τη συμμετοχή τους.",
              rulesOtherTitle: "Άλλα Θέματα",
              sponsorsTitle: "Οι Χορηγοί Μας",
              footerRights: "© 2025 Kyrosil. Με επιφύλαξη παντός δικαιώματος.",
              footerTnc: "Ισχύουν Όροι & Προϋποθέσεις.",
+            // --- ΚΕΙΜΕΝΑ ΣΕΛΙΔΑΣ ΑΠΟΤΕΛΕΣΜΑΤΩΝ ΚΛΗΡΩΣΗΣ 1 (ΝΕΑ) ---
+            giveawayEndedTitle: "Το Μεγάλο Έπαθλο Βρήκε τον Ιδιοκτήτη του!",
+            giveawayThanksAll: "Η κλήρωσή μας ολοκληρώθηκε. Ευχαριστούμε όλους όσους συμμετείχαν!",
+            giveawayWinnerMainLabel: "Κύριος Νικητής:",
+            giveawayWinnerMainName: "METİN ŞAHLI / İZMİR", // Συγκεκριμένο όνομα νικητή
+            giveawayWinnerBackupLabel: "Αναπληρωματικός Νικητής:",
+            giveawayWinnerBackupName: "GAMZE İNAL / İSTANBUL", // Συγκεκριμένο όνομα αναπληρωματικού νικητή
+            giveawayCongratsMessage: "Συγχαρητήρια στους νικητές διαγωνιζόμενους μας!",
+            giveawayStayTuned: "Μείνετε συντονισμένοι για τις νέες μας καμπάνιες!",
              // --- ΝΕΑ ΚΕΙΜΕΝΑ ΣΕΛΙΔΑΣ ΑΠΟΤΕΛΕΣΜΑΤΩΝ ---
              resultsTitle: "Αποτελέσματα Κλήρωσης",
-             resultsSummary2: "Συγχαρητήρια στους 50 τυχερούς νικητές παρακάτω, καθένας λαμβάνει 250 USDT!", // Ειδική Περίληψη USDT
-             resultsSummary3: "Συγχαρητήρια στους 100 τυχερούς νικητές παρακάτω, καθένας λαμβάνει μια Δωροκάρτα Starbucks Mobile αξίας 50$!", // Ειδική Περίληψη Starbucks
+             resultsSummary2: "Συγχαρητήρια στους 50 τυχερούς νικητές παρακάτω, καθένας λαμβάνει 250 USDT!", 
+             resultsSummary3: "Συγχαρητήρια στους 100 τυχερούς νικητές παρακάτω, καθένας λαμβάνει μια Δωροκάρτα Starbucks Mobile αξίας 50$!", 
              winnersListTitle: "Λίστα Νικητών:",
              resultsContact: "Θα επικοινωνήσουμε με τους νικητές μέσω της διεύθυνσης email που δόθηκε κατά την εγγραφή. Συγχαρητήρια σε όλους!",
-             resultsNestleTitle: "Νικητές Πακέτου Ευτυχίας Nestle (50 Άτομα)", // Κλήρωση 4 - Nestle
-             resultsCokeTitle: "Νικητές Πακέτου Ευτυχίας Coca Cola (100 Άτομα)", // Κλήρωση 4 - Coke
-             resultsBkTitle: "Νικητές Κουπονιού Burger King 30$ (500 Άτομα)" // Κλήρωση 4 - BK
+             resultsNestleTitle: "Νικητές Πακέτου Ευτυχίας Nestle (50 Άτομα)", 
+             resultsCokeTitle: "Νικητές Πακέτου Ευτυχίας Coca Cola (100 Άτομα)", 
+             resultsBkTitle: "Νικητές Κουπονιού Burger King 30$ (500 Άτομα)" 
         }
     };
 
@@ -395,9 +430,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function setLanguage(lang) {
         if (!translations[lang]) {
             console.warn(`Language ${lang} not found, defaulting to English.`);
-            lang = 'en'; // Dil bulunamazsa İngilizceye dön
+            lang = 'en'; 
         }
-        // İngilizce de yoksa bir sorun var demektir, ama en azından en objesi boş olmamalı
         if (!translations[lang]) return;
 
         currentLang = lang;
@@ -408,173 +442,100 @@ document.addEventListener('DOMContentLoaded', () => {
             const key = element.dataset.langKey;
             let translation = translations[lang][key];
 
-            // Seçilen dilde çeviri eksikse İngilizce'ye dön
             if (translation === undefined && lang !== 'en') {
                 console.warn(`Key "${key}" missing for lang "${lang}", using English fallback.`);
                 translation = translations['en'][key];
             }
 
             if (translation !== undefined) {
-                // Placeholder'ı olan inputlar için placeholder'ı güncelle
                 if (element.placeholder !== undefined) {
                     element.placeholder = translation;
                 }
-                // Diğer elementler için içeriği (innerHTML) güncelle
-                // Dikkat: Eğer element içinde başka HTML tag'leri varsa (örneğin <span> içinde <br>)
-                // bu yapı onları silip sadece çeviriyi basar.
-                // Eğer iç HTML yapısını korumak gerekiyorsa, daha karmaşık bir güncelleme mekanizması gerekir.
-                // Ancak mevcut yapıda çoğunlukla basit metinler olduğu için innerHTML yeterli görünüyor.
-                // Özellikle `prize4ListItem3` gibi içinde span olanlar zaten `data-lang-key` ile işaretlenmiş.
                  else if (key === 'prize4ListItem3' || key === 'prize4DescBK') {
-                     // Allow HTML within specific keys if needed (Use with caution!)
                      element.innerHTML = translation;
                  } else {
-                     // Use textContent for safety against XSS unless HTML is intended
-                     // For simplicity here, we continue with innerHTML as used before
                     element.innerHTML = translation;
                  }
 
             } else {
                  console.warn(`Key "${key}" not found for lang "${lang}" or fallback "en".`);
-                 // Çeviri hiç bulunamazsa mevcut içeriği koru
-                 // element.innerHTML = element.innerHTML; // Değişiklik yok
             }
         });
 
-        // Aktif dil butonunu işaretle
         languageButtons.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.lang === lang);
         });
     }
 
-    // Dil butonlarına tıklama olayını ekle
     languageButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             setLanguage(button.dataset.lang);
         });
     });
 
-    // Sayfa yüklendiğinde dili başlat
     function initializeLanguage() {
         const savedLang = localStorage.getItem('preferredLanguage');
-        const browserLang = navigator.language ? navigator.language.split('-')[0] : 'en'; // Tarayıcı dilini al (örn: "tr")
+        const browserLang = navigator.language ? navigator.language.split('-')[0] : 'en'; 
         const supportedLangs = ['en', 'tr', 'fr', 'el'];
-        let initialLang = 'en'; // Varsayılan İngilizce
+        let initialLang = 'en'; 
 
         if (savedLang && supportedLangs.includes(savedLang)) {
-            // Kayıtlı dil varsa ve destekleniyorsa onu kullan
             initialLang = savedLang;
         } else if (supportedLangs.includes(browserLang)) {
-            // Kayıtlı dil yoksa ama tarayıcı dili destekleniyorsa onu kullan
             initialLang = browserLang;
         }
-        // Diğer durumlarda varsayılan İngilizce kalır
-
         setLanguage(initialLang);
     }
 
-    // --- Form Gönderme Mantığı (Dokunulmadı) ---
+    // --- Form Gönderme Mantığı ---
      giveawayForms.forEach(form => {
          const messageElement = form.querySelector('.form-message');
          const submitButton = form.querySelector('button[type="submit"]');
-         let originalButtonText = ''; // Butonun orijinal metnini saklamak için
+         let originalButtonText = ''; 
 
          form.addEventListener('submit', (event) => {
-             event.preventDefault(); // Formun normal gönderimini engelle
+             event.preventDefault(); 
              const nameInput = form.querySelector('input[name="name"]');
              const emailInput = form.querySelector('input[name="email"]');
              const instaInput = form.querySelector('input[name="instagram"]');
              const consentCheckbox = form.querySelector('input[name="ipConsent"]');
-             originalButtonText = submitButton.innerHTML; // Orijinal metni al (çevrilmiş hali)
+             originalButtonText = submitButton.innerHTML; 
 
-             // Basit Doğrulama
              if (!nameInput.value.trim() || !emailInput.value.trim() || !instaInput.value.trim() || !consentCheckbox.checked) {
-                 // Hata mesajını çeviriden al
                  alert(translations[currentLang]['formValidationError'] || "Please fill in all required fields (Name, Email, Instagram) and accept the terms.");
-                 return; // İşlemi durdur
+                 return; 
              }
 
-             // Butonu deaktif et ve metni değiştir
              submitButton.disabled = true;
              submitButton.style.opacity = 0.7;
              submitButton.innerHTML = translations[currentLang]['formSubmitting'] || "Submitting...";
-             if(messageElement) messageElement.classList.add('hidden'); // Eski mesajı gizle
+             if(messageElement) messageElement.classList.add('hidden'); 
 
-             // Form verilerini al (gerçek gönderim için)
              const formData = new FormData(form);
              const name = formData.get('name');
              const email = formData.get('email');
              const instagram = formData.get('instagram');
              const ipConsent = formData.get('ipConsent') ? 'Yes' : 'No';
-             const whichForm = form.id; // Hangi formun gönderildiğini belirle
+             const whichForm = form.id; 
 
-             // Konsola yazdırma (Test amaçlı)
              console.log(`--- ${whichForm} Form Submitted ---`);
              console.log("Name:", name);
              console.log("Email:", email);
              console.log("Instagram:", instagram);
              console.log("IP Consent:", ipConsent);
              console.log("-----------------------------");
-
-             // -----!----- GERÇEK VERİ DEPOLAMA ENTEGRASYONU -----!-----
-             // Bu kısımda fetch API veya başka bir yöntemle verileri
-             // kendi sunucuna veya backend servisine göndermen gerekir.
-             // Örnek:
-             // fetch('https://senin-api-adresin.com/kayit', {
-             //     method: 'POST',
-             //     body: JSON.stringify(Object.fromEntries(formData)), // Veriyi JSON olarak gönderme
-             //     headers: { 'Content-Type': 'application/json' }
-             // })
-             // .then(response => response.json())
-             // .then(data => {
-             //     console.log('Success:', data);
-             //     // Başarılı mesajını göster
-             //     if (messageElement) {
-             //         messageElement.innerHTML = `<p data-lang-key="formThanksMessage">${translations[currentLang]['formThanksMessage']}</p>`;
-             //         messageElement.classList.remove('hidden');
-             //     }
-             //     form.reset(); // Formu temizle
-             //     submitButton.innerHTML = translations[currentLang]['formSubmitted'] || "Submitted!";
-             //     // İstersen butonu tekrar aktif etme
-             // })
-             // .catch((error) => {
-             //     console.error('Error:', error);
-             //     // Hata mesajını göster
-             //     if (messageElement) {
-             //         messageElement.innerHTML = `<p>${translations[currentLang]['formError'] || "An error occurred, please try again."}</p>`;
-             //         messageElement.classList.remove('hidden');
-             //         messageElement.style.color = 'red'; // Hata rengi
-             //     }
-             //     // Hata durumunda butonu tekrar aktif et
-             //     submitButton.disabled = false;
-             //     submitButton.style.opacity = 1;
-             //     submitButton.innerHTML = originalButtonText; // Orijinal metne dön
-             // });
-             // --------------------------------------------------------
-
-             // -------- Şimdilik Simülasyon (Yukarıdaki fetch'i kullanacaksan burayı sil) --------
+            
              setTimeout(() => {
                  if (messageElement) {
                      messageElement.innerHTML = `<p data-lang-key="formThanksMessage">${translations[currentLang]['formThanksMessage']}</p>`;
                      messageElement.classList.remove('hidden');
-                     messageElement.style.color = ''; // Hata rengini sıfırla (varsa)
+                     messageElement.style.color = ''; 
                  }
-                 form.reset(); // Formu temizle
+                 form.reset(); 
                  submitButton.innerHTML = translations[currentLang]['formSubmitted'] || "Submitted!";
-                 // Buton gönderim sonrası deaktif kalabilir veya belirli süre sonra aktif edilebilir
-                 // Örneğin 5 saniye sonra:
-                 // setTimeout(() => {
-                 //    submitButton.disabled = false;
-                 //    submitButton.style.opacity = 1;
-                 //    submitButton.innerHTML = originalButtonText;
-                 //    if(messageElement) messageElement.classList.add('hidden'); // Mesajı gizle
-                 // }, 5000);
-             }, 1000); // 1 saniye bekleme simülasyonu
-             // -----------------------------------------------------------------------------
+             }, 1000); 
          });
      });
 
-    // --- Başlangıç ---
-    initializeLanguage(); // Sayfa ilk yüklendiğinde dili ayarla
-
+    initializeLanguage(); 
 });
