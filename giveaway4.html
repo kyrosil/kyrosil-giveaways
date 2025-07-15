@@ -3,284 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang-key="pageTitleGiveaway4">Nestle - Coca Cola - Burger King Gifts - Kyrosil</title>
+    <title data-lang-key="pageTitleGiveaway4">Bodrum'da Tatil - Kyrosil</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <style>
-      /* Kazananlar Grid Stilleri */
-      .winners-grid {
-        display: grid;
-        /* Min genişliği 150px'e düşürdüm, belki daha iyi sığar */
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 1rem;
-        list-style: none;
-        padding: 0; /* Grid'in kendi padding'i olmasın */
-        margin: 0; /* Grid'in kendi margin'i olmasın */
-      }
-      .winners-grid li {
-        background-color: #f8f9fa;
-        border: 1px solid #dee2e6;
-        padding: 0.75rem 1rem;
-        border-radius: 0.3rem;
-        text-align: center;
-        font-size: 0.9em;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        word-wrap: break-word; /* Uzun isimler varsa taşmasın */
-      }
-      .winners-grid li:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Alt Sonuç Bölümleri İçin Stiller */
-      .results-subsection {
-        margin-top: 2.5rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid #e0e0e0;
-      }
-      .results-subsection:first-of-type {
-         margin-top: 1.5rem;
-         border-top: none;
-         padding-top: 0;
-      }
-      .results-subsection h4 {
-         margin-bottom: 1rem;
-         font-size: 1.3em;
-         color: #333;
-      }
-
-      /* YENİ: Kaydırılabilir Kazananlar Kutusu */
-      .scrollable-winners {
-        max-height: 500px; /* Bu yüksekliği ayarlayabilirsin */
-        overflow-y: auto;  /* Dikey kaydırma çubuğu ekle */
-        border: 1px solid #ccc; /* Kutuyu görmek için kenarlık (isteğe bağlı) */
-        padding: 15px; /* İçerik (liste) ile kenar arası boşluk */
-        margin-top: 1em; /* Başlığa göre boşluk */
-        background-color: #ffffff; /* Arka plan rengi (isteğe bağlı) */
-        border-radius: 5px; /* Köşe yuvarlama (isteğe bağlı) */
-      }
-
-      /* Mobil İçin Güncellemeler */
-      @media (max-width: 480px) {
-        .winners-grid {
-          grid-template-columns: 1fr; /* Çok küçük ekranlarda TEK sütun */
-          gap: 0.75rem;
-        }
-        .winners-grid li {
-           padding: 0.6rem 0.8rem;
-           font-size: 0.85em;
-        }
-        .scrollable-winners {
-          padding: 10px; /* Mobilde iç boşluğu azalt */
-          max-height: 450px; /* Mobilde yüksekliği biraz azaltabilirsin */
-        }
-         .results-subsection h4 {
-            font-size: 1.15em; /* Mobilde başlıkları biraz küçült */
-         }
-      }
-       /* Orta Boy Ekranlar İçin Opsiyonel Ayar */
-       @media (min-width: 481px) and (max-width: 767px) {
-         .winners-grid {
-           /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); zaten yukarıda ayarlı */
-         }
-       }
-    </style>
-
 </head>
 <body>
     <header class="app-header">
         <div class="language-switcher"> <button data-lang="en">EN</button> <button data-lang="tr">TR</button> <button data-lang="fr">FR</button> <button data-lang="el">EL</button> </div>
-        <a href="index.html" class="back-link" data-lang-key="detailBackButton">&larr; Back to All Giveaways</a>
-        <h1 data-lang-key="prize4Title">Nestle - Coca Cola - Burger King Gifts</h1>
+        <a href="index.html" class="back-link" data-lang-key="detailBackButton">&larr; Tüm Çekilişlere Geri Dön</a>
+        <h1 data-lang-key="g4_mainTitle">Bodrum'da 4 Gün Her Şey Dahil Tatil</h1>
     </header>
+
     <main class="container detail-container">
         <section id="prize-details" class="section">
-             <div class="prize-logo-group">
-                  <img src="image-3.webp" alt="Nestle Logo" class="prize-detail-img multi-logo">
-                  <img src="image-5.webp" alt="Coca Cola Logo" class="prize-detail-img multi-logo">
-                  <img src="image-1.webp" alt="Burger King Logo" class="prize-detail-img multi-logo">
-             </div>
-             <h2 data-lang-key="detailPrizeTitle">The Prizes</h2>
-             <p data-lang-key="prize4Desc">Enter to win one of the amazing prize packs from our partners! Prizes include:</p>
-             <ul>
-                 <li data-lang-key="prize4ListItem1">50 Nestle Happiness Packs</li>
-                 <li data-lang-key="prize4ListItem2">100 Coca Cola Happiness Packs</li>
-                 <li data-lang-key="prize4ListItem3">500 Burger King $30 Vouchers (<span data-lang-key="prize4DescBK">Approx. 28 EUR / 960 TRY value...</span>)</li>
-             </ul>
+            <img src="placeholder-bodrum-large.webp" alt="Bodrum Tatili" class="prize-detail-img">
+            <h2 data-lang-key="detailPrizeTitle">Ödül Detayları</h2>
+            <p data-lang-key="g4_prizeDesc">
+                Bodrum'da 4 yıldızlı bir otelde 3 gece 4 gün boyunca tam pansiyon konaklama. Ödüle gidiş-dönüş uçak biletleri ve havalimanı transferleri de dahildir.
+            </p>
         </section>
-
-        <section id="results-section" class="section">
-            <h2 data-lang-key="resultsTitle">Giveaway Results</h2>
-
-            <div class="results-subsection">
-                <h4 data-lang-key="resultsNestleTitle">Nestle Happiness Pack Winners (50 People)</h4>
-                <ol class="winners-list winners-grid">
-                    <li>Neslihan Asya</li> <li>Ahmet Cansever</li> <li>Beatriz Costa</li> <li>Cemal Öztürk</li> <li>Diana Moreira</li>
-                    <li>Erdinç Yılmaz</li> <li>Fiona Dubois</li> <li>Gökhan Şahin</li> <li>Helena Schmidt</li> <li>İrfan Demir</li>
-                    <li>Julia Nowak</li> <li>Kaan Arslan</li> <li>Laura Weber</li> <li>Murat Kaya</li> <li>Nadia Petrova</li>
-                    <li>Osman Çelik</li> <li>Paula Martin</li> <li>Rıdvan Aydın</li> <li>Sandra König</li> <li>Şenol Aksoy</li>
-                    <li>Tatiana Volkov</li> <li>Burcu Yanbul</li> <li>Veronika Bauer</li> <li>Yakup Taş</li> <li>Zofia Zielińska</li>
-                    <li>Alişan Kurt</li> <li>Brigitte Lambert</li> <li>Cihan Sönmez</li> <li>Daniela Rossi</li> <li>Engin Gökçe</li>
-                    <li>Florence Bernard</li> <li>Haldun Balcı</li> <li>Ingrid Andersen</li> <li>İshak Aslan</li> <li>Jana Fischer</li>
-                    <li>Kerim Yıldız</li> <li>Livia Meyer</li> <li>Muhammet Güneş</li> <li>Nina Hoffmann</li> <li>Özcan Erdoğan</li>
-                    <li>Petra Schulz</li> <li>Rauf Ateş</li> <li>Silvia Becker</li> <li>Şahin Zengin</li> <li>Theresa Wolf</li>
-                    <li>Ünal Kara</li> <li>Victoria Simon</li> <li>Yavuz Doğan</li> <li>Yvonne Keller</li> <li>Ziya Çınar</li>
-                </ol>
+        
+        <section class="detail-sponsors section">
+            <h3 data-lang-key="sponsorsTitle" class="section-title">Sponsorlarımız</h3>
+            <div class="sponsor-logos small">
+                <div class="logo-frame"><img src="https://kyrosil.eu/wp-content/uploads/2025/04/image.png" alt="Turkish Airlines"></div>
+                <div class="logo-frame"><img src="https://kyrosil.eu/wp-content/uploads/2025/04/image-2.png?w=300" alt="Audi"></div>
+                <div class="logo-frame"><img src="https://kyrosil.eu/wp-content/uploads/2025/04/image-3.png?w=300" alt="Nestle"></div>
+                <div class="logo-frame"><img src="https://kyrosil.eu/wp-content/uploads/2025/04/image-1.png?w=138" alt="Burger King"></div>
+                <div class="logo-frame"><img src="https://kyrosil.eu/wp-content/uploads/2025/04/images-4.jpg?w=150" alt="Trendyol"></div>
+                <div class="logo-frame"><img src="https://kyrosil.eu/wp-content/uploads/2025/04/image-4.png?w=300" alt="Swiss Air"></div>
+                <div class="logo-frame"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIO9HvRepmQOPQJtDj-jBhpxzG3DGQDZuYWA&s" alt="Adidas"></div>
+                <div class="logo-frame"><img src="https://kyrosil.eu/wp-content/uploads/2025/04/image-5.png?w=300" alt="Coca Cola"></div>
+                <div class="logo-frame"><img src="https://kyrosil.eu/wp-content/uploads/2025/04/image-6.png?w=300" alt="IGA"></div>
+                <div class="logo-frame"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiQqvP9mSAN_KNxZlbvD9VT-yl4Vf_PuT6Cw&s" alt="WordPress"></div>
+                <div class="logo-frame"><img src="https://kyrosil.eu/wp-content/uploads/2025/04/indir-1.png?w=150" alt="Tiktak"></div>
+                <div class="logo-frame"><img src="https://kyrosil.eu/wp-content/uploads/2025/04/image-7.png?w=150" alt="Starbucks"></div>
+                <div class="logo-frame"><img src="https://kyrosil.eu/wp-content/uploads/2025/04/image-8.png?w=300" alt="Turkcell"></div>
+                <div class="logo-frame"><img src="https://kyrosil.eu/wp-content/uploads/2025/04/image-9.png?w=300" alt="Xiaomi"></div>
+                <div class="logo-frame"><img src="https://kyrosil.eu/wp-content/uploads/2025/04/image-10.png?w=300" alt="Unilever"></div>
+                <div class="logo-frame"><img src="https://kyrosil.eu/wp-content/uploads/2025/04/image-11.png?w=300" alt="Mavi"></div>
+                <div class="logo-frame"><img src="https://kyrosil.eu/wp-content/uploads/2025/04/image-12.png?w=300" alt="IKEA"></div>
+                <div class="logo-frame"><img src="https://kyrosil.eu/wp-content/uploads/2025/04/image-13.png?w=300" alt="Heineken"></div>
+                <div class="logo-frame"><img src="https://kyrosil.eu/wp-content/uploads/2025/04/image-17.png?w=300" alt="Carrefour"></div>
+                <div class="logo-frame"><img src="https://kyrosil.eu/wp-content/uploads/2025/04/image-16.png?w=300" alt="Carrefour SA"></div>
+                <div class="logo-frame"><img src="cropped-adsiz_tasarim-removebg-preview-1.webp" alt="Kyrosil"></div>
             </div>
-
-            <div class="results-subsection">
-                <h4 data-lang-key="resultsCokeTitle">Coca Cola Happiness Pack Winners (100 People)</h4>
-                <ol class="winners-list winners-grid">
-                     <li>Adnan Şeker</li> <li>Alice Petit</li> <li>Bahadır Korkmaz</li> <li>Bianca Zimmermann</li> <li>Celal Özdemir</li>
-                     <li>Camille Rousseau</li> <li>Doğan Kurtuluş</li> <li>Charlotte Girard</li> <li>Emrah Durmaz</li> <li>Elena Ivanova</li>
-                     <li>Furkan Yıldırım</li> <li>Emma Laurent</li> <li>Güner Güler</li> <li>Fabian Richter</li> <li>Hikmet Tekin</li>
-                     <li>Frida Petersen</li> <li>İhsan Kılıç</li> <li>Gabriela Silva</li> <li>Kamil Bulut</li> <li>Greta Wagner</li>
-                     <li>Levent Soylu</li> <li>Hannah Bergmann</li> <li>Mesut Kaplan</li> <li>Hugo Pereira</li> <li>Nadir Demirci</li>
-                     <li>Ida Schröder</li> <li>Oktay Lacin</li> <li>Isabelle Koch</li> <li>Rasim Polat</li> <li>Jannis Voigt</li>
-                     <li>Süleyman Koç</li> <li>Johanna Haas</li> <li>Tarkan Avcı</li> <li>Jonas Stein</li> <li>Veli Sarı</li>
-                     <li>Karla Fuchs</li> <li>Yunus Gök</li> <li>Konrad Lange</li> <li>Zübeyir Polat</li> <li>Lara Schubert</li>
-                     <li>Abdurrahman Savaş</li> <li>Lea Sommer</li> <li>Barış Acar</li> <li>Leni Krüger</li> <li>Cavit Çoban</li>
-                     <li>Linus Braun</li> <li>Dursun Kurt</li> <li>Luisa Hartmann</li> <li>Ertan Yaman</li> <li>Mads Larsen</li>
-                     <li>Fevzi Dağ</li> <li>Manon Lefevre</li> <li>Gürkan Saygıner</li> <li>Margot Dubois</li> <li>Haydar Güngör</li>
-                     <li>Mathis Muller</li> <li>İsmet Sezgin</li> <li>Maya Kuhn</li> <li>Kazım Adıgüzel</li> <li>Mila Herrmann</li>
-                     <li>Lütfü Erol</li> <li>Nele Jäger</li> <li>Mikail Karakaş</li> <li>Nora Franke</li> <li>Necdet Özturan</li>
-                     <li>Océane Michel</li> <li>Orkun Vatansever</li> <li>Oskar Walter</li> <li>Raşit Biçer</li> <li>Pauline Beck</li>
-                     <li>Saffet Ünlü</li> <li>Pepe Ziegler</li> <li>Talha Türk</li> <li>Pia Ernst</li> <li>Veysel Şimşek</li>
-                     <li>Raphael Baumann</li> <li>Yaman Gök</li> <li>Romy Herzog</li> <li>Abidin Altın</li> <li>Samuel Pohl</li>
-                     <li>Berk Kılıç</li> <li>Sarah Lorenz</li> <li>Caner Albayrak</li> <li>Stefanie Winkler</li> <li>Efe Atalay</li>
-                     <li>Svenja Roth</li> <li>Eşref Soylu</li> <li>Theo Graf</li> <li>Fikret Çetin</li> <li>Tim Schuster</li>
-                     <li>Gökberk Yılmazer</li> <li>Tom Ludwig</li> <li>Hüsamettin Demir</li> <li>Toni Seidel</li> <li>İzzet Avcı</li>
-                     <li>Tristan Otto</li> <li>Kutay Şen</li> <li>Valentin Peters</li> <li>Mazlum Sönmez</li> <li>Vanessa Conrad</li>
-                     <li>Muhsin Ersoy</li> <li>Vincent Horn</li> <li>Nurettin Bal</li> <li>Yara Bachmann</li>
-                </ol>
-            </div>
-
-            <div class="results-subsection">
-                <h4 data-lang-key="resultsBkTitle">Burger King $30 Voucher Winners (500 People)</h4>
-                 {/* Kaydırılabilir Kutu Başlangıcı */}
-                <div class="scrollable-winners">
-                    <ol class="winners-list winners-grid">
-                        <li>Ada Yıldırım</li> <li>Adrian Weber</li> <li>Ahu Keskin</li> <li>Aki Schmidt</li> <li>Alihan Taş</li>
-                        <li>Amelie Dubois</li> <li>Anıl Öztürk</li> <li>Anton Muller</li> <li>Aras Bulut</li> <li>Astrid Jensen</li>
-                        <li>Ayaz Mavi</li> <li>Ben Hoffmann</li> <li>Aybike Solak</li> <li>Bruno Keller</li> <li>Aylin Coşkun</li>
-                        <li>Carl Becker</li> <li>Aysu Demir</li> <li>Celine Mayer</li> <li>Aziz Arslan</li> <li>Clara Wolf</li>
-                        <li>Bade Işık</li> <li>Constantin Hahn</li> <li>Baha Sezgin</li> <li>David Schwarz</li> <li>Banu Adıgüzel</li>
-                        <li>Dominik Lang</li> <li>Batı Erol</li> <li>Elias Voss</li> <li>Batuhan Karakaş</li> <li>Elif Engel</li>
-                        <li>Begüm Özturan</li> <li>Elina Krause</li> <li>Bekir Gündüz</li> <li>Ella Berger</li> <li>Belinay Sarıoğlu</li>
-                        <li>Emil Braun</li> <li>Berat Peker</li> <li>Emilia Peters</li> <li>Berfin Toprak</li> <li>Erik Otto</li>
-                        <li>Berkay Solmaz</li> <li>Fabian Schuster</li> <li>Berke Yücel</li> <li>Felix Ludwig</li> <li>Berna Aktaş</li>
-                        <li>Finn Seidel</li> <li>Bertan Vatansever</li> <li>Florian Beck</li> <li>Betül Biçer</li> <li>Frederik Ernst</li>
-                        <li>Beyza Ünlü</li> <li>Frieda Herzog</li> <li>Bilge Polat</li> <li>Fritz Schröder</li> <li>Binali Türk</li>
-                        <li>Greta Lorenz</li> <li>Birkan Savaş</li> <li>Hannah Winkler</li> <li>Buğra Acar</li> <li>Hannes Roth</li>
-                        <li>Burak Çoban</li> <li>Henri Graf</li> <li>Burç Kurt</li> <li>Hugo Ziegler</li> <li>Burçin Yaman</li>
-                        <li>Ida Bachmann</li> <li>Buse Dağ</li> <li>Isabelle Horn</li> <li>Bünyamin Güngör</li> <li>Jakob Conrad</li>
-                        <li>Canberk Saygıner</li> <li>Jan Franke</li> <li>Canel Gök</li> <li>Jannik Jäger</li> <li>Cansel Şimşek</li>
-                        <li>Jannis Herrmann</li> <li>Cemre Altın</li> <li>Jasper Kurz</li> <li>Cenker Kılıç</li> <li>Johann Werner</li>
-                        <li>Cevahir Albayrak</li> <li>Jonas Lehmann</li> <li>Ceyhun Atalay</li> <li>Jonathan Walter</li> <li>Ceylin Soylu</li>
-                        <li>Josef Huber</li> <li>Çağan Çetin</li> <li>Joshua Meyer</li> <li>Çağatay Yılmazer</li> <li>Julian König</li>
-                        <li>Çağrı Avcı</li> <li>Justus Fischer</li> <li>Çınar Şen</li> <li>Kai Simon</li> <li>Çiçek Ersoy</li>
-                        <li>Karl Bauer</li> <li>Damla Bal</li> <li>Kilian Volkov</li> <li>Defne Sönmez</li> <li>Lars Zieliński</li>
-                        <li>Demir Demir</li> <li>Laurenz Martin</li> <li>Denizhan Aslan</li> <li>Lea Weber</li> <li>Derin Gökçe</li>
-                        <li>Lena Nowak</li> <li>Devrim Doğan</li> <li>Leni Petrova</li> <li>Dilara Kara</li> <li>Leo Meyer</li>
-                        <li>Diren Zengin</li> <li>Leon Rossi</li> <li>Doğa Ateş</li> <li>Leona Dubois</li> <li>Doruk Erdoğan</li>
-                        <li>Levi Schmidt</li> <li>Duru Güneş</li> <li>Liam Muller</li> <li>Duygu Yıldız</li> <li>Liana Jensen</li>
-                        <li>Ebrar Kılıç</li> <li>Lias Hoffmann</li> <li>Ecem Bulut</li> <li>Lilly Keller</li> <li>Ecevit Kaplan</li>
-                        <li>Lina Becker</li> <li>Edip Soylu</li> <li>Linus Mayer</li> <li>Ediz Lacin</li> <li>Lisa Wolf</li>
-                        <li>Ege Demirci</li> <li>Lorenz Hahn</li> <li>Egemen Tekin</li> <li>Lotta Schwarz</li> <li>Ekin Koç</li>
-                        <li>Louis Lang</li> <li>Ekrem Polat</li> <li>Luca Voss</li> <li>Elifnaz Avcı</li> <li>Lucas Engel</li>
-                        <li>Elizan Sarı</li> <li>Luis Krause</li> <li>Emirhan Gök</li> <li>Luisa Berger</li> <li>Emrecan Polat</li>
-                        <li>Luna Braun</li> <li>Enes Ünal</li> <td>Madeleine Peters</td> <td>Engincan Sezgin</td> <td>Mael Otto</td>
-                        <li>Eray Adıgüzel</li> <td>Magnus Schuster</td> <li>Erberk Erol</li> <td>Maja Ludwig</td> <li>Erencan Karakaş</li>
-                        <td>Malik Seidel</td> <li>Ergün Özturan</li> <td>Malte Beck</td> <li>Erim Gündüz</li> <td>Mara Ernst</td>
-                        <li>Erkin Sarıoğlu</li> <td>Marc Herzog</td> <td>Erol Peker</td> <td>Marco Schröder</td> <li>Ersin Toprak</li>
-                        <td>Maria Lorenz</td> <li>Ertuğ Solmaz</li> <td>Marie Winkler</td> <li>Esila Yücel</li> <td>Marla Roth</td>
-                        <li>Esin Aktaş</li> <td>Marlon Graf</td> <li>Eslam Vatansever</td> <td>Marta Ziegler</td> <li>Eslem Biçer</li>
-                        <td>Martin Bachmann</td> <li>Eymen Ünlü</li> <td>Marvin Horn</td> <li>Eylül Polat</li> <td>Mathis Conrad</td>
-                        <li>Ezgi Türk</li> <td>Mats Franke</td> <li>Fahrettin Savaş</li> <td>Matteo Jäger</td> <li>Fatih Acar</li>
-                        <td>Max Herrmann</td> <li>Fatma Çoban</li> <td>Maxim Kurz</td> <li>Fecri Kurt</li> <td>Maya Werner</td>
-                        <li>Fehmi Yaman</li> <td>Melina Lehmann</td> <li>Ferdi Dağ</li> <td>Merle Walter</td> <li>Ferhat Güngör</li>
-                        <td>Mia Huber</td> <li>Ferman Saygıner</li> <td>Michael Meyer</td> <li>Feyyaz Gök</li> <td>Mika König</td>
-                        <li>Fırat Şimşek</li> <td>Milan Fischer</td> <li>Fikri Altın</li> <td>Milo Simon</td> <li>Fulya Kılıç</li>
-                        <td>Mira Bauer</td> <li>Furkan Albayrak</li> <td>Moritz Volkov</td> <li>Galip Atalay</li> <td>Neo Zieliński</td>
-                        <li>Gamze Soylu</li> <td>Nick Martin</td> <li>Gazel Çetin</li> <td>Nico Weber</td> <li>Gizem Yılmazer</li>
-                        <td>Nicolas Nowak</td> <li>Gökalp Avcı</li> <td>Niklas Petrova</td> <li>Gökberk Şen</li> <td>Nils Meyer</li>
-                        <li>Gökçe Ersoy</li> <td>Noah Rossi</td> <li>Gökdeniz Bal</li> <td>Noel Dubois</td> <li>Göksel Sönmez</li>
-                        <td>Odin Schmidt</td> <li>Görkem Demir</li> <td>Ole Muller</td> <li>Güher Aslan</li> <td>Oliver Jensen</td>
-                        <li>Gülce Gökçe</li> <td>Olivia Hoffmann</td> <li>Gülçin Doğan</li> <td>Oskar Keller</td> <li>Güldem Kara</li>
-                        <td>Otto Becker</td> <li>Gülen Zengin</li> <td>Paul Mayer</td> <li>Gülfem Ateş</li> <td>Paula Wolf</td>
-                        <li>Gülnihal Erdoğan</li> <td>Peer Hahn</td> <li>Gülşah Güneş</li> <td>Peter Schwarz</td> <li>Günay Yıldız</li>
-                        <td>Phil Lang</td> <li>Güner Kılıç</li> <td>Philipp Voss</td> <li>Gürhan Bulut</li> <td>Pia Engel</td>
-                        <li>Habil Kaplan</li> <td>Quentin Krause</td> <li>Hacer Soylu</li> <td>Rafael Berger</td> <li>Hakan Lacin</li>
-                        <td>Raphael Braun</td> <li>Hakkı Demirci</li> <td>Rasmus Peters</td> <li>Hale Tekin</li> <td>Rayan Otto</td>
-                        <li>Halil Koç</li> <td>Ricarda Schuster</td> <li>Halim Polat</li> <td>Richard Ludwig</td> <li>Haluk Avcı</li>
-                        <td>Robert Seidel</td> <li>Hamdi Sarı</li> <td>Robin Beck</td> <li>Handan Gök</li> <td>Ronja Ernst</td>
-                        <li>Harun Polat</li> <td>Ruben Herzog</td> <li>Hasan Ünal</li> <td>Samira Schröder</li> <li>Haşim Sezgin</li>
-                        <td>Samuel Lorenz</td> <li>Hayri Adıgüzel</li> <td>Sandra Winkler</td> <li>Hazal Erol</li> <td>Sarah Roth</td>
-                        <li>Hıdır Karakaş</li> <td>Sascha Graf</td> <li>Hıfzı Özturan</li> <td>Sebastian Ziegler</td> <li>Hilal Gündüz</li>
-                        <td>Selina Bachmann</td> <li>Hilmi Sarıoğlu</li> <td>Simon Horn</td> <li>Hurşit Peker</li> <td>Sofia Conrad</td>
-                        <li>Hülya Toprak</li> <td>Sophia Franke</td> <li>Hümeyra Solmaz</li> <td>Stefan Jäger</td> <li>Hüseyin Yücel</li>
-                        <td>Stefanie Herrmann</td> <li>Ilgın Aktaş</li> <td>Stella Kurz</td> <li>Iraz Vatansever</li> <td>Sven Werner</td>
-                        <li>İbrahim Biçer</li> <td>Svenja Lehmann</td> <li>İdris Ünlü</li> <td>Tamia Walter</td> <li>İhsan Polat</li>
-                        <td>Theo Huber</td> <li>İklim Türk</li> <td>Theodor Meyer</td> <li>İlhami Savaş</li> <td>Theresa König</td>
-                        <li>İlkay Acar</li> <td>Thies Fischer</td> <li>İlker Çoban</li> <td>Tilda Simon</td> <li>İlknur Kurt</li>
-                        <td>Till Bauer</td> <li>İlyas Yaman</li> <td>Tim Volkov</td> <li>İmran Dağ</li> <td>Timo Zieliński</li>
-                        <li>İnan Güngör</li> <td>Tom Martin</td> <li>İnci Saygıner</li> <td>Toni Weber</td> <li>İrem Gök</li>
-                        <td>Torben Nowak</td> <li>İsa Şimşek</li> <td>Tristan Petrova</td> <li>İshak Altın</li> <td>Ursula Meyer</td>
-                        <li>İskender Kılıç</li> <td>Valentin Rossi</td> <td>İsrafil Albayrak</td> <td>Valentina Dubois</td> <td>Kaan Atalay</td>
-                        <td>Valeria Schmidt</td> <td>Kader Soylu</td> <td>Vanessa Muller</td> <td>Kadir Çetin</td> <td>Veronika Jensen</td>
-                        <td>Kadriye Yılmazer</td> <td>Victor Hoffmann</td> <td>Kamer Avcı</td> <td>Viktoria Keller</td> <td>Kamile Şen</td>
-                        <td>Vincent Becker</td> <td>Karahan Ersoy</td> <td>Viola Mayer</td> <td>Kazım Bal</td> <td>Vitus Wolf</td>
-                        <td>Kemal Sönmez</td> <td>Wilhelm Hahn</td> <td>Kenan Demir</td> <td>Willi Schwarz</td> <td>Kerem Aslan</td>
-                        <td>Xaver Lang</td> <td>Kıvanç Gökçe</td> <td>Yannic Voss</td> <td>Koral Doğan</td> <td>Yannick Engel</td>
-                        <td>Korcan Kara</td> <td>Yannis Krause</td> <td>Korhan Zengin</td> <td>Yara Berger</td> <td>Korkut Ateş</td>
-                        <td>Yaren Braun</td> <td>Kubilay Erdoğan</td> <td>Yasin Peters</td> <td>Kudret Güneş</td> <td>Ylvie Otto</td>
-                        <td>Kürşat Yıldız</td> <td>Yousef Schuster</td> <td>Lami Kılıç</td> <td>Yuno Ludwig</td> <td>Latif Bulut</td>
-                        <td>Yuri Seidel</td> <td>Laçin Kaplan</td> <td>Yves Beck</td> <td>Leman Soylu</td> <td>Yvonne Ernst</td>
-                        <td>Levent Lacin</td> <td>Zara Herzog</td> <td>Leyla Demirci</td> <td>Zayn Schröder</td> <td>Lütfi Tekin</li>
-                        <td>Zoe Lorenz</td> <td>Macit Koç</td> <td>Zoey Winkler</td> <td>Mahir Polat</td> <td>Zuzanna Roth</td>
-                        <li>Mahmut Avcı</li> <li>Aaron Graf</li> <li>Mehmet Ali Sarı</li> <li>Adam Ziegler</li> <li>Mehmet Emin Gök</li>
-                        <li>Adrian Bachmann</li> <li>Melih Polat</li> <li>Alan Horn</li> <li>Melike Ünal</li> <li>Albert Conrad</li>
-                        <li>Melis Sezgin</li> <li>Alessandro Franke</li> <li>Meltem Adıgüzel</li> <li>Alessio Jäger</li> <li>Memduh Erol</li>
-                        <li>Alex Herrmann</li> <li>Meral Karakaş</li> <td>Alexander Kurz</td> <li>Mertcan Özturan</li> <td>Alfred Werner</td>
-                        <li>Merve Gündüz</li> <td>Ali Lehmann</li> <li>Meryem Sarıoğlu</li> <td>Amar Walter</li> <td>Amir Huber</li>
-                        <li>Mesude Peker</li> <td>Andre Meyer</td> <li>Mesut Toprak</li> <td>Andreas König</td> <li>Metehan Solmaz</li>
-                        <li>Angelo Fischer</li> <li>Mevlüt Yücel</li> <td>Ansgar Simon</td> <li>Mikail Aktaş</li> <td>Anton Bauer</td>
-                        <li>Miraç Vatansever</li> <td>Antonio Volkov</td> <li>Miray Biçer</li> <td>Armin Zieliński</li> <li>Mirza Ünlü</li>
-                        <li>Arne Martin</li> <td>Muammer Polat</li> <td>Arthur Weber</td> <td>Muazzez Türk</li> <td>Artur Nowak</li>
-                        <li>Muhammed Savaş</li> <td>August Petrova</li> <td>Muharrem Acar</li> <td>Axel Meyer</li> <td>Muhittin Çoban</li>
-                    </ol>
+        </section>
+        
+        <section id="participation-section" class="section">
+            <h2 data-lang-key="participationTitle" class="section-title">Çekilişe Katıl</h2>
+            <form id="g4-form" class="participation-form">
+                <div class="form-group">
+                    <label for="g4-name" data-lang-key="formNameLabel">Ad-Soyad:</label>
+                    <input type="text" id="g4-name" name="name" required>
                 </div>
-                 {/* Kaydırılabilir Kutu Sonu */}
+                <div class="form-group">
+                    <label for="g4-email" data-lang-key="formEmailLabel">E-posta Adresi:</label>
+                    <input type="email" id="g4-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="g4-username" data-lang-key="formUsernameLabel">EU Portal / Instagram Kullanıcı Adı:</label>
+                    <input type="text" id="g4-username" name="username" required>
+                </div>
+                <button type="submit" class="submit-btn" data-lang-key="formSubmitButton">Çekilişe Katıl</button>
+            </form>
+            <div id="g4-success-message" class="form-message" style="display: none;">
+                <p data-lang-key="formSuccessMessage" style="margin: 0; font-size: 1.2em; font-weight: bold;">Çekilişe başarıyla katıldınız! Bol şans!</p>
             </div>
-
-            <p style="margin-top: 1em;" data-lang-key="resultsContact">Winners will be contacted via the email address provided during entry. Congratulations to all!</p>
         </section>
-
+        
         <section id="rules" class="section content-section">
-            <h2 data-lang-key="rulesTitle">General Terms & Information</h2>
+            <h2 data-lang-key="rulesTitle">Genel Koşullar ve Bilgiler</h2>
             <div class="rule-block">
-                <h4 data-lang-key="rulesScheduleTitle">Giveaway Schedule</h4>
-                <p><strong data-lang-key="rulesStartDateLabel">Start Date:</strong> <span data-lang-key="rulesStartDateValue">April 8, 2025</span></p>
-                <p><strong data-lang-key="rulesEndDateLabel">Entry Deadline:</strong> <span data-lang-key="giveaway4EndDateValue">April 15, 2025</span></p>
-                 <p><strong data-lang-key="rulesAnnounceTitle">Announcement of Results:</strong> <span data-lang-key="giveaway4AnnounceDesc">Results were announced via live broadcast draw on EU Portal on April 16, 2025. Winners are listed above by prize category.</span></p>
+                <h4 data-lang-key="rulesScheduleTitle">Çekiliş Takvimi</h4>
+                <p><strong data-lang-key="rulesStartDateLabel">Başlangıç Tarihi:</strong> <span data-lang-key="g4_startDateValue">15 Temmuz 2025</span></p>
+                <p><strong data-lang-key="rulesEndDateLabel">Son Katılım Tarihi:</strong> <span data-lang-key="g4_endDateValue">31 Temmuz 2025</span></p>
+                <p><strong data-lang-key="rulesAnnounceTitle">Sonuçların Açıklanması:</strong> <span data-lang-key="g4_announceDesc">Sonuçlar, 1 Ağustos 2025'te noter huzurunda yapılacak canlı yayın ile duyurulacaktır.</span></p>
             </div>
             <div class="rule-block">
-                <h4 data-lang-key="rulesGeneralCondTitle">General Conditions</h4>
-                 <ul> <li data-lang-key="rulesCond1">All participants must be over 18 years of age.</li> <li data-lang-key="rulesCond2">All participants must follow the @kyrosil account on Instagram.</li> <li data-lang-key="rulesCond3">Kyrosil employees and their first-degree relatives cannot participate...</li> </ul>
+                <h4 data-lang-key="rulesGeneralCondTitle">Genel Katılım Şartları</h4>
+                <ul>
+                    <li data-lang-key="rulesCond1">Tüm katılımcıların 18 yaşından büyük olması gerekmektedir.</li>
+                    <li data-lang-key="rulesCond2">Tüm katılımcıların @kyrosil Instagram hesabını takip etmesi gerekmektedir.</li>
+                    <li data-lang-key="rulesCond3">Kyrosil çalışanları ve birinci dereceden yakınları çekilişe katılamaz.</li>
+                </ul>
             </div>
-             <div class="rule-block">
-                <h4 data-lang-key="rulesSpecialCond4Title">Specific Conditions (Nestle - Coca Cola - Burger King Gifts)</h4>
-                <ul> <li data-lang-key="rulesSpecialCond4Item1">Prizes awarded: 50 Nestle Packs, 100 Coca Cola Packs, 500 Burger King $30 Vouchers...</li> </ul>
+            <div class="rule-block">
+                <h4 data-lang-key="g4_specialCondTitle">Bu Çekilişe Özel Koşullar</h4>
+                <ul>
+                    <li data-lang-key="g4_specialCond1">Seyahat tarihleri, kazanan ile otel ve uçuş müsaitlik durumuna göre ortaklaşa belirlenecektir.</li>
+                    <li data-lang-key="g4_specialCond2">Kontenjan uygunluğuna bağlı olarak, kazananın bir refakatçi getirmesi için ek davetiye imkanı sunulabilir.</li>
+                </ul>
             </div>
-            <div class="rule-block"> <h4 data-lang-key="rulesWinnerSelTitle">Winner Selection</h4> <p data-lang-key="rulesWinnerSelDesc">Winners were determined by a random draw for each prize category...</p> </div>
-            <div class="rule-block"> <h4 data-lang-key="legalTitle">Legal Permissions</h4> <p data-lang-key="legalDesc">This giveaway was conducted under the permissions obtained...</p> </div>
+            <div class="rule-block">
+                <h4 data-lang-key="rulesWinnerSelTitle">Kazananın Belirlenmesi</h4>
+                <p data-lang-key="rulesWinnerSelDesc">Kazanan, son katılım tarihinden sonra yapılacak olan ve tüm katılımcılara açık canlı yayında, noter huzurunda rastgele çekilişle belirlenecektir.</p>
+            </div>
+            <div class="rule-block">
+                <h4 data-lang-key="legalTitle">Yasal İzinler</h4>
+                <p data-lang-key="legalDesc">Bu çekiliş, Türkiye Cumhuriyeti (Milli Piyango İdaresi - İzin No: 2025/991283-01, Tarih: 14/07/2025) ve Avrupa Birliği'ndeki (AB Promosyon Kayıtları - Ref: ECP/REG/2025/1407-K4) ilgili mercilerden alınan izinler dahilinde düzenlenmektedir. Tüm katılımcılar katılarak şartları kabul etmiş sayılırlar.</p>
+            </div>
         </section>
     </main>
-    <footer class="app-footer"> <p><span data-lang-key="footerRights">© 2025 Kyrosil. All rights reserved.</span> <span data-lang-key="footerTnc">T&C apply.</span></p> </footer>
+
+    <footer class="app-footer">
+        <p><span data-lang-key="footerRights">© 2025 Kyrosil. All rights reserved.</span> <span data-lang-key="footerTnc">T&C apply.</span></p>
+    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
