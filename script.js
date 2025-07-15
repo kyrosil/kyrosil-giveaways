@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // =================================================================================
-    // ÇEVİRİ OBJESİ - SİTEDEKİ TÜM METİNLER BURADA (TÜM DİLLER TAMAMLANDI)
+    // ÇEVİRİ OBJESİ
     // =================================================================================
     const translations = {
-        // English (Fully Translated)
         en: {
             pageTitle: "Kyrosil Big Summer Giveaway",
             pageTitleGiveaway1: "Grand Prize: €25,000 in Bitcoin - Kyrosil",
@@ -81,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
             footerTnc: "T&C apply.",
             hashtags: "#Kyrosil #Giveaway #BigGiveaway #Bitcoin #Audi #THY #Athens #Bodrum #Holiday #Prize"
         },
-        // Turkish (Fully Translated)
         tr: {
             pageTitle: "Kyrosil Büyük Yaz Çekilişi",
             pageTitleGiveaway1: "Büyük Ödül: €25.000 Bitcoin - Kyrosil",
@@ -158,7 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
             footerTnc: "T&Ş geçerlidir.",
             hashtags: "#Kyrosil #Çekiliş #BüyükÇekiliş #Bitcoin #Audi #THY #Atina #Bodrum #Tatil #Hediye"
         },
-        // French (Fully Translated)
         fr: {
             pageTitle: "Grand Tirage d'Été Kyrosil",
             pageTitleGiveaway1: "Grand Prix : 25 000 € en Bitcoin - Kyrosil",
@@ -235,7 +232,6 @@ document.addEventListener('DOMContentLoaded', () => {
             footerTnc: "T&C s'appliquent.",
             hashtags: "#Kyrosil #TirageAuSort #GrandTirage #Bitcoin #Audi #THY #Athenes #Bodrum #Vacances #Prix"
         },
-        // Greek (Fully Translated)
         el: {
             pageTitle: "Μεγάλη Καλοκαιρινή Κλήρωση Kyrosil",
             pageTitleGiveaway1: "Μεγάλο Έπαθλο: 25.000 € σε Bitcoin - Kyrosil",
@@ -318,7 +314,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // ANA FONKSİYONLAR
     // =================================================================================
     let currentLang = 'tr';
-    
+    let countdownIntervals = [];
+
     function setLanguage(lang) {
         currentLang = translations[lang] ? lang : 'tr';
         document.documentElement.lang = currentLang;
@@ -335,11 +332,18 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.language-switcher button').forEach(btn => {
             btn.classList.toggle('active', btn.dataset.lang === currentLang);
         });
+        
+        // DİL DEĞİŞTİĞİNDE SAYAÇLARI YENİ DİLLE YENİDEN BAŞLAT
+        countdownIntervals.forEach(interval => clearInterval(interval));
+        countdownIntervals = [];
+        document.querySelectorAll('.countdown-timer').forEach(timer => {
+            countdownIntervals.push(startCountdown(timer.id, currentLang));
+        });
     }
 
-    function startCountdown(elementId) {
+    function startCountdown(elementId, lang) {
         const countdownElement = document.getElementById(elementId);
-        if (!countdownElement) return;
+        if (!countdownElement) return null;
 
         const endDate = new Date("2025-07-31T23:59:59").getTime();
 
@@ -349,7 +353,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (distance < 0) {
                 clearInterval(interval);
-                countdownElement.innerHTML = `<span data-lang-key="countdownEnded">${translations[currentLang]['countdownEnded']}</span>`;
+                countdownElement.innerHTML = `<span data-lang-key="countdownEnded">${translations[lang]['countdownEnded']}</span>`;
                 return;
             }
 
@@ -359,15 +363,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const s = Math.floor((distance % (1000 * 60)) / 1000);
 
             countdownElement.innerHTML = `
-                <span class="label" data-lang-key="countdownLabel">${translations[currentLang]['countdownLabel']}</span>
-                <span class="value">${d}</span> <span data-lang-key="days">${translations[currentLang]['days']}</span>
-                <span class="value">${h}</span> <span data-lang-key="hours">${translations[currentLang]['hours']}</span>
-                <span class="value">${m}</span> <span data-lang-key="minutes">${translations[currentLang]['minutes']}</span>
-                <span class="value">${s}</span> <span data-lang-key="seconds">${translations[currentLang]['seconds']}</span>
+                <span class="label">${translations[lang]['countdownLabel']}</span>
+                <span class="value">${d}</span> <span>${translations[lang]['days']}</span>,
+                <span class="value">${h}</span> <span>${translations[lang]['hours']}</span>,
+                <span class="value">${m}</span> <span>${translations[lang]['minutes']}</span>,
+                <span class="value">${s}</span> <span>${translations[lang]['seconds']}</span>
             `;
         }, 1000);
+        return interval;
     }
-
+    
     function initializeForms() {
         document.querySelectorAll('.participation-form').forEach(form => {
             const formId = form.id;
@@ -377,7 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (localStorage.getItem(`${giveawayId}-entered`) === 'true') {
                 form.style.display = 'none';
-                successMessage.style.display = 'block';
+                if(successMessage) successMessage.style.display = 'block';
                 return;
             }
 
@@ -397,7 +402,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 setTimeout(() => {
                     form.style.display = 'none';
-                    successMessage.style.display = 'block';
+                    if(successMessage) successMessage.style.display = 'block';
                     localStorage.setItem(`${giveawayId}-entered`, 'true');
                 }, 750);
             });
@@ -406,12 +411,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function initializePage() {
         const savedLang = localStorage.getItem('preferredLanguage');
-        const browserLang = navigator.language.split('-')[0];
+        const browserLang = navigator.language ? navigator.language.split('-')[0] : 'tr';
         const initialLang = savedLang || (translations[browserLang] ? browserLang : 'tr');
         
-        setLanguage(initialLang);
         initializeForms();
-        document.querySelectorAll('.countdown-timer').forEach(timer => startCountdown(timer.id));
+        setLanguage(initialLang); // Sayaçların doğru dilde başlaması için formlardan sonra çalıştır
     }
 
     initializePage();
