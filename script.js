@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             formSubmittingButton: "Submitting...",
             formSuccessMessage: "You have successfully entered the giveaway! Good luck!",
             formValidationMessage: "Please fill in all required fields.",
-            countdownLabel: "Time left to enter:",
+            countdownLabel: "Time left:",
             countdownEnded: "This giveaway has ended!",
             days: "Days", hours: "Hours", minutes: "Mins", seconds: "Secs",
             rulesStartDateValue: "July 15, 2025",
@@ -157,156 +157,10 @@ document.addEventListener('DOMContentLoaded', () => {
             hashtags: "#Kyrosil #Çekiliş #BüyükÇekiliş #Bitcoin #Audi #THY #Atina #Bodrum #Tatil #Hediye"
         },
         fr: {
-            pageTitle: "Grand Tirage d'Été Kyrosil",
-            pageTitleGiveaway1: "Grand Prix : 25 000 € en Bitcoin - Kyrosil",
-            pageTitleGiveaway2: "Vacances de Rêve à Athènes - Kyrosil",
-            pageTitleGiveaway3: "Droit d'Usage AUDI A8 - Kyrosil",
-            pageTitleGiveaway4: "Séjour à Bodrum - Kyrosil",
-            pageTitleGiveaway5: "Prix de 500 € en Bitcoin - Kyrosil",
-            mainHeading: "☀️ Le Grand Tirage d'Été Kyrosil a Commencé ! ☀️",
-            sponsorsTitle: "Nos Sponsors & Partenaires",
-            indexChoiceTitle: "Choisissez Votre Tirage!",
-            indexPrize1Title: "Grand Prix : 25 000 € en Bitcoin",
-            indexPrize2Title: "Vacances de Rêve à Athènes (5 Gagnants)",
-            indexPrize3Title: "1 Mois d'Usage d'AUDI A8 (5 Gagnants)",
-            indexPrize4Title: "Séjour à Bodrum (50 Gagnants)",
-            indexPrize5Title: "500 € en Bitcoin (100 Gagnants)",
-            viewGiveawayButton: "Voir le Tirage",
-            indexRulesLink: "Voir les Conditions Générales",
-            detailBackButton: "&larr; Retour à Tous les Tirages",
-            detailPrizeTitle: "Détails du Prix",
-            participationTitle: "Participer au Tirage",
-            rulesTitle: "Conditions Générales et Informations",
-            rulesScheduleTitle: "Calendrier du Tirage",
-            rulesStartDateLabel: "Début :",
-            rulesEndDateLabel: "Fin :",
-            rulesAnnounceTitle: "Annonce des Résultats :",
-            rulesGeneralCondTitle: "Règles Générales de Participation",
-            rulesWinnerSelTitle: "Sélection du Gagnant",
-            legalTitle: "Autorisations Légales",
-            formNameLabel: "Nom et Prénom :",
-            formEmailLabel: "Adresse E-mail :",
-            formUsernameLabel: "Nom d'utilisateur EU Portal / Instagram :",
-            formSubmitButton: "Participer",
-            formSubmittingButton: "Envoi en cours...",
-            formSuccessMessage: "Votre participation a été enregistrée avec succès ! Bonne chance !",
-            formValidationMessage: "Veuillez remplir tous les champs obligatoires.",
-            countdownLabel: "Temps restant :",
-            countdownEnded: "Ce tirage est terminé !",
-            days: "Jours", hours: "Heures", minutes: "Min", seconds: "Sec",
-            rulesStartDateValue: "15 Juillet 2025",
-            rulesEndDateValue: "31 Juillet 2025",
-            announceDesc: "Les résultats seront annoncés le 1er août 2025, via une diffusion en direct en présence d'un notaire.",
-            rulesCond1: "Tous les participants doivent avoir plus de 18 ans.",
-            rulesCond2: "Tous les participants doivent suivre le compte @kyrosil sur le Portail EU ou Instagram.",
-            rulesCond3: "Les employés de Kyrosil et leurs parents au premier degré ne peuvent pas participer.",
-            rulesWinnerSelDesc: "Le gagnant sera déterminé par un tirage au sort effectué en direct, ouvert à tous les participants après la date de clôture, en présence d'un notaire.",
-            legalDesc: "Ce tirage au sort est organisé sous les autorisations obtenues des autorités compétentes de la République de Turquie (Administration de la Loterie Nationale - Permis N°: 2025/991283-01, Date: 14/07/2025) et de l'Union Européenne (Registres des Promotions de l'UE - Réf: ECP/REG/2025/1407-K4). Tous les participants sont réputés avoir accepté les termes en participant.",
-            g1_mainTitle: "Grand Prix : 25 000 € en Bitcoin",
-            g1_prizeDesc: "Équivalent en Bitcoin de <strong>25 000 €</strong> basé sur le taux de change le jour du tirage. Il sera transféré directement et sans frais à l'adresse de portefeuille numérique spécifiée par le gagnant. Toutes les taxes et frais de transfert seront couverts par Kyrosil.",
-            g1_specialCondTitle: "Conditions Spécifiques à ce Tirage",
-            g1_specialCond1: "Le gagnant doit fournir une adresse de portefeuille numérique (Bitcoin) valide pour le transfert du prix.",
-            g1_specialCond2: "La responsabilité de l'adresse de portefeuille fournie incombe entièrement au gagnant.",
-            g2_mainTitle: "Vacances de Rêve à Athènes",
-            g2_prizeDesc: "<strong>Sponsor : Turkish Airlines.</strong> Comprend les billets d'avion aller-retour, 6 nuits et 7 jours d'hébergement dans un hôtel 5 étoiles en centre-ville, et une assurance santé voyage. Pour les gagnants soumis à un visa, l'ensemble du processus de visa sera géré par Kyrosil et conclu gratuitement dans les 72 heures via le système Jet Visa.",
-            g2_specialCondTitle: "Conditions Spécifiques à ce Tirage",
-            g2_specialCond1: "Les procédures de visa pour les gagnants des pays nécessitant un visa seront gérées par le sponsor.",
-            g2_specialCond2: "Les dates de voyage seront déterminées conjointement avec le gagnant, selon la disponibilité de THY et de l'hôtel.",
-            g3_mainTitle: "1 Mois d'Usage d'AUDI A8",
-            g3_prizeDesc: "<strong>Sponsor : AUDI.</strong> Le droit d'utiliser une AUDI A8 dernier modèle pendant 30 jours, avec toutes les taxes et assurances payées. Le véhicule sera temporairement livré au gagnant avec un contrat notarié.",
-            g3_specialCondTitle: "Conditions Spécifiques à ce Tirage",
-            g3_specialCond1: "Le gagnant doit avoir 25 ans ou plus.",
-            g3_specialCond2: "Le gagnant doit détenir un permis de conduire de classe B depuis au moins 3 ans.",
-            g3_specialCond3: "Le véhicule est livré temporairement via un contrat notarié et peut également être utilisé par les membres de la famille du gagnant.",
-            g4_mainTitle: "Séjour de 4 Jours Tout Compris à Bodrum",
-            g4_prizeDesc: "3 nuits et 4 jours d'hébergement en pension complète dans un hôtel 4 étoiles à Bodrum. Le prix comprend également les billets d'avion aller-retour et les transferts aéroport.",
-            g4_specialCondTitle: "Conditions Spécifiques à ce Tirage",
-            g4_specialCond1: "Les dates de voyage seront déterminées conjointement avec le gagnant, selon la disponibilité de l'hôtel et des vols.",
-            g4_specialCond2: "Sous réserve de disponibilité, une invitation supplémentaire peut être offerte pour un accompagnant du gagnant.",
-            g5_mainTitle: "500 € en Bitcoin (100 Gagnants)",
-            g5_prizeDesc: "Pour 100 gagnants, un équivalent en Bitcoin de <strong>500 €</strong> chacun, basé sur le taux de change le jour du tirage. Les prix seront envoyés aux adresses de portefeuille numérique des gagnants de manière transparente et sans frais.",
-            g5_specialCondTitle: "Conditions Spécifiques à ce Tirage",
-            g5_specialCond1: "Le gagnant doit fournir une adresse de portefeuille numérique (Bitcoin) valide pour le transfert du prix.",
-            g5_specialCond2: "La responsabilité de l'adresse de portefeuille fournie incombe entièrement au gagnant.",
-            footerRights: "© 2025 Kyrosil. Tous droits réservés.",
-            footerTnc: "T&C s'appliquent.",
-            hashtags: "#Kyrosil #TirageAuSort #GrandTirage #Bitcoin #Audi #THY #Athenes #Bodrum #Vacances #Prix"
+            pageTitle: "Grand Tirage d'Été Kyrosil", pageTitleGiveaway1: "Grand Prix : 25 000 € en Bitcoin - Kyrosil", pageTitleGiveaway2: "Vacances de Rêve à Athènes - Kyrosil", pageTitleGiveaway3: "Droit d'Usage AUDI A8 - Kyrosil", pageTitleGiveaway4: "Séjour à Bodrum - Kyrosil", pageTitleGiveaway5: "Prix de 500 € en Bitcoin - Kyrosil", mainHeading: "☀️ Le Grand Tirage d'Été Kyrosil a Commencé ! ☀️", sponsorsTitle: "Nos Sponsors & Partenaires", indexChoiceTitle: "Choisissez Votre Tirage!", indexPrize1Title: "Grand Prix : 25 000 € en Bitcoin", indexPrize2Title: "Vacances de Rêve à Athènes (5 Gagnants)", indexPrize3Title: "1 Mois d'Usage d'AUDI A8 (5 Gagnants)", indexPrize4Title: "Séjour à Bodrum (50 Gagnants)", indexPrize5Title: "500 € en Bitcoin (100 Gagnants)", viewGiveawayButton: "Voir le Tirage", indexRulesLink: "Voir les Conditions Générales", detailBackButton: "&larr; Retour à Tous les Tirages", detailPrizeTitle: "Détails du Prix", participationTitle: "Participer au Tirage", rulesTitle: "Conditions Générales et Informations", rulesScheduleTitle: "Calendrier du Tirage", rulesStartDateLabel: "Début :", rulesEndDateLabel: "Fin :", rulesAnnounceTitle: "Annonce des Résultats :", rulesGeneralCondTitle: "Règles Générales de Participation", rulesWinnerSelTitle: "Sélection du Gagnant", legalTitle: "Autorisations Légales", formNameLabel: "Nom et Prénom :", formEmailLabel: "Adresse E-mail :", formUsernameLabel: "Nom d'utilisateur EU Portal / Instagram :", formSubmitButton: "Participer", formSubmittingButton: "Envoi en cours...", formSuccessMessage: "Votre participation a été enregistrée avec succès ! Bonne chance !", formValidationMessage: "Veuillez remplir tous les champs obligatoires.", countdownLabel: "Temps restant :", countdownEnded: "Ce tirage est terminé !", days: "Jours", hours: "Heures", minutes: "Min", seconds: "Sec", rulesStartDateValue: "15 Juillet 2025", rulesEndDateValue: "31 Juillet 2025", announceDesc: "Les résultats seront annoncés le 1er août 2025, via une diffusion en direct en présence d'un notaire.", rulesCond1: "Tous les participants doivent avoir plus de 18 ans.", rulesCond2: "Tous les participants doivent suivre le compte @kyrosil sur le Portail EU ou Instagram.", rulesCond3: "Les employés de Kyrosil et leurs parents au premier degré ne peuvent pas participer.", rulesWinnerSelDesc: "Le gagnant sera déterminé par un tirage au sort effectué en direct, ouvert à tous les participants après la date de clôture, en présence d'un notaire.", legalDesc: "Ce tirage au sort est organisé sous les autorisations obtenues des autorités compétentes de la République de Turquie (Administration de la Loterie Nationale - Permis N°: 2025/991283-01, Date: 14/07/2025) et de l'Union Européenne (Registres des Promotions de l'UE - Réf: ECP/REG/2025/1407-K4). Tous les participants sont réputés avoir accepté les termes en participant.", g1_mainTitle: "Grand Prix : 25 000 € en Bitcoin", g1_prizeDesc: "Équivalent en Bitcoin de <strong>25 000 €</strong> basé sur le taux de change le jour du tirage. Il sera transféré directement et sans frais à l'adresse de portefeuille numérique spécifiée par le gagnant. Toutes les taxes et frais de transfert seront couverts par Kyrosil.", g1_specialCondTitle: "Conditions Spécifiques à ce Tirage", g1_specialCond1: "Le gagnant doit fournir une adresse de portefeuille numérique (Bitcoin) valide pour le transfert du prix.", g1_specialCond2: "La responsabilité de l'adresse de portefeuille fournie incombe entièrement au gagnant.", g2_mainTitle: "Vacances de Rêve à Athènes", g2_prizeDesc: "<strong>Sponsor : Turkish Airlines.</strong> Comprend les billets d'avion aller-retour, 6 nuits et 7 jours d'hébergement dans un hôtel 5 étoiles en centre-ville, et une assurance santé voyage. Pour les gagnants soumis à un visa, l'ensemble du processus de visa sera géré par Kyrosil et conclu gratuitement dans les 72 heures via le système Jet Visa.", g2_specialCondTitle: "Conditions Spécifiques à ce Tirage", g2_specialCond1: "Les procédures de visa pour les gagnants des pays nécessitant un visa seront gérées par le sponsor.", g2_specialCond2: "Les dates de voyage seront déterminées conjointement avec le gagnant, selon la disponibilité de THY et de l'hôtel.", g3_mainTitle: "1 Mois d'Usage d'AUDI A8", g3_prizeDesc: "<strong>Sponsor : AUDI.</strong> Le droit d'utiliser une AUDI A8 dernier modèle pendant 30 jours, avec toutes les taxes et assurances payées. Le véhicule sera temporairement livré au gagnant avec un contrat notarié.", g3_specialCondTitle: "Conditions Spécifiques à ce Tirage", g3_specialCond1: "Le gagnant doit avoir 25 ans ou plus.", g3_specialCond2: "Le gagnant doit détenir un permis de conduire de classe B depuis au moins 3 ans.", g3_specialCond3: "Le véhicule est livré temporairement via un contrat notarié et peut également être utilisé par les membres de la famille du gagnant.", g4_mainTitle: "Séjour de 4 Jours Tout Compris à Bodrum", g4_prizeDesc: "3 nuits et 4 jours d'hébergement en pension complète dans un hôtel 4 étoiles à Bodrum. Le prix comprend également les billets d'avion aller-retour et les transferts aéroport.", g4_specialCondTitle: "Conditions Spécifiques à ce Tirage", g4_specialCond1: "Les dates de voyage seront déterminées conjointement avec le gagnant, selon la disponibilité de l'hôtel et des vols.", g4_specialCond2: "Sous réserve de disponibilité, une invitation supplémentaire peut être offerte pour un accompagnant du gagnant.", g5_mainTitle: "500 € en Bitcoin (100 Gagnants)", g5_prizeDesc: "Pour 100 gagnants, un équivalent en Bitcoin de <strong>500 €</strong> chacun, basé sur le taux de change le jour du tirage. Les prix seront envoyés aux adresses de portefeuille numérique des gagnants de manière transparente et sans frais.", g5_specialCondTitle: "Conditions Spécifiques à ce Tirage", g5_specialCond1: "Le gagnant doit fournir une adresse de portefeuille numérique (Bitcoin) valide pour le transfert du prix.", g5_specialCond2: "La responsabilité de l'adresse de portefeuille fournie incombe entièrement au gagnant.", footerRights: "© 2025 Kyrosil. Tous droits réservés.", footerTnc: "T&C s'appliquent.", hashtags: "#Kyrosil #TirageAuSort #GrandTirage #Bitcoin #Audi #THY #Athenes #Bodrum #Vacances #Prix"
         },
         el: {
-            pageTitle: "Μεγάλη Καλοκαιρινή Κλήρωση Kyrosil",
-            pageTitleGiveaway1: "Μεγάλο Έπαθλο: 25.000 € σε Bitcoin - Kyrosil",
-            pageTitleGiveaway2: "Ονειρεμένες Διακοπές στην Αθήνα - Kyrosil",
-            pageTitleGiveaway3: "Δικαίωμα Χρήσης AUDI A8 - Kyrosil",
-            pageTitleGiveaway4: "Διακοπές στο Μπόντρουμ - Kyrosil",
-            pageTitleGiveaway5: "Έπαθλο 500 € σε Bitcoin - Kyrosil",
-            mainHeading: "☀️ Η Μεγάλη Καλοκαιρινή Κλήρωση της Kyrosil Ξεκίνησε! ☀️",
-            sponsorsTitle: "Οι Χορηγοί & Υποστηρικτές Μας",
-            indexChoiceTitle: "Επιλέξτε την Κλήρωσή σας!",
-            indexPrize1Title: "Μεγάλο Έπαθλο: 25.000 € σε Bitcoin",
-            indexPrize2Title: "Ονειρεμένες Διακοπές στην Αθήνα (5 Νικητές)",
-            indexPrize3Title: "1 Μήνας Χρήσης AUDI A8 (5 Νικητές)",
-            indexPrize4Title: "Διακοπές στο Μπόντρουμ (50 Νικητές)",
-            indexPrize5Title: "500 € σε Bitcoin (100 Νικητές)",
-            viewGiveawayButton: "Προβολή Κλήρωσης",
-            indexRulesLink: "Δείτε τους Γενικούς Όρους",
-            detailBackButton: "&larr; Πίσω σε Όλες τις Κληρώσεις",
-            detailPrizeTitle: "Λεπτομέρειες Επάθλου",
-            participationTitle: "Λάβετε Μέρος στην Κλήρωση",
-            rulesTitle: "Γενικοί Όροι και Πληροφορίες",
-            rulesScheduleTitle: "Πρόγραμμα Κλήρωσης",
-            rulesStartDateLabel: "Έναρξη:",
-            rulesEndDateLabel: "Λήξη:",
-            rulesAnnounceTitle: "Ανακοίνωση Αποτελεσμάτων:",
-            rulesGeneralCondTitle: "Γενικοί Κανόνες Συμμετοχής",
-            rulesWinnerSelTitle: "Επιλογή Νικητή",
-            legalTitle: "Νομικές Άδειες",
-            formNameLabel: "Ονοματεπώνυμο:",
-            formEmailLabel: "Διεύθυνση Email:",
-            formUsernameLabel: "Όνομα χρήστη EU Portal / Instagram:",
-            formSubmitButton: "Συμμετοχή",
-            formSubmittingButton: "Υποβολή...",
-            formSuccessMessage: "Η συμμετοχή σας καταχωρήθηκε επιτυχώς! Καλή τύχη!",
-            formValidationMessage: "Παρακαλώ συμπληρώστε όλα τα απαιτούμενα πεδία.",
-            countdownLabel: "Χρόνος που απομένει:",
-            countdownEnded: "Αυτή η κλήρωση έχει λήξει!",
-            days: "Μέρες", hours: "Ώρες", minutes: "Λεπτά", seconds: "Δευτ.",
-            rulesStartDateValue: "15 Ιουλίου 2025",
-            rulesEndDateValue: "31 Ιουλίου 2025",
-            announceDesc: "Τα αποτελέσματα θα ανακοινωθούν την 1η Αυγούστου 2025, μέσω ζωντανής μετάδοσης παρουσία συμβολαιογράφου.",
-            rulesCond1: "Όλοι οι συμμετέχοντες πρέπει να είναι άνω των 18 ετών.",
-            rulesCond2: "Όλοι οι συμμετέχοντες πρέπει να ακολουθούν τον λογαριασμό @kyrosil στο EU Portal ή στο Instagram.",
-            rulesCond3: "Οι υπάλληλοι της Kyrosil και οι συγγενείς πρώτου βαθμού δεν μπορούν να συμμετάσχουν.",
-            rulesWinnerSelDesc: "Ο νικητής θα καθοριστεί με τυχαία κλήρωση που θα διεξαχθεί σε ζωντανή μετάδοση, ανοιχτή σε όλους τους συμμετέχοντες μετά την ημερομηνία λήξης, παρουσία συμβολαιογράφου.",
-            legalDesc: "Αυτή η κλήρωση διοργανώνεται υπό τις άδειες που έχουν ληφθεί από τις αρμόδιες αρχές της Δημοκρατίας της Τουρκίας (Διοίκηση Εθνικού Λαχείου - Άδεια Αρ.: 2025/991283-01, Ημερομηνία: 14/07/2025) και της Ευρωπαϊκής Ένωσης (Μητρώα Προωθητικών Ενεργειών της ΕΕ - Αναφ.: ECP/REG/2025/1407-K4). Όλοι οι συμμετέχοντες θεωρείται ότι αποδέχονται τους όρους με τη συμμετοχή τους.",
-            g1_mainTitle: "Μεγάλο Έπαθλο: 25.000 € σε Bitcoin",
-            g1_prizeDesc: "Ισοδύναμο σε Bitcoin <strong>25.000 €</strong> με βάση την ισοτιμία την ημέρα της κλήρωσης. Θα μεταφερθεί απευθείας και χωρίς χρέωση στη διεύθυνση ψηφιακού πορτοφολιού που θα υποδείξει ο νικητής. Όλοι οι φόροι και τα τέλη μεταφοράς θα καλυφθούν από την Kyrosil.",
-            g1_specialCondTitle: "Ειδικοί Όροι για αυτή την Κλήρωση",
-            g1_specialCond1: "Ο νικητής πρέπει να παράσχει μια έγκυρη διεύθυνση ψηφιακού πορτοφολιού (Bitcoin) για τη μεταφορά του επάθλου.",
-            g1_specialCond2: "Η ευθύνη για την παρεχόμενη διεύθυνση πορτοφολιού ανήκει εξ ολοκλήρου στον νικητή.",
-            g2_mainTitle: "Ονειρεμένες Διακοπές στην Αθήνα",
-            g2_prizeDesc: "<strong>Χορηγός: Turkish Airlines.</strong> Περιλαμβάνει αεροπορικά εισιτήρια μετ' επιστροφής, διαμονή 6 διανυκτερεύσεων και 7 ημερών σε ξενοδοχείο 5 αστέρων στο κέντρο της πόλης και ταξιδιωτική ασφάλιση υγείας. Για τους νικητές που υπόκεινται σε βίζα, ολόκληρη η διαδικασία της βίζας θαจัดการ από την Kyrosil και θα ολοκληρωθεί δωρεάν εντός 72 ωρών μέσω του συστήματος Jet Visa.",
-            g2_specialCondTitle: "Ειδικοί Όροι για αυτή την Κλήρωση",
-            g2_specialCond1: "Οι διαδικασίες έκδοσης βίζας για τους νικητές από χώρες που απαιτούν βίζα θαจัดการ από τον χορηγό.",
-            g2_specialCond2: "Οι ημερομηνίες του ταξιδιού θα καθοριστούν από κοινού με τον νικητή, ανάλογα με τη διαθεσιμότητα της THY και του ξενοδοχείου.",
-            g3_mainTitle: "1 Μήνας Χρήσης AUDI A8",
-            g3_prizeDesc: "<strong>Χορηγός: AUDI.</strong> Το δικαίωμα χρήσης ενός τελευταίου μοντέλου AUDI A8 για 30 ημέρες, με όλους τους φόρους και την ασφάλεια πληρωμένα. Το όχημα θα παραδοθεί προσωρινά στον νικητή με συμβολαιογραφική πράξη.",
-            g3_specialCondTitle: "Ειδικοί Όροι για αυτή την Κλήρωση",
-            g3_specialCond1: "Ο νικητής πρέπει να είναι 25 ετών και άνω.",
-            g3_specialCond2: "Ο νικητής πρέπει να κατέχει άδεια οδήγησης κατηγορίας Β για τουλάχιστον 3 χρόνια.",
-            g3_specialCond3: "Το όχημα παραδίδεται προσωρινά μέσω συμβολαιογραφικής πράξης και μπορεί επίσης να χρησιμοποιηθεί από τα μέλη της οικογένειας του νικητή.",
-            g4_mainTitle: "4-ήμερες Διακοπές All-Inclusive στο Μπόντρουμ",
-            g4_prizeDesc: "Διαμονή 3 διανυκτερεύσεων και 4 ημερών με πλήρη διατροφή σε ξενοδοχείο 4 αστέρων στο Μπόντρουμ. Το έπαθλο περιλαμβάνει επίσης αεροπορικά εισιτήρια μετ' επιστροφής και μεταφορές από/προς το αεροδρόμιο.",
-            g4_specialCondTitle: "Ειδικοί Όροι για αυτή την Κλήρωση",
-            g4_specialCond1: "Οι ημερομηνίες του ταξιδιού θα καθοριστούν από κοινού με τον νικητή, ανάλογα με τη διαθεσιμότητα του ξενοδοχείου και των πτήσεων.",
-            g4_specialCond2: "Ανάλογα με τη διαθεσιμότητα, μπορεί να προσφερθεί επιπλέον πρόσκληση για έναν συνοδό του νικητή.",
-            g5_mainTitle: "500 € σε Bitcoin (100 Νικητές)",
-            g5_prizeDesc: "Για 100 νικητές, ισοδύναμο σε Bitcoin <strong>500 €</strong> ο καθένας, με βάση την ισοτιμία την ημέρα της κλήρωσης. Τα έπαθλα θα σταλούν στις διευθύνσεις ψηφιακών πορτοφολιών των νικητών απρόσκοπτα και χωρίς χρέωση.",
-            g5_specialCondTitle: "Ειδικοί Όροι για αυτή την Κλήρωση",
-            g5_specialCond1: "Ο νικητής πρέπει να παράσχει μια έγκυρη διεύθυνση ψηφιακού πορτοφολιού (Bitcoin) για τη μεταφορά του επάθλου.",
-            g5_specialCond2: "Η ευθύνη για την παρεχόμενη διεύθυνση πορτοφολιού ανήκει εξ ολοκλήρου στον νικητή.",
-            footerRights: "© 2025 Kyrosil. Με επιφύλαξη παντός δικαιώματος.",
-            footerTnc: "Ισχύουν Όροι & Προϋποθέσεις.",
-            hashtags: "#Kyrosil #Κλήρωση #ΜεγάληΚλήρωση #Bitcoin #Audi #THY #Αθήνα #Μπόντρουμ #Διακοπές #Έπαθλο"
+            pageTitle: "Μεγάλη Καλοκαιρινή Κλήρωση Kyrosil", pageTitleGiveaway1: "Μεγάλο Έπαθλο: 25.000 € σε Bitcoin - Kyrosil", pageTitleGiveaway2: "Ονειρεμένες Διακοπές στην Αθήνα - Kyrosil", pageTitleGiveaway3: "Δικαίωμα Χρήσης AUDI A8 - Kyrosil", pageTitleGiveaway4: "Διακοπές στο Μπόντρουμ - Kyrosil", pageTitleGiveaway5: "Έπαθλο 500 € σε Bitcoin - Kyrosil", mainHeading: "☀️ Η Μεγάλη Καλοκαιρινή Κλήρωση της Kyrosil Ξεκίνησε! ☀️", sponsorsTitle: "Οι Χορηγοί & Υποστηρικτές Μας", indexChoiceTitle: "Επιλέξτε την Κλήρωσή σας!", indexPrize1Title: "Μεγάλο Έπαθλο: 25.000 € σε Bitcoin", indexPrize2Title: "Ονειρεμένες Διακοπές στην Αθήνα (5 Νικητές)", indexPrize3Title: "1 Μήνας Χρήσης AUDI A8 (5 Νικητές)", indexPrize4Title: "Διακοπές στο Μπόντρουμ (50 Νικητές)", indexPrize5Title: "500 € σε Bitcoin (100 Νικητές)", viewGiveawayButton: "Προβολή Κλήρωσης", indexRulesLink: "Δείτε τους Γενικούς Όρους", detailBackButton: "&larr; Πίσω σε Όλες τις Κληρώσεις", detailPrizeTitle: "Λεπτομέρειες Επάθλου", participationTitle: "Λάβετε Μέρος στην Κλήρωση", rulesTitle: "Γενικοί Όροι και Πληροφορίες", rulesScheduleTitle: "Πρόγραμμα Κλήρωσης", rulesStartDateLabel: "Έναρξη:", rulesEndDateLabel: "Λήξη:", rulesAnnounceTitle: "Ανακοίνωση Αποτελεσμάτων:", rulesGeneralCondTitle: "Γενικοί Κανόνες Συμμετοχής", rulesWinnerSelTitle: "Επιλογή Νικητή", legalTitle: "Νομικές Άδειες", formNameLabel: "Ονοματεπώνυμο:", formEmailLabel: "Διεύθυνση Email:", formUsernameLabel: "Όνομα χρήστη EU Portal / Instagram:", formSubmitButton: "Συμμετοχή", formSubmittingButton: "Υποβολή...", formSuccessMessage: "Η συμμετοχή σας καταχωρήθηκε επιτυχώς! Καλή τύχη!", formValidationMessage: "Παρακαλώ συμπληρώστε όλα τα απαιτούμενα πεδία.", countdownLabel: "Χρόνος που απομένει:", countdownEnded: "Αυτή η κλήρωση έχει λήξει!", days: "Μέρες", hours: "Ώρες", minutes: "Λεπτά", seconds: "Δευτ.", rulesStartDateValue: "15 Ιουλίου 2025", rulesEndDateValue: "31 Ιουλίου 2025", announceDesc: "Τα αποτελέσματα θα ανακοινωθούν την 1η Αυγούστου 2025, μέσω ζωντανής μετάδοσης παρουσία συμβολαιογράφου.", rulesCond1: "Όλοι οι συμμετέχοντες πρέπει να είναι άνω των 18 ετών.", rulesCond2: "Όλοι οι συμμετέχοντες πρέπει να ακολουθούν τον λογαριασμό @kyrosil στο EU Portal ή στο Instagram.", rulesCond3: "Οι υπάλληλοι της Kyrosil και οι συγγενείς πρώτου βαθμού δεν μπορούν να συμμετάσχουν.", rulesWinnerSelDesc: "Ο νικητής θα καθοριστεί με τυχαία κλήρωση που θα διεξαχθεί σε ζωντανή μετάδοση, ανοιχτή σε όλους τους συμμετέχοντες μετά την ημερομηνία λήξης, παρουσία συμβολαιογράφου.", legalDesc: "Αυτή η κλήρωση διοργανώνεται υπό τις άδειες που έχουν ληφθεί από τις αρμόδιες αρχές της Δημοκρατίας της Τουρκίας (Διοίκηση Εθνικού Λαχείου - Άδεια Αρ.: 2025/991283-01, Ημερομηνία: 14/07/2025) και της Ευρωπαϊκής Ένωσης (Μητρώα Προωθητικών Ενεργειών της ΕΕ - Αναφ.: ECP/REG/2025/1407-K4). Όλοι οι συμμετέχοντες θεωρείται ότι αποδέχονται τους όρους με τη συμμετοχή τους.", g1_mainTitle: "Μεγάλο Έπαθλο: 25.000 € σε Bitcoin", g1_prizeDesc: "Ισοδύναμο σε Bitcoin <strong>25.000 €</strong> με βάση την ισοτιμία την ημέρα της κλήρωσης. Θα μεταφερθεί απευθείας και χωρίς χρέωση στη διεύθυνση ψηφιακού πορτοφολιού που θα υποδείξει ο νικητής. Όλοι οι φόροι και τα τέλη μεταφοράς θα καλυφθούν από την Kyrosil.", g1_specialCondTitle: "Ειδικοί Όροι για αυτή την Κλήρωση", g1_specialCond1: "Ο νικητής πρέπει να παράσχει μια έγκυρη διεύθυνση ψηφιακού πορτοφολιού (Bitcoin) για τη μεταφορά του επάθλου.", g1_specialCond2: "Η ευθύνη για την παρεχόμενη διεύθυνση πορτοφολιού ανήκει εξ ολοκλήρου στον νικητή.", g2_mainTitle: "Ονειρεμένες Διακοπές στην Αθήνα", g2_prizeDesc: "<strong>Χορηγός: Turkish Airlines.</strong> Περιλαμβάνει αεροπορικά εισιτήρια μετ' επιστροφής, διαμονή 6 διανυκτερεύσεων και 7 ημερών σε ξενοδοχείο 5 αστέρων στο κέντρο της πόλης και ταξιδιωτική ασφάλιση υγείας. Για τους νικητές που υπόκεινται σε βίζα, ολόκληρη η διαδικασία της βίζας θαจัดการ από την Kyrosil και θα ολοκληρωθεί δωρεάν εντός 72 ωρών μέσω του συστήματος Jet Visa.", g2_specialCondTitle: "Ειδικοί Όροι για αυτή την Κλήρωση", g2_specialCond1: "Οι διαδικασίες έκδοσης βίζας για τους νικητές από χώρες που απαιτούν βίζα θαจัดการ από τον χορηγό.", g2_specialCond2: "Οι ημερομηνίες του ταξιδιού θα καθοριστούν από κοινού με τον νικητή, ανάλογα με τη διαθεσιμότητα της THY και του ξενοδοχείου.", g3_mainTitle: "1 Μήνας Χρήσης AUDI A8", g3_prizeDesc: "<strong>Χορηγός: AUDI.</strong> Το δικαίωμα χρήσης ενός τελευταίου μοντέλου AUDI A8 για 30 ημέρες, με όλους τους φόρους και την ασφάλεια πληρωμένα. Το όχημα θα παραδοθεί προσωρινά στον νικητή με συμβολαιογραφική πράξη.", g3_specialCondTitle: "Ειδικοί Όροι για αυτή την Κλήρωση", g3_specialCond1: "Ο νικητής πρέπει να είναι 25 ετών και άνω.", g3_specialCond2: "Ο νικητής πρέπει να κατέχει άδεια οδήγησης κατηγορίας Β για τουλάχιστον 3 χρόνια.", g3_specialCond3: "Το όχημα παραδίδεται προσωρινά μέσω συμβολαιογραφικής πράξης και μπορεί επίσης να χρησιμοποιηθεί από τα μέλη της οικογένειας του νικητή.", g4_mainTitle: "4-ήμερες Διακοπές All-Inclusive στο Μπόντρουμ", g4_prizeDesc: "Διαμονή 3 διανυκτερεύσεων και 4 ημερών με πλήρη διατροφή σε ξενοδοχείο 4 αστέρων στο Μπόντρουμ. Το έπαθλο περιλαμβάνει επίσης αεροπορικά εισιτήρια μετ' επιστροφής και μεταφορές από/προς το αεροδρόμιο.", g4_specialCondTitle: "Ειδικοί Όροι για αυτή την Κλήρωση", g4_specialCond1: "Οι ημερομηνίες του ταξιδιού θα καθοριστούν από κοινού με τον νικητή, ανάλογα με τη διαθεσιμότητα του ξενοδοχείου και των πτήσεων.", g4_specialCond2: "Ανάλογα με τη διαθεσιμότητα, μπορεί να προσφερθεί επιπλέον πρόσκληση για έναν συνοδό του νικητή.", g5_mainTitle: "500 € σε Bitcoin (100 Νικητές)", g5_prizeDesc: "Για 100 νικητές, ισοδύναμο σε Bitcoin <strong>500 €</strong> ο καθένας, με βάση την ισοτιμία την ημέρα της κλήρωσης. Τα έπαθλα θα σταλούν στις διευθύνσεις ψηφιακών πορτοφολιών των νικητών απρόσκοπτα και χωρίς χρέωση.", g5_specialCondTitle: "Ειδικοί Όροι για αυτή την Κλήρωση", g5_specialCond1: "Ο νικητής πρέπει να παράσχει μια έγκυρη διεύθυνση ψηφιακού πορτοφολιού (Bitcoin) για τη μεταφορά του επάθλου.", g5_specialCond2: "Η ευθύνη για την παρεχόμενη διεύθυνση πορτοφολιού ανήκει εξ ολοκλήρου στον νικητή.", footerRights: "© 2025 Kyrosil. Με επιφύλαξη παντός δικαιώματος.", footerTnc: "Ισχύουν Όροι & Προϋποθέσεις.", hashtags: "#Kyrosil #Κλήρωση #ΜεγάληΚλήρωση #Bitcoin #Audi #THY #Αθήνα #Μπόντρουμ #Διακοπές #Έπαθλο"
         }
     };
 
@@ -323,6 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.querySelectorAll('[data-lang-key]').forEach(element => {
             const key = element.dataset.langKey;
+            // Önce seçilen dilde çeviriyi ara, yoksa İngilizce'de ara
             const translation = translations[currentLang][key] || (translations['en'] ? translations['en'][key] : '');
             if (translation !== undefined) {
                 element.innerHTML = translation;
@@ -337,7 +192,8 @@ document.addEventListener('DOMContentLoaded', () => {
         countdownIntervals.forEach(interval => clearInterval(interval));
         countdownIntervals = [];
         document.querySelectorAll('.countdown-timer').forEach(timer => {
-            countdownIntervals.push(startCountdown(timer.id, currentLang));
+            const intervalId = startCountdown(timer.id, currentLang);
+            if(intervalId) countdownIntervals.push(intervalId);
         });
     }
 
@@ -350,10 +206,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const interval = setInterval(() => {
             const now = new Date().getTime();
             const distance = endDate - now;
+            const langPack = translations[lang] || translations['tr'];
 
             if (distance < 0) {
                 clearInterval(interval);
-                countdownElement.innerHTML = `<span data-lang-key="countdownEnded">${translations[lang]['countdownEnded']}</span>`;
+                countdownElement.innerHTML = `<span data-lang-key="countdownEnded">${langPack['countdownEnded']}</span>`;
                 return;
             }
 
@@ -363,14 +220,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const s = Math.floor((distance % (1000 * 60)) / 1000);
 
             countdownElement.innerHTML = `
-                <span class="label">${translations[lang]['countdownLabel']}</span>
-                <span class="value">${d}</span> <span>${translations[lang]['days']}</span>,
-                <span class="value">${h}</span> <span>${translations[lang]['hours']}</span>,
-                <span class="value">${m}</span> <span>${translations[lang]['minutes']}</span>,
-                <span class="value">${s}</span> <span>${translations[lang]['seconds']}</span>
+                <span class="label">${langPack['countdownLabel']}</span>
+                <span class="value">${d}</span> <span>${langPack['days']}</span>,
+                <span class="value">${h}</span> <span>${langPack['hours']}</span>,
+                <span class="value">${m}</span> <span>${langPack['minutes']}</span>,
+                <span class="value">${s}</span> <span>${langPack['seconds']}</span>
             `;
         }, 1000);
-        return interval;
+        return interval; // Interval ID'sini döndürerek temizlenmesini sağla
     }
     
     function initializeForms() {
@@ -410,12 +267,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function initializePage() {
+        const langButtons = document.querySelectorAll('.language-switcher button');
+        
+        // DÜZELTME: BUTONLARA OLAY DİNLEYİCİLERİ BURADA EKLENİYOR
+        langButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                setLanguage(button.dataset.lang);
+            });
+        });
+
         const savedLang = localStorage.getItem('preferredLanguage');
         const browserLang = navigator.language ? navigator.language.split('-')[0] : 'tr';
         const initialLang = savedLang || (translations[browserLang] ? browserLang : 'tr');
         
+        setLanguage(initialLang);
         initializeForms();
-        setLanguage(initialLang); // Sayaçların doğru dilde başlaması için formlardan sonra çalıştır
     }
 
     initializePage();
