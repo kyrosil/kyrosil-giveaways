@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang-key="pageTitleGiveaway1">Flat Giveaway - Kyrosil</title>
+    <title data-lang-key="pageTitleGiveaway1">Büyük Ödül: €25.000 Bitcoin - Kyrosil</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,54 +12,81 @@
 <body>
     <header class="app-header">
         <div class="language-switcher"> <button data-lang="en">EN</button> <button data-lang="tr">TR</button> <button data-lang="fr">FR</button> <button data-lang="el">EL</button> </div>
-        <a href="index.html" class="back-link" data-lang-key="detailBackButton">&larr; Back to All Giveaways</a>
-        <h1 data-lang-key="prize1Title">2+1 Flat from ReziKyros Azure Kağıthane</h1>
+        <a href="index.html" class="back-link" data-lang-key="detailBackButton">&larr; Tüm Çekilişlere Geri Dön</a>
+        <h1 data-lang-key="g1_mainTitle">Büyük Ödül: €25.000 Değerinde Bitcoin</h1>
     </header>
+
     <main class="container detail-container">
         <section id="prize-details" class="section">
-            <img src="adsiz-tasarim_20250407_210715_0000-1.webp" alt="ReziKyros Azure Kağıthane Flat" class="prize-detail-img">
-            <h2 data-lang-key="detailPrizeTitle">The Prize</h2>
-            <p data-lang-key="prize1Desc">A chance to win a fantastic flat in our soon-to-be-completed ReziKyros Azure Kağıthane project!</p>
+            <img src="placeholder-bitcoin-gold-large.webp" alt="€25.000 Değerinde Bitcoin" class="prize-detail-img">
+            <h2 data-lang-key="detailPrizeTitle">Ödül Detayları</h2>
+            <p data-lang-key="g1_prizeDesc">
+                Çekiliş günündeki güncel kur baz alınarak **25.000 Euro** karşılığı Bitcoin. Kazananın belirteceği dijital cüzdan adresine doğrudan ve masrafsız transfer edilecektir. Tüm vergiler ve transfer işlem ücretleri Kyrosil tarafından karşılanacaktır.
+            </p>
         </section>
         
-        <section id="giveaway1-section" class="section">
-            <h2 data-lang-key="giveawayEndedTitle">Büyük Ödül Sahibini Buldu!</h2>
-            <div class="winner-announcement" style="text-align: center; margin-bottom: 20px;">
-                <p data-lang-key="giveawayThanksAll">Çekilişimiz sonuçlanmıştır. Katılan herkese teşekkür ederiz!</p>
-                <div style="margin-top: 20px; margin-bottom: 20px;">
-                    <h3 style="margin-bottom: 5px;"><strong data-lang-key="giveawayWinnerMainLabel">Asil Kazanan:</strong></h3>
-                    <p data-lang-key="giveawayWinnerMainName" style="font-size: 1.2em; font-weight: bold;">METİN ŞAHLI / İZMİR</p>
+        <section id="participation-section" class="section">
+            <h2 data-lang-key="participationTitle">Çekilişe Katıl</h2>
+            
+            <form id="g1-form" class="participation-form">
+                <div class="form-group">
+                    <label for="g1-name" data-lang-key="formNameLabel">Ad-Soyad:</label>
+                    <input type="text" id="g1-name" name="name" required>
                 </div>
-                <div style="margin-top: 20px; margin-bottom: 20px;">
-                    <h3 style="margin-bottom: 5px;"><strong data-lang-key="giveawayWinnerBackupLabel">Yedek Kazanan:</strong></h3>
-                    <p data-lang-key="giveawayWinnerBackupName" style="font-size: 1.1em;">GAMZE İNAL / İSTANBUL</p>
+                <div class="form-group">
+                    <label for="g1-email" data-lang-key="formEmailLabel">E-posta Adresi:</label>
+                    <input type="email" id="g1-email" name="email" required>
                 </div>
-                <p data-lang-key="giveawayCongratsMessage">Kazanan katılımcımızı tebrik ederiz! (Asil talihli çekiliş şartlarını karşılamıyorsa yedek talihliye devredlir.)</p>
-                <p data-lang-key="giveawayStayTuned">Yeni kampanyalarımız için bizi takip etmeye devam edin!</p>
+                <div class="form-group">
+                    <label for="g1-username" data-lang-key="formUsernameLabel">EU Portal / Instagram Kullanıcı Adı:</label>
+                    <input type="text" id="g1-username" name="username" required>
+                </div>
+                <button type="submit" class="submit-btn" data-lang-key="formSubmitButton">Çekilişe Katıl</button>
+            </form>
+            
+            <div id="g1-success-message" style="display: none; text-align: center; padding: 20px; background-color: #d4edda; color: #155724; border-radius: 5px;">
+                <p data-lang-key="formSuccessMessage" style="margin: 0; font-size: 1.2em; font-weight: bold;">Çekilişe başarıyla katıldınız! Bol şans!</p>
             </div>
         </section>
         
         <section id="rules" class="section content-section">
-             <h2 data-lang-key="rulesTitle">General Terms & Information</h2>
-             <div class="rule-block">
-                 <h4 data-lang-key="rulesScheduleTitle">Giveaway Schedule</h4>
-                 <p><strong data-lang-key="rulesStartDateLabel">Start Date:</strong> <span data-lang-key="rulesStartDateValue">April 8, 2025</span></p>
-                 <p><strong data-lang-key="rulesEndDateLabel">Entry Deadline:</strong> <span data-lang-key="giveaway1EndDateValue">April 30, 2025</span></p>
-                 <p><strong data-lang-key="rulesAnnounceTitle">Announcement of Results:</strong> <span data-lang-key="giveaway1AnnounceDesc">Results will be announced via live broadcast draw on EU Portal on May 1, 2025.</span></p>
-             </div>
-             <div class="rule-block">
-                 <h4 data-lang-key="rulesGeneralCondTitle">General Conditions</h4>
-                 <ul> <li data-lang-key="rulesCond1">All participants must be over 18 years of age.</li> <li data-lang-key="rulesCond2">All participants must follow the @kyrosil account on Instagram.</li> <li data-lang-key="rulesCond3">Kyrosil employees and their first-degree relatives cannot participate in the draw.</li> </ul>
-             </div>
-             <div class="rule-block">
-                 <h4 data-lang-key="rulesSpecialCond1Title">Specific Conditions (Flat Giveaway)</h4>
-                 <ul> <li data-lang-key="rulesSpecialCond1Item1">The winning participant must not have any registered vehicle or property deed...</li> </ul>
-             </div>
-             <div class="rule-block"> <h4 data-lang-key="rulesWinnerSelTitle">Winner Selection</h4> <p data-lang-key="rulesWinnerSelDesc">Winners will be determined by a random draw conducted via live broadcast...</p> </div>
-             <div class="rule-block"> <h4 data-lang-key="legalTitle">Legal Permissions</h4> <p data-lang-key="legalDesc">This giveaway is conducted under the permissions obtained...</p> </div>
-         </section>
+            <h2 data-lang-key="rulesTitle">Genel Koşullar ve Bilgiler</h2>
+            <div class="rule-block">
+                <h4 data-lang-key="rulesScheduleTitle">Çekiliş Takvimi</h4>
+                <p><strong data-lang-key="rulesStartDateLabel">Başlangıç Tarihi:</strong> <span data-lang-key="g1_startDateValue">15 Temmuz 2025</span></p>
+                <p><strong data-lang-key="rulesEndDateLabel">Son Katılım Tarihi:</strong> <span data-lang-key="g1_endDateValue">31 Temmuz 2025</span></p>
+                <p><strong data-lang-key="rulesAnnounceTitle">Sonuçların Açıklanması:</strong> <span data-lang-key="g1_announceDesc">Sonuçlar, 1 Ağustos 2025'te noter huzurunda yapılacak canlı yayın ile duyurulacaktır.</span></p>
+            </div>
+            <div class="rule-block">
+                <h4 data-lang-key="rulesGeneralCondTitle">Genel Katılım Şartları</h4>
+                <ul>
+                    <li data-lang-key="rulesCond1">Tüm katılımcıların 18 yaşından büyük olması gerekmektedir.</li>
+                    <li data-lang-key="rulesCond2">Tüm katılımcıların @kyrosil Instagram hesabını takip etmesi gerekmektedir.</li>
+                    <li data-lang-key="rulesCond3">Kyrosil çalışanları ve birinci dereceden yakınları çekilişe katılamaz.</li>
+                </ul>
+            </div>
+            <div class="rule-block">
+                <h4 data-lang-key="g1_specialCondTitle">Bu Çekilişe Özel Koşullar</h4>
+                <ul>
+                    <li data-lang-key="g1_specialCond1">Kazananın, ödülün transferi için geçerli bir dijital cüzdan (Bitcoin) adresi bildirmesi zorunludur.</li>
+                    <li data-lang-key="g1_specialCond2">Belirtilen cüzdan adresinin sorumluluğu tamamen kazanana aittir.</li>
+                </ul>
+            </div>
+            <div class="rule-block">
+                <h4 data-lang-key="rulesWinnerSelTitle">Kazananın Belirlenmesi</h4>
+                <p data-lang-key="rulesWinnerSelDesc">Kazanan, son katılım tarihinden sonra yapılacak olan ve tüm katılımcılara açık canlı yayında, noter huzurunda rastgele çekilişle belirlenecektir.</p>
+            </div>
+            <div class="rule-block">
+                <h4 data-lang-key="legalTitle">Yasal İzinler</h4>
+                <p data-lang-key="legalDesc">Bu çekiliş, Türkiye Cumhuriyeti (Milli Piyango İdaresi - İzin No: 2025/991283-01, Tarih: 14/07/2025) ve Avrupa Birliği'ndeki (AB Promosyon Kayıtları - Ref: ECP/REG/2025/1407-K4) ilgili mercilerden alınan izinler dahilinde düzenlenmektedir. Tüm katılımcılar katılarak şartları kabul etmiş sayılırlar.</p>
+            </div>
+        </section>
     </main>
-    <footer class="app-footer"> <p><span data-lang-key="footerRights">© 2025 Kyrosil. All rights reserved.</span> <span data-lang-key="footerTnc">T&C apply.</span></p> </footer>
+
+    <footer class="app-footer">
+        <p><span data-lang-key="footerRights">© 2025 Kyrosil. All rights reserved.</span> <span data-lang-key="footerTnc">T&C apply.</span></p>
+    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
